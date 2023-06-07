@@ -1,11 +1,11 @@
 # School of Code - BC14 - Final Project
 
-Welcome to the repository for our team Byte Club!
+Welcome to the repository for our School of Code final project!
 
 
-## Byte Club!
+## The Team:   Byte Club!
 
-The Team:
+Team members:
 
 Kane Dru
 Lawrence Allen
@@ -15,9 +15,7 @@ Naomi Richards
 Ben Hensor
 
 
-## Paprback
-
-The Project:
+## The Project:   Paprback
 
 An platform to enable book lovers to connect to donate, exchange and discover 2nd-hand books.
 
