@@ -7,17 +7,12 @@ Welcome to the repository for our School of Code final project!
 
 Team members:
 
-Kane Dru
-Lawrence Allen
-Evavgeline Amoura
-Nich Horishny
-Naomi Richards
-Ben Hensor
+Kane Dru - Lawrence Allen - Evangeline Amoura - Nich Horishny - Naomi Richards - Ben Hensor
 
 
 ## The Project:   Paprback
 
-An platform to enable book lovers to connect to donate, exchange and discover 2nd-hand books.
+A platform to enable book lovers to connect to donate, exchange and discover 2nd-hand books.
 
 
 ## MVP
