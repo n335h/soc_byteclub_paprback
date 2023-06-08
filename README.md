@@ -7,7 +7,12 @@ Welcome to the repository for our School of Code final project!
 
 Team members:
 
-Kane Dru - Lawrence Allen - Evangeline Amoura - Nich Horishny - Naomi Richards - Ben Hensor
+Kane Dru<br>
+Lawrence Allen<br>
+Evangeline Amoura<br>
+Nich Horishny<br>
+Naomi Richards<br>
+Ben Hensor<br>
 
 
 ## The Project:   Paprback
@@ -17,12 +22,12 @@ A platform to enable book lovers to connect to donate, exchange and discover 2nd
 
 ## MVP
 
-Features:
+Features:<br>
 
-Create new users
-List books for donation/exchange
-Search for available books
-Contact user to arrange exchange/collection
+Create new users<br>
+List books for donation/exchange<br>
+Search for available books<br>
+Contact user to arrange exchange/collection<br>
 
 
 ## Tech Stack
@@ -32,25 +37,25 @@ The technologies we will be deploying are...
 
 ### Front End
 
-React
-Bootstrap
-Animate CSS
-SASS
+React<br>
+Bootstrap<br>
+Animate CSS<br>
+SASS<br>
 
 ### Back End
 
-Node JS
-Express
-ElephantSQL
+Node JS<br>
+Express<br>
+ElephantSQL<br>
 
 
 ### Testing
 
-Jest
-Playwright
+Jest<br>
+Playwright<br>
 
 
 ### Deployment
 
-Netlify
-Render?
+Netlify<br>
+Render<br>
