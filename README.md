@@ -3,7 +3,7 @@
 Welcome to the repository for our School of Code final project!
 
 
-## The Team:   Byte Club!
+## We are Byte Club!
 
 Team members:
 
@@ -15,7 +15,7 @@ Naomi Richards<br>
 Ben Hensor<br>
 
 
-## The Project:   Paprback
+## Our Project:   Paprback
 
 A platform to enable book lovers to connect to donate, exchange and discover 2nd-hand books.
 
