@@ -4,11 +4,11 @@
 
 function Offer() {
   return (
-    <main id="offer">
+    <section id="offer">
       <div className="offer-container">
       <h1>Make an Offer</h1>
       </div>
-    </main>
+    </section>
   );
 }
 

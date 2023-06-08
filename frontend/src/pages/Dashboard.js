@@ -4,11 +4,11 @@
 
 function Dashboard() {
   return (
-    <main id="dashboard">
+    <section id="dashboard">
       <div className="dashboard-container">
       <h1>Dashboard</h1>
       </div>
-    </main>
+    </section>
   );
 }
 

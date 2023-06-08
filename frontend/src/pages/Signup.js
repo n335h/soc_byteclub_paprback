@@ -4,11 +4,11 @@
 
 function Signup() {
   return (
-    <main id="signup">
+    <section id="signup">
       <div className="signup-container">
       <h1>Signup</h1>
       </div>
-    </main>
+    </section>
   );
 }
 

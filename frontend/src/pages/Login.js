@@ -4,11 +4,11 @@
 
 function Login() {
   return (
-    <main id="login">
+    <section id="login">
       <div className="login-container">
       <h1>Login</h1>
       </div>
-    </main>
+    </section>
   );
 }
 
