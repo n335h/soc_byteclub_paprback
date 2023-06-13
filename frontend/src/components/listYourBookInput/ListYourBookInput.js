@@ -7,7 +7,7 @@ function ListYourBookInput(props) {
 
 
   return (
-    <div classname="List-book-input">
+    <div className="list-book-input">
       <input type="text" placeholder="ISBN or title" onChange={props.onChange}></input>
       <button onClick={props.onClick}>Search</button>
     </div>

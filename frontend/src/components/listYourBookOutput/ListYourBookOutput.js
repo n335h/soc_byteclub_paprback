@@ -1,6 +1,4 @@
 function ListYourBookOutput(props) {
-
-
   return (
     <div>
       <img id="cover" src="" alt=""></img>
@@ -38,7 +36,7 @@ function ListYourBookOutput(props) {
       </form>
       <p>Notes:</p>
       <input id="notes" type="text" placeholder="Notes"></input>
-      <button id="post-listing" >Post Listing</button>
+      <button id="post-listing">Post Listing</button>
     </div>
   );
 }
