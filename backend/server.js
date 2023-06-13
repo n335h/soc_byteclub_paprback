@@ -104,7 +104,7 @@ app.get("/api/listings/:isbn", async function (req, res) {
 // Get book from listings by title 
 app.get("/api/listings/:title", async function (req, res) {
   try {
-  const result = await client.query('SELECT * FROM listings WHERE title = $1::text', [req.params.title]);
+  const result = await client.query('SELECT * FROM listings WHERE title = $1', [req.params.title]);
   if (result.rows.length > 0) {
     res.json({ success: true,
               payload: result.rows });
@@ -121,41 +121,59 @@ app.get("/api/listings/:title", async function (req, res) {
 
 // Get all Listings
 app.get("/api/listings", async function (req, res) {
-  const allBooks = await getBooks();
-  if (allBooks) {
-    res.json({success: true,
-              payload: allBooks});
-
-  } else {
-    res.send("No books found")
+  try {
+    const result = await client.query('SELECT * FROM listings');
+    
+    if (result.rows.length > 0) {
+      res.json({ success: true, payload: result.rows });
+    } else {
+      res.send("No books found");
+    }
+  } catch (error) {
+    console.error("Error executing query:", error);
+    res.status(500).json({ success: false, error: "Internal server error" });
   }
 });
 
 
 // List a book
 app.post("/api/listings", async function (req, res) {
-  const book = req.body;
-  const newBook = await createBook(book);
-  if (newBook) {
+  try {
+  const result = await client.query(
+    'INSERT INTO listings (isbn, title, author, edition, condition, price, seller, email, phone) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)', 
+    [req.body.isbn, req.body.title, req.body.author, req.body.edition, req.body.condition, req.body.price, req.body.seller, req.body.email, req.body.phone]
+    );
+
+  if (result) {
     res.json({success: true,
-              payload: newBook});
+              payload: result.rows});
   } else {
-    res.send("Book not created")
+    res.send("Book not listed")
   }
+} catch (error) {
+  console.error("Error executing query:", error);
+  res.status(500).json({ success: false, error: "Internal server error" });
+
+};
 });
 
 
-// Delete a Listings
-// app.delete("/api/listings/:id", async function (req, res) {
-//   const id = req.params.id;
-//   const deletedBook = await deleteBook(id);
-//   if (deletedBook) {
-//     res.json({success: true,
-//               payload: deletedBook});
-//   } else {
-//     res.send("Book not deleted")
-//   }
-// });
+
+// Delete a Listing
+app.delete("/api/listings/:id", async function (req, res) {
+  try {
+    const result = await client.query('DELETE FROM listings WHERE id = $1', [req.params.id]);
+    if (result) {
+      res.json({success: true,
+                payload: result.rows});
+    } else {
+      res.send("Listing not deleted")
+    }
+  } catch (error) {
+    console.error("Error executing query:", error);
+    res.status(500).json({ success: false, error: "Internal server error" });
+  }
+});
 
 
 
