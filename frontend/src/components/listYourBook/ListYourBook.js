@@ -5,7 +5,14 @@ import { books } from "../../data.js";
 
 function ListYourBook() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchResult, setSearchResult] = useState([{}]);
+  const [searchResult, setSearchResult] = useState([
+    {
+      title: "",
+      author: "",
+      cover: "",
+      publishedDate: "",
+    },
+  ]);
 
   function handleChange(e) {
     setSearchTerm(e.target.value);
@@ -23,7 +30,11 @@ function ListYourBook() {
     }
     let result = books.filter(checkBook);
     console.log(result);
-    setSearchResult(result);
+
+    if (result !== []) {
+      setSearchResult(result);
+    }
+
     console.log(searchResult);
   }
 
@@ -31,7 +42,7 @@ function ListYourBook() {
     <div>
       <h1>List Your Book</h1>
       <ListYourBookInput onChange={handleChange} onClick={handleSearchClick} />
-      <ListYourBookOutput />
+      <ListYourBookOutput book={searchResult[0]} />
     </div>
   );
 }
