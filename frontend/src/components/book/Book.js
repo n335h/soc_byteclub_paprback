@@ -3,10 +3,15 @@ import './book.css';
 
 
 function Book() {
+
+
   return (
     <div id="book">
       <div className="book-container">
-      <h1>This is a single Book</h1>
+        <img id="like-heart" src="" alt=""/>
+        <img id="cover" src={props.cover} alt=""/>
+        <p>{props.title}</p>
+
       </div>
     </div>
   );

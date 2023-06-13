@@ -1,4 +1,6 @@
-function ListYourBookOutput() {
+function ListYourBookOutput(props) {
+
+
   return (
     <div>
       <img id="cover" src="" alt=""></img>
@@ -8,21 +10,21 @@ function ListYourBookOutput() {
         type="text"
         placeholder="Title"
         disabled="disabled"
-      ></input>
+      >{data.title}</input>
       <p>Author:</p>
       <input
         id="author"
         type="text"
         placeholder="Author"
         disabled="disabled"
-      ></input>
+      >{data.author}</input>
       <p>Edition:</p>
       <input
         id="edition"
         type="text"
         placeholder="Edition"
         disabled="disabled"
-      ></input>
+      >{data.edition}</input>
       <p>Condition:</p>
       <form id="condition">
         <select name="Condition">
@@ -36,7 +38,7 @@ function ListYourBookOutput() {
       </form>
       <p>Notes:</p>
       <input id="notes" type="text" placeholder="Notes"></input>
-      <button id="post-listing">Post Listing</button>
+      <button id="post-listing" >Post Listing</button>
     </div>
   );
 }
