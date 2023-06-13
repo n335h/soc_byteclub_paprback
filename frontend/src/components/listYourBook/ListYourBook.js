@@ -20,20 +20,27 @@ function ListYourBook() {
   }
   function handleSearchClick(e) {
     //if searchTerm === ISBN of any book in database return that book
-    function checkBook(book) {
+
+    let result = books.filter((book) => {
       if (book.isbn.toLowerCase() === searchTerm.toLowerCase()) {
         return book;
       }
       if (book.title.toLowerCase() === searchTerm.toLowerCase()) {
         return book;
       }
-    }
-    let result = books.filter(checkBook);
+    });
     console.log(result);
-
-    if (result !== []) {
-      setSearchResult(result);
+    
+    if (result.length === 0) {
+      result.push({
+        title: "",
+        author: "",
+        cover: "",
+        publishedDate: "",
+      });
     }
+
+    setSearchResult(result);
 
     console.log(searchResult);
   }
