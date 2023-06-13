@@ -1,8 +1,10 @@
+
 import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/paprback_logo.svg';
 import './header.css';
 import React, { useState, useEffect } from 'react';
 import userIconGrey from '../../assets/icons/userIconGrey.png';
+
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,9 +16,9 @@ function Header() {
       }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -50,18 +52,23 @@ function Header() {
           </div>
         </div>
         <div className="header-bottom">
-          <nav className={`navbar ${menuOpen ? 'open' : ''}`}>
+          <nav className={`navbar ${menuOpen ? "open" : ""}`}>
             <div className="menu-toggle" onClick={handleToggleMenu}>
               <div className="bar"></div>
               <div className="bar"></div>
               <div className="bar"></div>
             </div>
+
+
             <ul className={`menu ${menuOpen ? 'open' : ''}`}>
+
               <li>
                 <Link to="/browse">
                   <button className="browse">Browse</button>
                 </Link>
               </li>
+
+
               <li>
                 <Link to="/about">
                   <button className="about">About</button>
@@ -72,6 +79,7 @@ function Header() {
                   <button className="faq">FAQ</button>
                 </Link>
               </li>
+
             </ul>
           </nav>
         </div>
