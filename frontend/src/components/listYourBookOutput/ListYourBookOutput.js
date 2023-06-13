@@ -10,21 +10,21 @@ function ListYourBookOutput(props) {
         type="text"
         placeholder="Title"
         disabled="disabled"
-      >{data.title}</input>
+      ></input>
       <p>Author:</p>
       <input
         id="author"
         type="text"
         placeholder="Author"
         disabled="disabled"
-      >{data.author}</input>
+      ></input>
       <p>Edition:</p>
       <input
         id="edition"
         type="text"
         placeholder="Edition"
         disabled="disabled"
-      >{data.edition}</input>
+      ></input>
       <p>Condition:</p>
       <form id="condition">
         <select name="Condition">

@@ -9,6 +9,7 @@ import FAQ from './pages/FAQ';
 import Listings from './pages/Listings';
 import ListBook from './pages/ListBook';
 import Offer from './pages/Offer';
+import { useState } from 'react';
 
 
 import Footer from './components/footer/Footer';
@@ -16,6 +17,8 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
+  // const [loggedIn, setLoggedIn] = useState(false);
+    
   return (
     <main className="App">
     <Header />
