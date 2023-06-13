@@ -1,7 +1,7 @@
 export const books = [
   {
     isbn: "9780143127550",
-    cover: 'src/assets/images/books/to-kill-a-mockingbird.png',
+    cover: 'https://iili.io/H6zeWBI.png',
     title: "To Kill a Mockingbird",
     author: "Harper Lee",
     publisher: "J. B. Lippincott & Co.",
@@ -11,7 +11,7 @@ export const books = [
   },
   {
     isbn: "9780061120084",
-    cover: 'src/assets/images/books/1984.png',
+    cover: 'https://iili.io/H6zOtft.png',
     title: "1984",
     author: "George Orwell",
     publisher: "Secker & Warburg",
@@ -21,7 +21,7 @@ export const books = [
   },
   {
     isbn: "9798404767230",
-    cover: 'src/assets/images/books/pride-and-prejudice.png',
+    cover: 'https://iili.io/H6zeKq7.png',
     title: "Pride and Prejudice",
     author: "Jane Austen",
     publisher: "T. Egerton, Whitehall",
@@ -31,7 +31,7 @@ export const books = [
   },
   {
     isbn: "9780316769174",
-    cover: 'src/assets/images/books/catcher-in-the-rye.png',
+    cover: 'https://iili.io/H6zOD0X.png',
     title: "The Catcher in the Rye",
     author: "J.D. Salinger",
     publisher: "Little, Brown and Company",
@@ -41,7 +41,7 @@ export const books = [
   },
   {
     isbn: "9780544273443",
-    cover: 'src/assets/images/books/tlotr.png',
+    cover: 'https://iili.io/H6zeMLN.png',
     title: "The Lord of the Rings",
     author: "J.R.R. Tolkien",
     publisher: "Allen & Unwin",
@@ -51,7 +51,7 @@ export const books = [
   },
   {
     isbn: "9780547928227",
-    cover: 'src./assets/images/books/the-hobbit.png',
+    cover: 'https://iili.io/H6zeRqP.png',
     title: "The Hobbit",
     author: "J.R.R. Tolkien",
     publisher: "George Allen & Unwin",
@@ -61,7 +61,7 @@ export const books = [
   },
   {
     isbn: "9781408855652",
-    cover: 'src/assets/images/books/harry-potter-philosophers-stone.png',
+    cover: 'https://iili.io/H6zedzl.png',
     title: "Harry Potter and the Philosopher's Stone",
     author: "J.K. Rowling",
     publisher: "Bloomsbury Publishing",
@@ -71,7 +71,7 @@ export const books = [
   },
   {
     isbn: "9798351145013",
-    cover: 'src/assets/images/books/the-great-gatsby.png',
+    cover: 'https://iili.io/H6zeuLB.png',
     title: "The Great Gatsby",
     author: "F. Scott Fitzgerald",
     publisher: "Charles Scribner's Sons",
@@ -81,7 +81,7 @@ export const books = [
   },
   {
     isbn: "9780143105954",
-    cover: 'src/assets/images/books/moby-dick-or-the-whale.png',
+    cover: 'https://iili.io/H6ze3sS.png',
     title: "Moby-Dick; or, The Whale",
     author: "Herman Melville",
     publisher: "Richard Bentley (UK)",
@@ -91,7 +91,7 @@ export const books = [
   },
   {
     isbn: "9780060850524",
-    cover: 'src/assets/images/books/brave_new_world.png',
+    cover: 'https://iili.io/H6zObgn.png',
     title: "Brave New World",
     author: "Aldous Huxley",
     publisher: "Chatto & Windus",
@@ -101,7 +101,7 @@ export const books = [
   },
   {
     isbn: "9780486280615",
-    cover: 'src/assets/images/books/adventures-of-huckleberry-finn.png',
+    cover: 'https://iili.io/H6zOQsI.png',
     title: "The Adventures of Huckleberry Finn",
     author: "Mark Twain",
     publisher: "Chatto & Windus",
@@ -111,7 +111,7 @@ export const books = [
   },
   {
     isbn: "9780064471046",
-    cover: 'src/assets/images/books/the-lion-the-witch-and-the-wardrobe-the-chronicles-of-narnia-book.png',
+    cover: 'https://iili.io/H6zec7a.png',
     title: "The Lion, the Witch & the Wardrobe",
     author: "C.S. Lewis",
     publisher: "Geoffrey Bles",
@@ -121,7 +121,7 @@ export const books = [
   },
   {
     isbn: "9780062315007",
-    cover: 'src/assets/images/books/the-alchemist.png',
+    cover: 'https://iili.io/H6zef19.png',
     title: "The Alchemist",
     author: "Paulo Coelho",
     publisher: "HarperCollins",
@@ -131,7 +131,7 @@ export const books = [
   },
   {
     isbn: "9798374008258",
-    cover: 'src/assets/images/books/the-picture-of-dorian-gray.png',
+    cover: 'https://iili.io/H6ze0mv.png',
     title: "The Picture of Dorian Gray",
     author: "Oscar Wilde",
     publisher: "Lippincott's Monthly Magazine",
@@ -141,7 +141,7 @@ export const books = [
   },
   {
     isbn: "9781512308051",
-    cover: 'src/assets/images/books/frankenstein.png',
+    cover: 'https://iili.io/H6zOpJs.png',
     title: "Frankenstein",
     author: "Mary Shelley",
     publisher: "Lackington, Hughes, Harding, Mavor & Jones",
@@ -151,7 +151,7 @@ export const books = [
   },
   {
     isbn: "9780439023528",
-    cover: 'src/assets/images/books/the-hunger-games.png',
+    cover: 'https://iili.io/H6ze7rF.png',
     title: "The Hunger Games",
     author: "Suzanne Collins",
     publisher: "Scholastic Corporation",
@@ -161,7 +161,7 @@ export const books = [
   },
   {
     isbn: "9780307588371",
-    cover: 'src/assets/images/books/gone-girl.png',
+    cover: 'https://iili.io/H6ze9ef.png',
     title: "Gone Girl",
     author: "Gillian Flynn",
     publisher: "Crown Publishing Group",
@@ -171,7 +171,7 @@ export const books = [
   },
   {
     isbn: "9780698185395",
-    cover: 'src/assets/images/books/the-girl-on-the-train.png',
+    cover: 'https://iili.io/H6zeIzQ.png',
     title: "The Girl on the Train",
     author: "Paula Hawkins",
     publisher: "Riverhead Books",
@@ -181,7 +181,7 @@ export const books = [
   },
   {
     isbn: "9780375842207",
-    cover: 'src/assets/images/books/the-book-thief.png',
+    cover: 'https://iili.io/H6zeqge.png',
     title: "The Book Thief",
     author: "Markus Zusak",
     publisher: "Picador",
@@ -191,7 +191,7 @@ export const books = [
   },
   {
     isbn: "9781594631931",
-    cover: 'src/assets/images/books/the-kite-runner.png',
+    cover: 'https://iili.io/H6zeadg.png',
     title: "The Kite Runner",
     author: "Khaled Hosseini",
     publisher: "Riverhead Books",
@@ -201,7 +201,7 @@ export const books = [
   },
   {
     isbn: "9780274808328",
-    cover: 'src/assets/images/books/the-da-vinci-code.png',
+    cover: 'https://iili.io/H6zeCdu.png',
     title: "The Da Vinci Code",
     author: "Dan Brown",
     publisher: "Doubleday",
@@ -211,7 +211,7 @@ export const books = [
   },
   {
     isbn: "9780142424179",
-    cover: 'src/assets/images/books/the-fault-in-our-stars-black.png',
+    cover: 'https://iili.io/H6zen5b.png',
     title: "The Fault in Our Stars",
     author: "John Green",
     publisher: "Dutton Books",
@@ -221,7 +221,7 @@ export const books = [
   },
   {
     isbn: "9780425232200",
-    cover: 'src/assets/images/books/the-help.png',
+    cover: 'https://iili.io/H6ze511.png',
     title: "The Help",
     author: "Kathryn Stockett",
     publisher: "Putnam",
@@ -231,7 +231,7 @@ export const books = [
   },
   {
     isbn: "9780385737951",
-    cover: 'src/assets/images/books/maze-runner.png',
+    cover: 'https://iili.io/H6ze2X2.png',
     title: "The Maze Runner",
     author: "James Dashner",
     publisher: "Delacorte Press",
@@ -241,7 +241,7 @@ export const books = [
   },
   {
     isbn: "9780307949486",
-    cover: 'src/assets/images/books/the-girl-with-the-dragon-tattoo.png',
+    cover: 'https://iili.io/H6zeoej.png',
     title: "The Girl with the Dragon Tattoo",
     author: "Stieg Larsson",
     publisher: "Norstedts Förlag",
@@ -251,7 +251,7 @@ export const books = [
   },
   {
     isbn: "9780544336261",
-    cover: 'src/assets/images/books/the-giver.png',
+    cover: 'https://iili.io/H6zexmx.png',
     title: "The Giver",
     author: "Lois Lowry",
     publisher: "Houghton Mifflin",
@@ -261,7 +261,7 @@ export const books = [
   },
   {
     isbn: "9780345806789",
-    cover: 'src/assets/images/books/the-shining.png',
+    cover: 'https://iili.io/H6zeEIR.png',
     title: "The Shining",
     author: "Stephen King",
     publisher: "Doubleday",
@@ -271,7 +271,7 @@ export const books = [
   },
   {
     isbn: "9780316168816",
-    cover: 'src/assets/images/books/girl-with-a-pearl-earring.png',
+    cover: 'https://iili.io/H6zOy5G.png',
     title: "The Girl with the Pearl Earring",
     author: "Tracy Chevalier",
     publisher: "HarperCollins",
@@ -280,8 +280,8 @@ export const books = [
     keySearchWords: ["art", "Vermeer", "forbidden love"]
   },
   {
-    isbn: "",
-    cover: 'src/assets/images/books/the-lovely-bones.png',
+    isbn: "9780316168816",
+    cover: 'https://iili.io/H6zelkJ.png',
     title: "The Lovely Bones",
     author: "Alice Sebold",
     publisher: "Little, Brown and Company",
@@ -291,7 +291,7 @@ export const books = [
   },
   {
     isbn: "9780307387899",
-    cover: 'src/assets/images/books/the-road.png',
+    cover: 'https://iili.io/H6zeGXp.png',
     title: "The Road",
     author: "Cormac McCarthy",
     publisher: "Alfred A. Knopf",
@@ -301,7 +301,7 @@ export const books = [
   },
   {
     isbn: "9780385490818",
-    cover: 'src/assets/images/books/the-handmaids-tale.png',
+    cover: 'https://iili.io/H6zeTXV.png',
     title: "The Handmaid's Tale",
     author: "Margaret Atwood",
     publisher: "McClelland and Stewart",
@@ -311,7 +311,7 @@ export const books = [
   },
   {
     isbn: "9780274992379",
-    cover: 'src/assets/images/books/use-of-weapons.png',
+    cover: 'https://iili.io/H6zeX1t.png',
     title: "Use of Weapons",
     author: "Iain M. Banks",
     publisher: "Orbit",
@@ -321,7 +321,7 @@ export const books = [
   },
   {
     isbn: "9798374735512",
-    cover: 'src/assets/images/books/great-expectations.png',
+    cover: 'https://iili.io/H6zeHb4.png',
     title: "Great Expectations",
     author: "Charles Dickens",
     publisher: "Chapman & Hall",
