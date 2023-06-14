@@ -1,7 +1,7 @@
 import ListYourBookInput from '../listYourBookInput/ListYourBookInput';
 import ListYourBookOutput from '../listYourBookOutput/ListYourBookOutput';
 import React, { useState, useEffect } from 'react';
-import { books } from '../../data.js';
+// import { books } from '../../data.js';
 
 //PLAN
 //1. fetch our API
@@ -17,6 +17,14 @@ function ListYourBook() {
     },
   ]);
 
+ 
+  useEffect(() => {
+    fetch(`http://localhost:5432/api/books/${searchTerm}`)
+      .then((res) => res.json())
+      .then((data) => setSearchResult(data));
+  }, [searchTerm]);
+
+
   function handleChange(e) {
     setSearchTerm(e.target.value);
   }
@@ -31,26 +39,26 @@ function ListYourBook() {
 
     //if searchTerm === ISBN of any book in database return that book
 
-    let result = books.filter((book) => {
-      if (book.isbn.toLowerCase() === searchTerm.toLowerCase()) {
-        return book;
-      }
-      if (book.title.toLowerCase() === searchTerm.toLowerCase()) {
-        return book;
-      }
-    });
-    console.log(result);
+    // let result = books.filter((book) => {
+    //   if (book.isbn.toLowerCase() === searchTerm.toLowerCase()) {
+    //     return book;
+    //   }
+    //   if (book.title.toLowerCase() === searchTerm.toLowerCase()) {
+    //     return book;
+    //   }
+    // });
+    // console.log(result);
     
-    if (result.length === 0) {
-      result.push({
-        title: "",
-        author: "",
-        cover: "",
-        publishedDate: "",
-      });
-    }
+    // if (result.length === 0) {
+    //   result.push({
+    //     title: "",
+    //     author: "",
+    //     cover: "",
+    //     publishedDate: "",
+    //   });
+    // }
 
-    setSearchResult(result);
+    // setSearchResult(result);
 
     console.log(searchResult);
 
