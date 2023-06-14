@@ -5,6 +5,26 @@
   display: none;
 }
 
+.header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  margin: 0 5vw 0 5vw;
+  
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFBE26;
+  list-style: none;
+  height: 30%;
+
+}
 
 @media screen and (max-width: 600px) {
 .login {
@@ -76,6 +96,59 @@ li {
  .menuBar {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 2vw;
+ }
+ .header-container {
+  display: flex;
+  flex-direction: row;
+ }
+ .menu {
+  background-color: none;
  }
 
+}
+
+.login  {
+  background-color: #FFBE26;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 2px 5px;
+  cursor: pointer;
+}
+.login:hover {
+  background-color: #FFBE26;
+  color: white;
+  scale: 1.1;
+}
+.signup {
+  background-color: transparent;
+  border: none;
+  color: rgb(41, 41, 41);
+  padding: 10px 32px;
+  text-decoration: underline;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 2px 5px;
+  cursor: pointer;
+}
+
+#navbutton {
+  background-color: #FFBE26;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 2px 5px;
+  cursor: pointer;
 }
