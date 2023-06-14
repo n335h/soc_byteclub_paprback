@@ -18,25 +18,27 @@ function ListYourBook() {
   ]);
 
  
-  useEffect(() => {
-    fetch(`http://localhost:5432/api/books/${searchTerm}`)
-      .then((res) => res.json())
-      .then((data) => setSearchResult(data));
-  }, [searchTerm]);
-
-
+  
+  
   function handleChange(e) {
     setSearchTerm(e.target.value);
   }
-
+  
   function handleEnter(e) {
     if (e.key === 'Enter' || e.keyCode === 13) {
       handleSearchClick();
     }
   }
-
+  
   function handleSearchClick(e) {
-
+    useEffect(() => {
+      fetch(`http://localhost:5432/api/books/${searchTerm}`)
+        .then((res) => res.json())
+        .then((data) => setSearchResult(data));
+        console.log(data);
+        console.log(searchResult);
+    }, [searchTerm]);
+    
     //if searchTerm === ISBN of any book in database return that book
 
     // let result = books.filter((book) => {
