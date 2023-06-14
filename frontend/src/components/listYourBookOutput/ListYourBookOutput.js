@@ -2,6 +2,20 @@
 import coverDefault from '../../assets/images/books/coverDefault.png';
 import './listYourBookOutput.css';
 
+
+//Creating a listed books array
+//1. Create a new array - in a data file.
+//2. Put a handleclick/on lick function in the JSX of the button
+//3. Import the empty array from the data file.
+//4. Create a function that will push the book to the array
+  //5. spread operator...?
+  //6. return an object with the requred structure (holding all the props and their inherent value)
+//7. A state variable is needed for the notes and condition
+
+  // function handleChange(e) {
+    
+  // }
+
 function ListYourBookOutput(props) {
   return (
     <div>

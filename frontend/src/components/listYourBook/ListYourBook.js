@@ -3,6 +3,9 @@ import ListYourBookOutput from '../listYourBookOutput/ListYourBookOutput';
 import React, { useState, useEffect } from 'react';
 import { books } from '../../data.js';
 
+//PLAN
+//1. fetch our API
+
 function ListYourBook() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResult, setSearchResult] = useState([
@@ -52,6 +55,16 @@ function ListYourBook() {
     console.log(searchResult);
 
   }
+
+//connecting to our database!
+
+  useEffect(() => {
+  async function getData() {
+    const response = await fetch("http://example.com/movies.json");
+    const jsonData = await response.json();
+    console.log(jsonData);
+  }})
+  
 
 
   return (
