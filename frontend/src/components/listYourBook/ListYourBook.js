@@ -29,15 +29,15 @@ function ListYourBook() {
       handleSearchClick();
     }
   }
+  useEffect(() => {
+    fetch(`http://localhost:5432/api/books/${searchTerm}`)
+      .then((res) => res.json())
+      .then((data) => setSearchResult(data));
+      console.log(data);
+      console.log(searchResult);
+  }, [searchTerm]);
   
   function handleSearchClick(e) {
-    useEffect(() => {
-      fetch(`http://localhost:5432/api/books/${searchTerm}`)
-        .then((res) => res.json())
-        .then((data) => setSearchResult(data));
-        console.log(data);
-        console.log(searchResult);
-    }, [searchTerm]);
     
     //if searchTerm === ISBN of any book in database return that book
 
@@ -68,12 +68,12 @@ function ListYourBook() {
 
 //connecting to our database!
 
-  useEffect(() => {
-  async function getData() {
-    const response = await fetch("http://example.com/movies.json");
-    const jsonData = await response.json();
-    console.log(jsonData);
-  }})
+  // useEffect(() => {
+  // async function getData() {
+  //   const response = await fetch("http://example.com/movies.json");
+  //   const jsonData = await response.json();
+  //   console.log(jsonData);
+  // }})
   
 
 
