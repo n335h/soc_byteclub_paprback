@@ -2,15 +2,21 @@ import './book.css';
 
 
 
-function Book() {
+function Book({ isbn, cover, title, author, publisher, publishedDate, genre }) {
 
 
   return (
     <div id="book">
       <div className="book-container">
         <img id="like-heart" src="" alt=""/>
-        <img id="cover" src={props.cover} alt=""/>
-        <p>{props.title}</p>
+        <img id="book-cover" src={cover} alt=""/>
+        <p id="book-title">{title}</p>
+        <p id="book-author">{author}</p>
+        <p id="book-publisher">{publisher}</p>
+        <p id="book-publishedDate">{publishedDate}</p>
+        <p id="book-genre">{genre}</p>
+        <p id="book-isbn">{isbn}</p>
+
 
       </div>
     </div>
