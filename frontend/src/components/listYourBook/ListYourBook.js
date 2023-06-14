@@ -1,47 +1,54 @@
-import ListYourBookInput from "../listYourBookInput/ListYourBookInput";
-import ListYourBookOutput from "../listYourBookOutput/ListYourBookOutput";
-import React, { useState } from "react";
-import { books } from "../../data.js";
+import ListYourBookInput from '../listYourBookInput/ListYourBookInput';
+import ListYourBookOutput from '../listYourBookOutput/ListYourBookOutput';
+import React, { useState, useEffect } from 'react';
+import { books } from '../../data.js';
 
 function ListYourBook() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
   const [searchResult, setSearchResult] = useState([
     {
-      title: "",
-      author: "",
-      cover: "",
-      publishedDate: "",
+      title: '',
+      author: '',
+      cover: '',
+      publishedDate: '',
     },
   ]);
 
   function handleChange(e) {
     setSearchTerm(e.target.value);
-    console.log(searchTerm);
   }
+
+  function handleEnter(e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      handleSearchClick();
+    }
+  }
+
   function handleSearchClick(e) {
-    //if searchTerm === ISBN of any book in database return that book
     function checkBook(book) {
-      if (book.isbn.toLowerCase() === searchTerm.toLowerCase()) {
-        return book;
-      }
-      if (book.title.toLowerCase() === searchTerm.toLowerCase()) {
+      if (
+        book.isbn.toLowerCase() === searchTerm.toLowerCase() ||
+        book.title.toLowerCase() === searchTerm.toLowerCase()
+      ) {
         return book;
       }
     }
     let result = books.filter(checkBook);
-    console.log(result);
 
-    if (result !== []) {
+    if (result.length > 0) {
       setSearchResult(result);
     }
-
-    console.log(searchResult);
   }
+
 
   return (
     <div>
       <h1>List Your Book</h1>
-      <ListYourBookInput onChange={handleChange} onClick={handleSearchClick} />
+      <ListYourBookInput
+        onChange={handleChange}
+        onClick={handleSearchClick}
+        onKeyPress={handleEnter}
+      />
       <ListYourBookOutput book={searchResult[0]} />
     </div>
   );

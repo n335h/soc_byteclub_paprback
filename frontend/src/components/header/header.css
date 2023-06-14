@@ -69,10 +69,13 @@ li {
   .navbar.open .menu-toggle .bar:last-child {
     transform: rotate(-45deg) translate(11px, -2px);
   }
-
-
-
-
-
+  .userIcon {
+   height: 5vw;
+    width: auto;
+  }
+ .menuBar {
+  display: flex;
+  flex-direction: row;
+ }
 
 }

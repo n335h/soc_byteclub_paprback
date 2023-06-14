@@ -1,11 +1,18 @@
 // import tokillamockingbird from "../../assets/images/books/to-kill-a-mockingbird.png";
+import coverDefault from '../../assets/images/books/coverDefault.png';
+import './listYourBookOutput.css';
 
 function ListYourBookOutput(props) {
   return (
     <div>
-      <img id="cover" src={props.book.cover} alt="book cover" />
+      <img
+        id="cover"
+        src={props.book.cover || coverDefault}
+        alt="book cover"
+      />
       <p>Title:</p>
       <input
+        className="outputForm"
         id="title"
         placeholder="Title"
         type="text"
@@ -14,6 +21,7 @@ function ListYourBookOutput(props) {
       ></input>
       <p>Author:</p>
       <input
+        className="outputForm"
         id="author"
         value={props.book.author}
         placeholder="Author"
@@ -21,6 +29,7 @@ function ListYourBookOutput(props) {
       ></input>
       <p>Published:</p>
       <input
+        className="outputForm"
         id="published"
         placeholder="Published"
         type="text"
@@ -29,7 +38,7 @@ function ListYourBookOutput(props) {
       ></input>
       <p>Condition:</p>
       <form id="condition">
-        <select name="Condition">
+        <select  className='outputForm' name="Condition">
           <option value="new">New</option>
           <option value="like-new">Like New</option>
           <option value="very-good">Very Good</option>
@@ -39,7 +48,13 @@ function ListYourBookOutput(props) {
         </select>
       </form>
       <p>Notes:</p>
-      <input id="notes" type="text" placeholder="Notes"></input>
+      <input
+        className="outputForm"
+        id="notes"
+        type="text"
+        placeholder="Notes"
+      ></input>
+      <br></br>
       <button id="post-listing">Post Listing</button>
     </div>
   );
