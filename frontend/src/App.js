@@ -10,8 +10,6 @@ import FAQ from './pages/FAQ';
 import Listings from './pages/Listings';
 import ListBook from './pages/ListBook';
 import Offer from './pages/Offer';
-import { useState } from 'react';
-
 
 import Footer from './components/footer/Footer';
 import './App.css';

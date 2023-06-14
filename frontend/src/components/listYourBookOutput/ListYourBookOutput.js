@@ -1,26 +1,30 @@
+// import tokillamockingbird from "../../assets/images/books/to-kill-a-mockingbird.png";
+
 function ListYourBookOutput(props) {
   return (
     <div>
-      <img id="cover" src="" alt=""></img>
+      <img id="cover" src={props.book.cover} alt="book cover" />
       <p>Title:</p>
       <input
         id="title"
-        type="text"
         placeholder="Title"
+        type="text"
+        value={props.book.title}
         disabled="disabled"
       ></input>
       <p>Author:</p>
       <input
         id="author"
-        type="text"
+        value={props.book.author}
         placeholder="Author"
         disabled="disabled"
       ></input>
-      <p>Edition:</p>
+      <p>Published:</p>
       <input
-        id="edition"
+        id="published"
+        placeholder="Published"
         type="text"
-        placeholder="Edition"
+        value={props.book.publishedDate}
         disabled="disabled"
       ></input>
       <p>Condition:</p>
