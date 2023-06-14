@@ -11,7 +11,7 @@ export const books = [
   },
   {
     isbn: "9780061120084",
-    cover: "books/1984.png",
+cover: "books/1984.png",
     title: "1984",
     author: "George Orwell",
     publisher: "Secker & Warburg",
@@ -21,7 +21,7 @@ export const books = [
   },
   {
     isbn: "9798404767230",
-    cover: "books/pride-and-prejudice.png",
+ cover: "books/pride-and-prejudice.png",
     title: "Pride and Prejudice",
     author: "Jane Austen",
     publisher: "T. Egerton, Whitehall",
@@ -41,7 +41,7 @@ export const books = [
   },
   {
     isbn: "9780544273443",
-    cover: "books/tlotr.png",
+cover: "books/tlotr.png",
     title: "The Lord of the Rings",
     author: "J.R.R. Tolkien",
     publisher: "Allen & Unwin",
@@ -81,7 +81,7 @@ export const books = [
   },
   {
     isbn: "9780143105954",
-    cover: "books/moby-dick-or-the-whale.png",
+   cover: "books/moby-dick-or-the-whale.png",
     title: "Moby-Dick; or, The Whale",
     author: "Herman Melville",
     publisher: "Richard Bentley (UK)",
@@ -101,7 +101,7 @@ export const books = [
   },
   {
     isbn: "9780486280615",
-    cover: "books/adventures-of-huckleberry-finn.png",
+   cover: "books/adventures-of-huckleberry-finn.png",
     title: "The Adventures of Huckleberry Finn",
     author: "Mark Twain",
     publisher: "Chatto & Windus",
@@ -111,7 +111,7 @@ export const books = [
   },
   {
     isbn: "9780064471046",
-    cover:
+ cover:
       "books/the-lion-the-witch-and-the-wardrobe-the-chronicles-of-narnia-book.png",
     title: "The Lion, the Witch & the Wardrobe",
     author: "C.S. Lewis",
@@ -122,7 +122,7 @@ export const books = [
   },
   {
     isbn: "9780062315007",
-    cover: "books/the-alchemist.png",
+ cover: "books/the-alchemist.png",
     title: "The Alchemist",
     author: "Paulo Coelho",
     publisher: "HarperCollins",
@@ -142,7 +142,7 @@ export const books = [
   },
   {
     isbn: "9781512308051",
-    cover: "books/frankenstein.png",
+ cover: "books/frankenstein.png",
     title: "Frankenstein",
     author: "Mary Shelley",
     publisher: "Lackington, Hughes, Harding, Mavor & Jones",
@@ -152,7 +152,7 @@ export const books = [
   },
   {
     isbn: "9780439023528",
-    cover: "books/the-hunger-games.png",
+cover: "books/the-hunger-games.png",
     title: "The Hunger Games",
     author: "Suzanne Collins",
     publisher: "Scholastic Corporation",
@@ -162,7 +162,7 @@ export const books = [
   },
   {
     isbn: "9780307588371",
-    cover: "books/gone-girl.png",
+ cover: "books/gone-girl.png",
     title: "Gone Girl",
     author: "Gillian Flynn",
     publisher: "Crown Publishing Group",
@@ -172,7 +172,7 @@ export const books = [
   },
   {
     isbn: "9780698185395",
-    cover: "books/the-girl-on-the-train.png",
+  cover: "books/the-girl-on-the-train.png",
     title: "The Girl on the Train",
     author: "Paula Hawkins",
     publisher: "Riverhead Books",
@@ -281,6 +281,7 @@ export const books = [
     keySearchWords: ["art", "Vermeer", "forbidden love"],
   },
   {
+
     isbn: "",
     cover: "books/the-lovely-bones.png",
     title: "The Lovely Bones",
@@ -328,6 +329,7 @@ export const books = [
   {
     isbn: "9798374735512",
     cover: "books/great-expectations.png",
+
     title: "Great Expectations",
     author: "Charles Dickens",
     publisher: "Chapman & Hall",
