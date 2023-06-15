@@ -1,7 +1,9 @@
+
 import ListYourBookInput from '../listYourBookInput/ListYourBookInput';
 import ListYourBookOutput from '../listYourBookOutput/ListYourBookOutput';
 import React, { useState } from 'react';
 import './listYourBook.css';
+
 
 //we want the areas to clear after the book is listed
 //if searchterm is EMPTY set the result to empty
@@ -13,23 +15,23 @@ import './listYourBook.css';
 //FAKE THE ISER ID THAT IS BEING SENT TO THE DATABASE
 
 function ListYourBook() {
-  const [condition, setCondition] = useState('');
-  const [notes, setNotes] = useState('');
+  const [condition, setCondition] = useState("");
+  const [notes, setNotes] = useState("");
   const [newListing, setNewListing] = useState({
-    title: '',
-    author: '',
-    isbn: '',
-    condition: '',
-    notes: '',
-    cover_img: '',
+    title: "",
+    author: "",
+    isbn: "",
+    condition: "",
+    notes: "",
+    cover_img: "",
     user_id: 1,
   });
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [searchResult, setSearchResult] = useState({
-    title: '',
-    author: '',
-    cover: '',
-    publishedDate: '',
+    title: "",
+    author: "",
+    cover_img: "",
+    publishedDate: "",
   });
 
   // useEffect(() => {
@@ -41,7 +43,7 @@ function ListYourBook() {
   }
 
   function handleEnter(e) {
-    if (e.key === 'Enter' || e.keyCode === 13) {
+    if (e.key === "Enter" || e.keyCode === 13) {
       handleSearchClick();
     }
   }
@@ -53,17 +55,17 @@ function ListYourBook() {
           if (res.ok) {
             return res.json();
           } else {
-            throw new Error('No book found');
+            throw new Error("No book found");
           }
         })
         .then((data) => setSearchResult(data.payload[0]))
         .catch((error) => {
-          console.error('Error fetching data:', error);
+          console.error("Error fetching data:", error);
           setSearchResult({
-            title: '',
-            author: '',
-            cover: '',
-            publishedDate: '',
+            title: "",
+            author: "",
+            cover_img: "",
+            publishedDate: "",
           });
         });
       console.log(searchResult);
@@ -88,7 +90,9 @@ function ListYourBook() {
       user_id: 1,
     });
     console.log(newListing);
+
     console.log('List Post CLicked');
+
   }
 
   return (
