@@ -87,6 +87,7 @@ function ListYourBook() {
       user_id: 1,
     });
     console.log(newListing);
+    console.log('List Post CLicked');
   }
 
   return (
