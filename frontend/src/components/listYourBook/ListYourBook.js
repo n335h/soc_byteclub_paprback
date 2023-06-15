@@ -10,7 +10,21 @@ import React, { useState } from 'react';
 //connect post listing to the backend - make an addition to the database
 
 
+//FAKE THE ISER ID THAT IS BEING SENT TO THE DATABASE
+
+
 function ListYourBook() {
+  const[condition, setCondition] = useState('');
+  const[notes, setNotes] = useState('');
+  const [newListing, setNewListing] = useState({
+    title: '',
+    author: '',
+    isbn: '',
+    condition: '',
+    notes: '',
+    cover_img: '',
+    user_id: 1
+  });
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResult, setSearchResult] = useState({
     title: '',
@@ -54,9 +68,26 @@ function ListYourBook() {
             publishedDate: '',
           });
         });
+        console.log(searchResult);
     }
   }
 
+
+function updateCondition(e){
+  setCondition(e.target.value)
+}
+
+function handleListingClick() {
+  setNewListing({
+    title: searchResult.title,
+    author: searchResult.author,
+    isbn: searchResult.isbn,
+    condition: '',
+    notes: '',
+    cover_img: searchResult.cover_img,
+    user_id: 1
+  });
+}
 
 
   return (
@@ -67,9 +98,19 @@ function ListYourBook() {
         onClick={handleSearchClick}
         onKeyPress={handleEnter}
       />
-      <ListYourBookOutput book={searchResult} />
+      <ListYourBookOutput onClick={handleListingClick} book={searchResult} />
     </div>
   );
 }
 
 export default ListYourBook;
+
+
+//PLAN
+//1. Create a new variable - new listing (object)
+//2. set params - combination of title, author, published date, condition, notes
+  //Assisgn the content of notes and condition to individual states
+//3. Adjust SQL database - to have column for conditon, notes
+// adjust SQL database - listings - delete edition for published date
+//adjsut form on the listings to remove the published date box
+//4. Construct a fetch request to post the new listing to the database - TBC??

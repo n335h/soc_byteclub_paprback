@@ -69,9 +69,18 @@ function ListYourBookOutput(props) {
         placeholder="Notes"
       ></input>
       <br></br>
-      <button id="post-listing" >Post Listing</button>
+      <button onClick={props.onClick} id="post-listing" >Post Listing</button>
     </div>
   );
 }
 
 export default ListYourBookOutput;
+
+
+
+//PLAN
+//1. Create a new variable - new listing (object)
+//2. set params - combination of title, author, published date, condition, notes
+  //Assisgn the content of notes and condition to individual states
+//3. Adjust SQL database - to have column for conditon, notes
+//4. Construct a fetch request to post the new listing to the database - TBC??
