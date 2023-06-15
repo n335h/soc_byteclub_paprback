@@ -1,10 +1,55 @@
 footer {
-    background-color: #296D6D;
-    padding: 25px 0;
-    text-align: center;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.5;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  text-align: center;
+  color: #ffffff;
+  font-size: var(--text-r);
+  min-height: 175px;
+}
+
+.footer-container {
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: var(--margin);
+}
+
+.company-details {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.footer-branding {
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+  left: calc((100% / 2) - 70px);
+}
+
+.footer-logo {
+  width: 140px;
+  fill: var(--background);
+}
+
+@media screen and (max-width: 600px) {
+  footer .company-details {
+    font-size: var(--text-s)
+  }
+
+  .footer-branding {
+    margin-top: 10px;
+  }
+
+  .logo {
+    scale: 0.75;
+  }
     
+  .footer-copyright {
+    font-size: var(--text-s);
+  }
 }

@@ -1,17 +1,74 @@
 #cover {
-    height: 20vw;
-    width: auto;
-    margin: 1vw auto;
+    height: auto;
+    width:60%;
+    margin: 0.3vh auto;
 }
 
 .outputForm {
-    width: 14vw;
+    width: 13vw;
+font-size: var(--text-s);
+height:3rem;
+border-radius: 0.5rem;
+border: 1px solid #c4c4c4;
+color: ;
+}
+.outputFormLabels {
+    font-size:var(--text-r);
+    display: flex;
+    width: 13vw;
+    margin: 0.3vh auto;
+    justify-content: flex-start;
 }
 .outputFormNotes {
-    width: 14vw;
+    width: 13vw;
     height: 3vw;
+    border-radius: 0.5rem;
+border: 1px solid #c4c4c4;
 }
 .outputForm p {
     width: 14vw;
     justify-content: flex-start;
+    
 }
+
+.postListing  {
+    background-color: #DE9E36;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: var(--text-s);
+    margin: 2px 2px;
+    cursor: pointer;
+    font-weight: 600;
+
+  }
+  .postListing:hover {
+    background-color: #DE9E36;
+    color: white;
+    scale: 1.1;
+  }
+/* 
+  @media screen and (max-width: 600px) {
+    #cover {
+        height: 45vw;
+        width: auto;
+        margin: 1vw auto;
+    }
+    .outputForm {
+        width: 35vw;
+        
+        
+    }
+    .outputFormNotes {
+        width: 35vw;
+        height: 10vw;
+        
+    }
+    .outputForm p {
+        width: 14vw;
+        justify-content: flex-start;
+    }
+  }     */

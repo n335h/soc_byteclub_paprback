@@ -1,8 +1,9 @@
-import ListYourBookInput from "../listYourBookInput/ListYourBookInput";
-import ListYourBookOutput from "../listYourBookOutput/ListYourBookOutput";
-import React, { useState } from "react";
-// import coverdefault from '../../assets/images/coverDefault.png';
-// const coverdefault = require("../../assets/images/coverDefault.png");
+
+import ListYourBookInput from '../listYourBookInput/ListYourBookInput';
+import ListYourBookOutput from '../listYourBookOutput/ListYourBookOutput';
+import React, { useState } from 'react';
+import './listYourBook.css';
+
 
 //we want the areas to clear after the book is listed
 //if searchterm is EMPTY set the result to empty
@@ -89,10 +90,13 @@ function ListYourBook() {
       user_id: 1,
     });
     console.log(newListing);
+
+    console.log('List Post CLicked');
+
   }
 
   return (
-    <div>
+    <div id="listBookContainer">
       <h1>List Your Book</h1>
       <ListYourBookInput
         onChange={handleChange}
@@ -100,7 +104,9 @@ function ListYourBook() {
         onKeyPress={handleEnter}
       />
       <ListYourBookOutput
-        onClick={(handleListingClick, updateCondition, updateNotes)}
+        onClick={handleListingClick}
+        onChangeCondition={updateCondition}
+        onChangeNotes={updateNotes}
         book={searchResult}
       />
     </div>

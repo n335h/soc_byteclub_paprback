@@ -1,6 +1,8 @@
 // import tokillamockingbird from "../../assets/images/books/to-kill-a-mockingbird.png";
+
 import "./listYourBookOutput.css";
 import coverdefault from '../../assets/images/coverDefault.png';
+
 
 //Creating a listed books array
 //1. Create a new array - in a data file.
@@ -18,8 +20,12 @@ import coverdefault from '../../assets/images/coverDefault.png';
 function ListYourBookOutput(props) {
   return (
     <div>
+
       <img id="cover" src={props.book.cover_img || coverdefault} alt="book cover" />
-      <p>Title:</p>
+      
+
+      <p className="outputFormLabels">Title:</p>
+
       <input
         className="outputForm"
         id="title"
@@ -28,7 +34,7 @@ function ListYourBookOutput(props) {
         value={props.book.title}
         disabled="disabled"
       ></input>
-      <p>Author:</p>
+      <p className="outputFormLabels">Author:</p>
       <input
         className="outputForm"
         id="author"
@@ -36,7 +42,7 @@ function ListYourBookOutput(props) {
         placeholder="Author"
         disabled="disabled"
       ></input>
-      <p>Published:</p>
+      <p className="outputFormLabels">Published:</p>
       <input
         className="outputForm"
         id="published"
@@ -45,8 +51,9 @@ function ListYourBookOutput(props) {
         value={props.book.publishedDate}
         disabled="disabled"
       ></input>
-      <p>Condition:</p>
-      <form id="condition">
+
+      <p className="outputFormLabels">Condition:</p>
+       <form id="condition" onChange={props.onChangeCondition}>
         <select className="outputForm" name="Condition">
           <option value="New">New</option>
           <option value="Like New">Like New</option>
@@ -54,17 +61,24 @@ function ListYourBookOutput(props) {
           <option value="Good">Good</option>
           <option value="Acceptable">Acceptable</option>
           <option value="Poor">Poor</option>
+
         </select>
       </form>
-      <p>Notes:</p>
+      <p className="outputFormLabels">Notes:</p>
       <input
+        onChange={props.onChangeNotes}
         className="outputFormNotes"
         id="notes"
         type="text"
         placeholder="Notes"
       ></input>
       <br></br>
-      <button onClick={props.onClick} id="post-listing">
+
+      <button
+        className="postListing"
+        onClick={props.onClick}
+        id="post-listing"
+      >
         Post Listing
       </button>
     </div>
