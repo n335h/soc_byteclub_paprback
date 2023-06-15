@@ -4,7 +4,7 @@
 
 function Listings() {
   return (
-    <section id="listings">
+    <section className='pages' id="listings">
       <div id="listings-container">
       <h1>Browse Listings</h1>
       

@@ -10,7 +10,7 @@ function Books() {
 
 
   return (
-    <section id="books">
+    <section className='pages' id="books">
       <div className="books-container">
       <h1>Browse Books</h1>
       <div className="books-grid">

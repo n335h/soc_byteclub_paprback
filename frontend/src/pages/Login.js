@@ -4,7 +4,7 @@
 
 function Login() {
   return (
-    <section id="login">
+    <section className='pages' id="login">
       <div className="login-container">
       <h1>Login</h1>
       </div>
