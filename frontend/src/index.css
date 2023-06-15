@@ -5,7 +5,40 @@
 
 /*==================== CSS VARIABLES ====================*/
 
+:root {
 
+  /* Global Colours */
+
+  --main-color: #DE9E36;
+  --secondary-color: #296D6D;
+  --background: #F3F3F3;
+  --text-color: #222222;
+
+  /* Global Font Sizes */
+
+  font-size: 62.5%;
+
+  --text-xxl: 4.8rem;
+  --text-xl: 2.4rem;
+  --text-l: 2rem;
+  --text-r: 1.6rem;
+  --text-s: 1.2rem;
+  --text-xs:1rem;
+
+  /* Global Margins */
+
+  --margin-top: 1.6rem;
+  --margin-left: 1rem;
+  --margin-right: 1rem;
+  --margin-bottom: 1.6rem;
+
+  /* Global Padding */
+
+  --padding-left: 5vw;
+  --padding-right: 5vw;
+  --padding: 0 5vw;
+
+}
 
 
 /*========================== BASE =======================*/
