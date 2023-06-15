@@ -1,3 +1,19 @@
 .App {
   text-align: center;
 }
+
+body {
+  height: 100vh; /* Hide vertical scrollbar */
+}
+  /* Hide the vertical scroll bar */
+  ::-webkit-scrollbar {
+    width: 0em;
+  }
+
+
+
+  /* Content area */
+  .content {
+    height: 300px;
+    overflow-y: scroll;
+  }

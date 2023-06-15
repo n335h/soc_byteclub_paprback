@@ -16,14 +16,9 @@ function Books() {
       <div className="books-grid">
       {books.map((book) => (
       <Book
-      key={book.isbn}
-      isbn={book.isbn}
       cover={book.cover}
       title={book.title}
       author={book.author}
-      publisher={book.publisher}
-      publishedDate={book.publishedDate}
-      genre={book.genre}
        />
       ))}
       </div>

@@ -41,7 +41,7 @@ function Header() {
               <button className="login">Login</button>
             </Link>
           </div>
-
+</div>
           <div className="menuBar">
             <div className="header-bottom">
               <nav className={`navbar ${menuOpen ? 'open' : ''}`}>
@@ -64,18 +64,18 @@ function Header() {
                 <ul className={`menu ${menuOpen ? 'open' : ''}`}>
                   <li>
                     <Link to="/browse">
-                      <button className="browse">Browse</button>
+                      <button id="navbutton"className="browse">Browse</button>
                     </Link>
                   </li>
 
                   <li>
                     <Link to="/about">
-                      <button className="about">About</button>
+                      <button id="navbutton" className="about">About</button>
                     </Link>
                   </li>
                   <li>
                     <Link to="/faq">
-                      <button className="faq">FAQ</button>
+                      <button id="navbutton" className="faq">FAQ</button>
                     </Link>
                   </li>
                 </ul>
@@ -83,7 +83,6 @@ function Header() {
             </div>
           </div>
         </div>
-      </div>
     </header>
   );
 }

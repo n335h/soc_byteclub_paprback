@@ -63,13 +63,13 @@ function ListYourBookOutput(props) {
       </form>
       <p>Notes:</p>
       <input
-        className="outputForm"
+        className="outputFormNotes"
         id="notes"
         type="text"
         placeholder="Notes"
       ></input>
       <br></br>
-      <button id="post-listing">Post Listing</button>
+      <button id="post-listing" >Post Listing</button>
     </div>
   );
 }
