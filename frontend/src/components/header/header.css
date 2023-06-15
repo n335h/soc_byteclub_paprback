@@ -1,5 +1,4 @@
 header {
-  position: sticky;
   top: 0;
   left: 0;
   width: 100vw;
@@ -20,6 +19,13 @@ header {
   background-color: var(--background);
 }
 
+.header-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -29,44 +35,55 @@ header {
   list-style: none;
   height: 30%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
+}
 
+.menu.open::before {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }
 
 @media screen and (max-width: 600px) {
-.login {
-   display: none;
-}
-.userIcon {
-    display: flex;
-}
-.signup {
+
+  .header-bottom {
+    background-color: transparent;
+  }
+
+  .login {
     display: none;
-}
+  }
 
- .navbar {
-   flex-direction: row;
-   align-items: flex-start;
-   display: flex;
-   justify-content:  space-evenly;
- }
+  .userIcon {
+      display: flex;
+  }
 
- .menu-toggle {
+  .signup {
+      display: none;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: flex-start;
+    display: flex;
+    justify-content:  space-evenly;
+  }
+
+  .menu-toggle {
     display: flex; 
     flex-direction: column;
 
-}
+  }
 
-.navbar ul {
+  .navbar ul {
     display: none;
-}
+  }
 
-.navbar ul.open {
-    display: flex;
-    flex-direction: column;
-}
-li {
-    list-style: none;
-}
+  .navbar ul.open {
+      display: flex;
+      flex-direction: column;
+  }
+  li {
+      list-style: none;
+  }
 
   .menu-toggle .bar {
     width: 25px;
@@ -78,13 +95,17 @@ li {
   }
 
   .menu.open {
+    position: absolute;
     background-color: var(--background);
     height: auto;
-    margin-top: -10px;
+    right: 0;
+    top: 100px;
+    opacity: 1;
+    
   }
 
   .navbar.open .menu-toggle .bar:first-child {
-    transform: rotate(45deg) translate(10px, 2px);
+    transform: translateX(-6px) rotate(45deg) translate(10px, 2px);
     top: 2px;
   }
 
@@ -93,27 +114,31 @@ li {
   }
 
   .navbar.open .menu-toggle .bar:last-child {
-    transform: rotate(-45deg) translate(11px, -2px);
+    transform: translateX(-5px) rotate(-45deg) translate(10px, -4px);
   }
+
   .userIcon {
    height: 5vw;
     width: auto;
   }
- .menuBar {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-right: 2vw;
- }
- .header-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  background-color: var(--background);
- }
- .menu {
-  background-color: none;
- }
+
+  .menuBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 2vw;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--background);
+  }
+
+  .menu {
+    background-color: none;
+  }
 
 }
 

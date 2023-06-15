@@ -1,12 +1,11 @@
 footer {
-  position: fixed;
   bottom: 0;
   width: 100%;
   background-color: var(--secondary-color);
   text-align: center;
   color: #ffffff;
   font-size: var(--text-r);
-  min-height: 175px;
+  min-height: 100vh;
 }
 
 .footer-container {
@@ -21,22 +20,29 @@ footer {
 }
 
 .company-details {
+  margin-top: 15px;
   text-align: left;
 }
 
 .footer-branding {
   position: absolute;
-  top: -10px;
+  top: 0;
+  margin-top: 10px;
   left: calc((100% / 2) - 70px);
 }
 
 .footer-logo {
   width: 140px;
+  fill: var(--background);
 }
 
 @media screen and (max-width: 600px) {
   footer .company-details {
     font-size: var(--text-s)
+  }
+
+  .footer-branding {
+    margin-top: 10px;
   }
 
   .logo {
