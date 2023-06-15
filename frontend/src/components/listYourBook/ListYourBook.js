@@ -86,6 +86,8 @@ function ListYourBook() {
       cover_img: searchResult.cover_img,
       user_id: 1,
     });
+    console.log(newListing);
+    console.log('List Post CLicked');
   }
 
   return (
@@ -97,7 +99,9 @@ function ListYourBook() {
         onKeyPress={handleEnter}
       />
       <ListYourBookOutput
-        onClick={(handleListingClick, updateCondition, updateNotes)}
+        onClick={handleListingClick}
+        onChangeCondition={updateCondition}
+        onChangeNotes={updateNotes}
         book={searchResult}
       />
     </div>
