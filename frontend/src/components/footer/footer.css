@@ -5,7 +5,7 @@ footer {
   text-align: center;
   color: #ffffff;
   font-size: var(--text-r);
-  min-height: 100vh;
+  min-height: 175px;
 }
 
 .footer-container {
