@@ -4,7 +4,7 @@
 
 function Offer() {
   return (
-    <section id="offer">
+    <section className='pages' id="offer">
       <div className="offer-container">
       <h1>Make an Offer</h1>
       </div>

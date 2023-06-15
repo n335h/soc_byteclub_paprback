@@ -1,7 +1,6 @@
 .App {
   text-align: center;
 }
-
 body {
   height: 100vh; /* Hide vertical scrollbar */
 }
@@ -16,4 +15,7 @@ body {
   .content {
     height: 300px;
     overflow-y: scroll;
+  }
+  .pages {
+    padding-top: 14vh;
   }

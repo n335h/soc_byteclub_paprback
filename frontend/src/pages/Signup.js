@@ -1,12 +1,8 @@
-
-
-
-
 function Signup() {
   return (
-    <section id="signup">
+    <section className="pages" id="signup">
       <div className="signup-container">
-      <h1>Signup</h1>
+        <h1>Signup</h1>
       </div>
     </section>
   );
