@@ -23,7 +23,7 @@ function ListYourBookOutput(props) {
         src={props.book.cover || coverDefault}
         alt="book cover"
       />
-      <p>Title:</p>
+      <p className="outputFormLabels">Title:</p>
       <input
         className="outputForm"
         id="title"
@@ -32,7 +32,7 @@ function ListYourBookOutput(props) {
         value={props.book.title}
         disabled="disabled"
       ></input>
-      <p>Author:</p>
+      <p className="outputFormLabels">Author:</p>
       <input
         className="outputForm"
         id="author"
@@ -40,7 +40,7 @@ function ListYourBookOutput(props) {
         placeholder="Author"
         disabled="disabled"
       ></input>
-      <p>Published:</p>
+      <p className="outputFormLabels">Published:</p>
       <input
         className="outputForm"
         id="published"
@@ -49,7 +49,7 @@ function ListYourBookOutput(props) {
         value={props.book.publishedDate}
         disabled="disabled"
       ></input>
-      <p>Condition:</p>
+      <p className="outputFormLabels">Condition:</p>
       <form id="condition" onChange={props.onChangeCondition}>
         <select className="outputForm" name="Condition">
           <option value="new">New</option>
@@ -60,7 +60,7 @@ function ListYourBookOutput(props) {
           <option value="poor">Poor</option>
         </select>
       </form>
-      <p>Notes:</p>
+      <p className="outputFormLabels">Notes:</p>
       <input
         onChange={props.onChangeNotes}
         className="outputFormNotes"
@@ -69,7 +69,11 @@ function ListYourBookOutput(props) {
         placeholder="Notes"
       ></input>
       <br></br>
-      <button className='postListing' onClick={props.onClick} id="post-listing">
+      <button
+        className="postListing"
+        onClick={props.onClick}
+        id="post-listing"
+      >
         Post Listing
       </button>
     </div>
