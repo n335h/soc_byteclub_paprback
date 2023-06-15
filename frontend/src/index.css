@@ -31,11 +31,13 @@
   --margin-left: 1rem;
   --margin-right: 1rem;
   --margin-bottom: 1.6rem;
+  --margin: 2rem 5vw;
 
   /* Global Padding */
 
   --padding-left: 5vw;
   --padding-right: 5vw;
+  --padding-top: 2vw;
   --padding: 0 5vw;
 
 }
