@@ -7,3 +7,11 @@
 .outputForm {
     width: 14vw;
 }
+.outputFormNotes {
+    width: 14vw;
+    height: 3vw;
+}
+.outputForm p {
+    width: 14vw;
+    justify-content: flex-start;
+}

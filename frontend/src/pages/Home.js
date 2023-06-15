@@ -1,13 +1,10 @@
-
-
-
-
+import homeHero from '../assets/images/homeHero.jpg';
+import './Home.css';
 function Home() {
   return (
     <section id="home">
       <div className="home-container">
-        <h1>Paprback</h1>
-        <h2>Welcome to the Landing Page</h2>
+        <img className="hero" src={homeHero} alt="Logo" />
       </div>
     </section>
   );
