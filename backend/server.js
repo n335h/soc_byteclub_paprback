@@ -145,7 +145,7 @@ app.get("/api/listings", async function (req, res) {
 app.post("/api/listings", async function (req, res) {
   try {
     const result = await client.query(
-      "INSERT INTO listings (isbn, title, author, edition, condition, cover_img, notes, userid)"
+      'INSERT INTO listings ( title, author, isbn, condition, notes, cover_img, user_id) VALUES ($1, $2, $3, $4, $5, $6, $7)'
       [       
         req.body.author,
         req.body.condition,
