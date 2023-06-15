@@ -145,17 +145,15 @@ app.get("/api/listings", async function (req, res) {
 app.post("/api/listings", async function (req, res) {
   try {
     const result = await client.query(
-      "INSERT INTO listings (isbn, title, author, edition, condition, price, seller, email, phone) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)",
-      [
-        req.body.isbn,
-        req.body.title,
+      "INSERT INTO listings (isbn, title, author, edition, condition, cover_img, notes, userid)"
+      [       
         req.body.author,
-        req.body.edition,
         req.body.condition,
-        req.body.price,
-        req.body.seller,
-        req.body.email,
-        req.body.phone,
+        req.body.cover_img,
+        req.body.isbn,
+        req.body.notes,
+        req.body.title,
+        req.body.user_id,
       ]
     );
 
