@@ -1,5 +1,6 @@
 // import tokillamockingbird from "../../assets/images/books/to-kill-a-mockingbird.png";
 import "./listYourBookOutput.css";
+import coverdefault from '../../assets/images/coverDefault.png';
 
 //Creating a listed books array
 //1. Create a new array - in a data file.
@@ -17,7 +18,7 @@ import "./listYourBookOutput.css";
 function ListYourBookOutput(props) {
   return (
     <div>
-      <img id="cover" src={props.book.cover_img} alt="book cover" />
+      <img id="cover" src={props.book.cover_img || coverdefault} alt="book cover" />
       <p>Title:</p>
       <input
         className="outputForm"

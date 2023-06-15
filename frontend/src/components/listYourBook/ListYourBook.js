@@ -1,7 +1,8 @@
 import ListYourBookInput from "../listYourBookInput/ListYourBookInput";
 import ListYourBookOutput from "../listYourBookOutput/ListYourBookOutput";
 import React, { useState } from "react";
-let coverdefault = "../../../public/books/coverDefault.png";
+// import coverdefault from '../../assets/images/coverDefault.png';
+// const coverdefault = require("../../assets/images/coverDefault.png");
 
 //we want the areas to clear after the book is listed
 //if searchterm is EMPTY set the result to empty
@@ -21,7 +22,7 @@ function ListYourBook() {
     isbn: "",
     condition: "",
     notes: "",
-    cover_img: coverdefault,
+    cover_img: "",
     user_id: 1,
   });
   const [searchTerm, setSearchTerm] = useState("");
@@ -62,7 +63,7 @@ function ListYourBook() {
           setSearchResult({
             title: "",
             author: "",
-            cover_img: coverdefault,
+            cover_img: "",
             publishedDate: "",
           });
         });
