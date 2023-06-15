@@ -33,6 +33,7 @@ function ListYourBook() {
     }
   }
 
+
   function handleSearchClick() {
     if (searchTerm) {
       fetch(`http://localhost:5432/api/books/${searchTerm}`)
@@ -56,9 +57,7 @@ function ListYourBook() {
     }
   }
 
-  // useEffect(() => {
-  //   console.log(searchResult);
-  // }, [searchResult]);
+
 
   return (
     <div>
