@@ -10,7 +10,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #f3f3f3;
+  background-color: #fafafa;
 
   
 }
@@ -73,7 +73,7 @@ li {
   }
 
   .menu.open {
-    background-color: #f3f3f3;
+    background-color: #fafafa;
     height: auto;
     margin-top: -10px;
   }
@@ -104,7 +104,7 @@ li {
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: #f3f3f3;
+  background-color: #fafafa;
  }
  .menu {
   background-color: none;
@@ -133,7 +133,7 @@ li {
 .signup {
   background-color: transparent;
   border: none;
-  color: rgb(41, 41, 41);
+  color: #2C6868;
   padding: 10px 32px;
   text-decoration: underline;
   border-radius: 3px;

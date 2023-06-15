@@ -2,19 +2,18 @@
 import coverDefault from '../../assets/images/books/coverDefault.png';
 import './listYourBookOutput.css';
 
-
 //Creating a listed books array
 //1. Create a new array - in a data file.
 //2. Put a handleclick/on lick function in the JSX of the button
 //3. Import the empty array from the data file.
 //4. Create a function that will push the book to the array
-  //5. spread operator...?
-  //6. return an object with the requred structure (holding all the props and their inherent value)
+//5. spread operator...?
+//6. return an object with the requred structure (holding all the props and their inherent value)
 //7. A state variable is needed for the notes and condition
 
-  // function handleChange(e) {
-    
-  // }
+// function handleChange(e) {
+
+// }
 
 function ListYourBookOutput(props) {
   return (
@@ -51,8 +50,8 @@ function ListYourBookOutput(props) {
         disabled="disabled"
       ></input>
       <p>Condition:</p>
-      <form id="condition">
-        <select  className='outputForm' name="Condition">
+      <form id="condition" onChange={props.onChangeCondition}>
+        <select className="outputForm" name="Condition">
           <option value="new">New</option>
           <option value="like-new">Like New</option>
           <option value="very-good">Very Good</option>
@@ -63,24 +62,25 @@ function ListYourBookOutput(props) {
       </form>
       <p>Notes:</p>
       <input
+        onChange={props.onChangeNotes}
         className="outputFormNotes"
         id="notes"
         type="text"
         placeholder="Notes"
       ></input>
       <br></br>
-      <button onClick={props.onClick} id="post-listing" >Post Listing</button>
+      <button onClick={props.onClick} id="post-listing">
+        Post Listing
+      </button>
     </div>
   );
 }
 
 export default ListYourBookOutput;
 
-
-
 //PLAN
 //1. Create a new variable - new listing (object)
 //2. set params - combination of title, author, published date, condition, notes
-  //Assisgn the content of notes and condition to individual states
+//Assisgn the content of notes and condition to individual states
 //3. Adjust SQL database - to have column for conditon, notes
 //4. Construct a fetch request to post the new listing to the database - TBC??
