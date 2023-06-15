@@ -1,5 +1,5 @@
 import './footer.css';
-import Logo from '../../assets/icons/paprback_logo.svg';
+import Logo from '../../assets/icons/paprback_logo_white.svg';
 
 
 
