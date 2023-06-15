@@ -9,13 +9,11 @@ import React, { useState } from 'react';
 //on the sql side put the url's for the images into the database
 //connect post listing to the backend - make an addition to the database
 
-
 //FAKE THE ISER ID THAT IS BEING SENT TO THE DATABASE
 
-
 function ListYourBook() {
-  const[condition, setCondition] = useState('');
-  const[notes, setNotes] = useState('');
+  const [condition, setCondition] = useState('');
+  const [notes, setNotes] = useState('');
   const [newListing, setNewListing] = useState({
     title: '',
     author: '',
@@ -23,7 +21,7 @@ function ListYourBook() {
     condition: '',
     notes: '',
     cover_img: '',
-    user_id: 1
+    user_id: 1,
   });
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResult, setSearchResult] = useState({
@@ -47,7 +45,6 @@ function ListYourBook() {
     }
   }
 
-
   function handleSearchClick() {
     if (searchTerm) {
       fetch(`http://localhost:5432/api/books/${searchTerm}`)
@@ -68,27 +65,28 @@ function ListYourBook() {
             publishedDate: '',
           });
         });
-        console.log(searchResult);
+      console.log(searchResult);
     }
   }
 
+  function updateCondition(e) {
+    setCondition(e.target.value);
+  }
+  function updateNotes(e) {
+    setNotes(e.target.value);
+  }
 
-function updateCondition(e){
-  setCondition(e.target.value)
-}
-
-function handleListingClick() {
-  setNewListing({
-    title: searchResult.title,
-    author: searchResult.author,
-    isbn: searchResult.isbn,
-    condition: '',
-    notes: '',
-    cover_img: searchResult.cover_img,
-    user_id: 1
-  });
-}
-
+  function handleListingClick() {
+    setNewListing({
+      title: searchResult.title,
+      author: searchResult.author,
+      isbn: searchResult.isbn,
+      condition: condition,
+      notes: notes,
+      cover_img: searchResult.cover_img,
+      user_id: 1,
+    });
+  }
 
   return (
     <div>
@@ -98,18 +96,20 @@ function handleListingClick() {
         onClick={handleSearchClick}
         onKeyPress={handleEnter}
       />
-      <ListYourBookOutput onClick={handleListingClick} book={searchResult} />
+      <ListYourBookOutput
+        onClick={(handleListingClick, updateCondition, updateNotes)}
+        book={searchResult}
+      />
     </div>
   );
 }
 
 export default ListYourBook;
 
-
 //PLAN
 //1. Create a new variable - new listing (object)
 //2. set params - combination of title, author, published date, condition, notes
-  //Assisgn the content of notes and condition to individual states
+//Assisgn the content of notes and condition to individual states
 //3. Adjust SQL database - to have column for conditon, notes
 // adjust SQL database - listings - delete edition for published date
 //adjsut form on the listings to remove the published date box
