@@ -1,22 +1,27 @@
-header {
+#header {
   top: 0;
-  left: 0;
   width: 100vw;
+  background-color: var(--background);
+}
+
+.header-container {
+  width: 100%;
 }
 
 .menu-toggle {
   display: none;
 }
+
 .userIcon {
   display: none;
 }
 
 .header-top {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  background-color: var(--background);
+  padding: 1rem 5vw;
 }
 
 .header-bottom {
@@ -32,7 +37,6 @@ header {
   justify-content: center;
   align-items: center;
   list-style: none;
-  height: 30%;
 }
 
 .menu.open::before {
@@ -42,8 +46,21 @@ header {
 
 @media screen and (max-width: 600px) {
 
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background);
+  }
+
+  header .header-top {
+    margin-left: 5vw;
+    padding: 1rem 0;
+  }
+  
+
   .header-bottom {
     background-color: transparent;
+    margin-right: 5vw;
   }
 
   .login {
@@ -76,11 +93,12 @@ header {
   }
 
   .navbar ul.open {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
+
   li {
-      list-style: none;
+    list-style: none;
   }
 
   .menu-toggle .bar {
@@ -97,9 +115,9 @@ header {
     background-color: var(--main-color);
     height: auto;
     right: 0;
-    top: 100px;
+    top: 72px;
     opacity: 1;
-    
+    transition: opacity 0.3s ease-in;
   }
 
   .navbar.open .menu-toggle .bar:first-child {
@@ -116,7 +134,7 @@ header {
   }
 
   .userIcon {
-   height: 5vw;
+    height: 5vw;
     width: auto;
   }
 
@@ -124,14 +142,6 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-right: 2vw;
-  }
-
-  .header-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background-color: var(--background);
   }
 
   .menu {
@@ -141,9 +151,7 @@ header {
 }
 
 .login  {
-
   background-color: var(--main-color);
-
   border: none;
   color: white;
   padding: 10px 32px;
@@ -155,13 +163,13 @@ header {
   cursor: pointer;
   font-weight: 600;
 }
+
 .login:hover {
-
   background-color: var(--main-color);
-
   color: white;
   scale: 1.1;
 }
+
 .signup {
   background-color: transparent;
   border: none;
@@ -196,23 +204,10 @@ header {
   margin: 2px 5px;
   cursor: pointer;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  
 }
+
 #navbutton:hover  {
   background-color: var(--main-color);
   color: rgb(255, 255, 255);
   scale: 1.1;
-}
-
-.header-container {
-  position: fixed;
-  width: 100%;
-  height: 10vh;
-  margin: 0;
-  padding: 0;
-}
-
-.header-top {
-  width: 100%;
-  margin: 0;
 }
