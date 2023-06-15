@@ -4,11 +4,15 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  
 }
 
 .books-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+}
+
+#books h1 {
+  font-size: var(--text-xl);
+  margin-bottom: 2rem;
 }
 

@@ -6,11 +6,11 @@
 
 .outputForm {
     width: 13vw;
-font-size: var(--text-s);
-height:3rem;
-border-radius: 0.5rem;
-border: 1px solid #c4c4c4;
-color: ;
+    font-size: var(--text-s);
+    height:3rem;
+    border-radius: 0.5rem;
+    border: 1px solid #c4c4c4;
+    color: var(--text-color);
 }
 .outputFormLabels {
     font-size:var(--text-r);
@@ -19,20 +19,21 @@ color: ;
     margin: 0.3vh auto;
     justify-content: flex-start;
 }
+
 .outputFormNotes {
     width: 13vw;
     height: 3vw;
     border-radius: 0.5rem;
-border: 1px solid #c4c4c4;
+    border: 1px solid #c4c4c4;
 }
+
 .outputForm p {
     width: 14vw;
     justify-content: flex-start;
-    
 }
 
 .postListing  {
-    background-color: #DE9E36;
+    background-color: var(--main-color);
     border: none;
     color: white;
     padding: 10px 32px;
@@ -46,7 +47,7 @@ border: 1px solid #c4c4c4;
 
   }
   .postListing:hover {
-    background-color: #DE9E36;
+    background-color: var(--main-color);
     color: white;
     scale: 1.1;
   }

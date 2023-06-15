@@ -25,7 +25,7 @@ function Header() {
   };
 
   return (
-    <header>
+    <header id="header">
       <div className="header-container">
         <div className="header-top">
           <div className="logo-container">

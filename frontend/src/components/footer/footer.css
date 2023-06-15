@@ -5,7 +5,7 @@ footer {
   text-align: center;
   color: #ffffff;
   font-size: var(--text-r);
-  min-height: 175px;
+  min-height: 225px;
 }
 
 .footer-container {
@@ -16,11 +16,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: var(--margin);
+  margin: 0 5vw;
 }
 
 .company-details {
-  margin-top: 15px;
+  margin-top: 22px;
   text-align: left;
 }
 
