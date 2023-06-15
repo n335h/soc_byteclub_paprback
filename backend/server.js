@@ -55,8 +55,8 @@ app.get("/api/books", async function (req, res) {
 // Get a single book by title
 app.get("/api/books/:title", async function (req, res) {
   try {
-    const result = await client.query("SELECT * FROM books WHERE title = $1", [
-      req.params.title,
+    const result = await client.query("SELECT * FROM books WHERE LOWER(title) = $1", [
+      req.params.title.toLowerCase()
     ]);
     if (result.rows.length > 0) {
       res.json({ success: true, payload: result.rows });
@@ -92,8 +92,8 @@ app.get("/api/listings/:isbn", async function (req, res) {
 app.get("/api/listings/:title", async function (req, res) {
   try {
     const result = await client.query(
-      "SELECT * FROM listings WHERE title = $1",
-      [req.params.title]
+      "SELECT * FROM listings WHERE LOWER(title) = $1",
+      [req.params.title.toLowerCase()]
     );
     if (result.rows.length > 0) {
       res.json({ success: true, payload: result.rows });
@@ -106,12 +106,33 @@ app.get("/api/listings/:title", async function (req, res) {
   }
 });
 
+// app.get("/api/listings/:title", async function (req, res) {
+//   try {
+//     const searchTerm = req.params.title.toLowerCase(); // Convert the search term to lowercase
+
+//     const result = await client.query(
+//       "SELECT * FROM listings WHERE LOWER(title) = $1",
+//       [searchTerm]
+//     );
+
+//     if (result.rows.length > 0) {
+//       res.json({ success: true, payload: result.rows });
+//     } else {
+//       res.send("No listing found");
+//     }
+//   } catch (error) {
+//     console.error("Error executing query:", error);
+//     res.status(500).json({ success: false, error: "Internal server error" });
+//   }
+// // });
+
+
 // Get a single book from books table by isbn or title
 app.get("/api/books/:isbntitle", async function (req, res) {
   try {
     const result = await client.query(
-      "SELECT * FROM listings WHERE isbn = $1 OR title = $1",
-      [req.params.isbntitle]
+      "SELECT * FROM listings WHERE isbn = $1 OR LOWER(title) = $1",
+      [req.params.isbntitle.toLowerCase()]
     );
     const book = result.rows[0];
     if (book) {
