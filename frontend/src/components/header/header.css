@@ -20,7 +20,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #FFBE26;
+  background-color: #DE9E36;
   list-style: none;
   height: 30%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
@@ -113,11 +113,11 @@ li {
 }
 
 .login  {
-  background-color: #FFBE26;
+  background-color: #DE9E36;
   border: none;
   color: white;
   padding: 10px 32px;
-  border-radius: 3px;
+  border-radius: 6px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -126,7 +126,7 @@ li {
   font-weight: 600;
 }
 .login:hover {
-  background-color: #FFBE26;
+  background-color: #DE9E36;
   color: white;
   scale: 1.1;
 }
@@ -136,7 +136,7 @@ li {
   color: #2C6868;
   padding: 10px 32px;
   text-decoration: underline;
-  border-radius: 3px;
+  border-radius: 6px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -153,7 +153,7 @@ li {
 }
 
 #navbutton {
-  background-color: #FFBE26;
+  background-color: #DE9E36;
   border: none;
   color: white;
   padding: 10px 32px;
@@ -167,7 +167,7 @@ li {
   
 }
 #navbutton:hover  {
-  background-color: #FFBE26;
+  background-color: #DE9E36;
   color: rgb(255, 255, 255);
   scale: 1.1;
 }
