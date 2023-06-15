@@ -15,3 +15,42 @@
     width: 14vw;
     justify-content: flex-start;
 }
+
+.postListing  {
+    background-color: #DE9E36;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    font-weight: 600;
+
+  }
+  .postListing:hover {
+    background-color: #DE9E36;
+    color: white;
+    scale: 0.9;
+  }
+
+  @media screen and (max-width: 600px) {
+    #cover {
+        height: 45vw;
+        width: auto;
+        margin: 1vw auto;
+    }
+    .outputForm {
+        width: 35vw;
+    }
+    .outputFormNotes {
+        width: 14vw;
+        height: 3vw;
+    }
+    .outputForm p {
+        width: 14vw;
+        justify-content: flex-start;
+    }
+  }    

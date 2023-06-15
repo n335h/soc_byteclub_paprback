@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 }
-body {
+main {
   height: 100vh; /* Hide vertical scrollbar */
 }
   /* Hide the vertical scroll bar */

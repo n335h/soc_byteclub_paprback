@@ -113,11 +113,13 @@ li {
 }
 
 .login  {
+
   background-color: var(--main-color);
+
   border: none;
   color: white;
   padding: 10px 32px;
-  border-radius: 3px;
+  border-radius: 6px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -126,7 +128,9 @@ li {
   font-weight: 600;
 }
 .login:hover {
+
   background-color: var(--main-color);
+
   color: white;
   scale: 1.1;
 }
@@ -136,7 +140,7 @@ li {
   color: var(--secondary-color);
   padding: 10px 32px;
   text-decoration: underline;
-  border-radius: 3px;
+  border-radius: 6px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;

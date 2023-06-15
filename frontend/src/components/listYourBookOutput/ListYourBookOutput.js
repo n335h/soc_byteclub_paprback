@@ -69,7 +69,7 @@ function ListYourBookOutput(props) {
         placeholder="Notes"
       ></input>
       <br></br>
-      <button onClick={props.onClick} id="post-listing">
+      <button className='postListing' onClick={props.onClick} id="post-listing">
         Post Listing
       </button>
     </div>
