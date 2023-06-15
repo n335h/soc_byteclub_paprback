@@ -1,6 +1,7 @@
 import ListYourBookInput from '../listYourBookInput/ListYourBookInput';
 import ListYourBookOutput from '../listYourBookOutput/ListYourBookOutput';
 import React, { useState } from 'react';
+import './listYourBook.css';
 
 //we want the areas to clear after the book is listed
 //if searchterm is EMPTY set the result to empty
@@ -91,7 +92,7 @@ function ListYourBook() {
   }
 
   return (
-    <div>
+    <div id="listBookContainer">
       <h1>List Your Book</h1>
       <ListYourBookInput
         onChange={handleChange}
