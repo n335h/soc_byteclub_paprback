@@ -1,14 +1,11 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import pkg from 'pg';
+import express from "express";
+import dotenv from "dotenv";
+import pkg from "pg";
+import cors from "cors";
 import { getBooks } from "./helper.js";
 
 export const { Client } = pkg;
 dotenv.config();
-
-
-
-
 
 const app = express();
 const port = process.env.PORT || 5432; // default port to listen
@@ -19,21 +16,16 @@ const apiKey = process.env.API_KEY;
 //Hello!!!
 
 // middleware
+app.use(cors());
 app.use(express.json());
 
-
 // Create a database client
- const client = new Client({
-    connectionString: dbConnectionString, // Use 'connectionString' instead of 'dbConnectionString'
-  });
-
+const client = new Client({
+  connectionString: dbConnectionString, // Use 'connectionString' instead of 'dbConnectionString'
+});
 
 // Connect to the database
 client.connect();
-
-  
-
-
 
 // routes
 
@@ -44,12 +36,11 @@ app.get("/", (req, res) => {
   });
 });
 
-
 // Get all books
 app.get("/api/books", async function (req, res) {
   try {
-    const result = await client.query('SELECT * FROM books');
-    
+    const result = await client.query("SELECT * FROM books");
+
     if (result.rows.length > 0) {
       res.json({ success: true, payload: result.rows });
     } else {
@@ -61,69 +52,84 @@ app.get("/api/books", async function (req, res) {
   }
 });
 
-
-
-// Get a single book by title 
+// Get a single book by title
 app.get("/api/books/:title", async function (req, res) {
   try {
-  const result = await client.query('SELECT * FROM books WHERE title = $1', [req.params.title]);
-  if (result.rows.length > 0) {
-    res.json({ success: true,
-              payload: result.rows });
-
-  } else {
-    res.send("No book found")
+    const result = await client.query("SELECT * FROM books WHERE title = $1", [
+      req.params.title,
+    ]);
+    if (result.rows.length > 0) {
+      res.json({ success: true, payload: result.rows });
+    } else {
+      res.send("No book found");
+    }
+  } catch (error) {
+    console.error("Error executing query:", error);
+    res.status(500).json({ success: false, error: "Internal server error" });
   }
-} catch (error) {
-  console.error("Error executing query:", error);
-  res.status(500).json({ success: false, error: "Internal server error" });
-
-}
 });
-
 
 // Get a single book from Listings by isbn
 app.get("/api/listings/:isbn", async function (req, res) {
   try {
-  const result = await client.query('SELECT * FROM listings WHERE isbn = $1', [req.params.isbn]);
-  const book = result.rows[0];
-  if (book) {
-    res.json({success: true,
-              payload: result.rows});
-              
-  } else {
-    res.send("No book found")
+    const result = await client.query(
+      "SELECT * FROM listings WHERE isbn = $1",
+      [req.params.isbn]
+    );
+    const book = result.rows[0];
+    if (book) {
+      res.json({ success: true, payload: result.rows });
+    } else {
+      res.send("No book found");
+    }
+  } catch (error) {
+    console.error("Error executing query:", error);
+    res.status(500).json({ success: false, error: "Internal server error" });
   }
-} catch (error) {
-  console.error("Error executing query:", error);
-  res.status(500).json({ success: false, error: "Internal server error" });
+});
 
-}});
-
-
-// Get book from listings by title 
+// Get book from listings by title
 app.get("/api/listings/:title", async function (req, res) {
   try {
-  const result = await client.query('SELECT * FROM listings WHERE title = $1', [req.params.title]);
-  if (result.rows.length > 0) {
-    res.json({ success: true,
-              payload: result.rows });
-
-  } else {
-    res.send("No listing found")
+    const result = await client.query(
+      "SELECT * FROM listings WHERE title = $1",
+      [req.params.title]
+    );
+    if (result.rows.length > 0) {
+      res.json({ success: true, payload: result.rows });
+    } else {
+      res.send("No listing found");
+    }
+  } catch (error) {
+    console.error("Error executing query:", error);
+    res.status(500).json({ success: false, error: "Internal server error" });
   }
-} catch (error) {
-  console.error("Error executing query:", error);
-  res.status(500).json({ success: false, error: "Internal server error" });
+});
 
-}});
-
+// Get a single book from books table by isbn or title
+app.get("/api/books/:isbntitle", async function (req, res) {
+  try {
+    const result = await client.query(
+      "SELECT * FROM listings WHERE isbn = $1 OR title = $1",
+      [req.params.isbntitle]
+    );
+    const book = result.rows[0];
+    if (book) {
+      res.json({ success: true, payload: result.rows });
+    } else {
+      res.send("No book found");
+    }
+  } catch (error) {
+    console.error("Error executing query:", error);
+    res.status(500).json({ success: false, error: "Internal server error" });
+  }
+});
 
 // Get all Listings
 app.get("/api/listings", async function (req, res) {
   try {
-    const result = await client.query('SELECT * FROM listings');
-    
+    const result = await client.query("SELECT * FROM listings");
+
     if (result.rows.length > 0) {
       res.json({ success: true, payload: result.rows });
     } else {
@@ -135,39 +141,28 @@ app.get("/api/listings", async function (req, res) {
   }
 });
 
-
 // List a book
 app.post("/api/listings", async function (req, res) {
   try {
-  const result = await client.query(
-    'INSERT INTO listings (isbn, title, author, edition, condition, price, seller, email, phone) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)', 
-    [req.body.isbn, req.body.title, req.body.author, req.body.edition, req.body.condition, req.body.price, req.body.seller, req.body.email, req.body.phone]
+    const result = await client.query(
+      "INSERT INTO listings (isbn, title, author, edition, condition, price, seller, email, phone) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)",
+      [
+        req.body.isbn,
+        req.body.title,
+        req.body.author,
+        req.body.edition,
+        req.body.condition,
+        req.body.price,
+        req.body.seller,
+        req.body.email,
+        req.body.phone,
+      ]
     );
 
-  if (result) {
-    res.json({success: true,
-              payload: result.rows});
-  } else {
-    res.send("Book not listed")
-  }
-} catch (error) {
-  console.error("Error executing query:", error);
-  res.status(500).json({ success: false, error: "Internal server error" });
-
-};
-});
-
-
-
-// Delete a Listing
-app.delete("/api/listings/:id", async function (req, res) {
-  try {
-    const result = await client.query('DELETE FROM listings WHERE id = $1', [req.params.id]);
     if (result) {
-      res.json({success: true,
-                payload: result.rows});
+      res.json({ success: true, payload: result.rows });
     } else {
-      res.send("Listing not deleted")
+      res.send("Book not listed");
     }
   } catch (error) {
     console.error("Error executing query:", error);
@@ -175,40 +170,46 @@ app.delete("/api/listings/:id", async function (req, res) {
   }
 });
 
-
+// Delete a Listing
+app.delete("/api/listings/:id", async function (req, res) {
+  try {
+    const result = await client.query("DELETE FROM listings WHERE id = $1", [
+      req.params.id,
+    ]);
+    if (result) {
+      res.json({ success: true, payload: result.rows });
+    } else {
+      res.send("Listing not deleted");
+    }
+  } catch (error) {
+    console.error("Error executing query:", error);
+    res.status(500).json({ success: false, error: "Internal server error" });
+  }
+});
 
 // Close the database connection when the server is stopped
-process.on('SIGINT', () => {
-  client.end()
+process.on("SIGINT", () => {
+  client
+    .end()
     .then(() => {
-      console.log('Database connection closed');
+      console.log("Database connection closed");
       process.exit(0);
     })
     .catch((error) => {
-      console.error('Error closing database connection:', error);
+      console.error("Error closing database connection:", error);
       process.exit(1);
     });
 });
 
-
-
-
+app.get("/message", (req, res) => {
+  res.json({ message: "Hello from server!" });
+});
 
 app.listen(port, () => {
   console.log(`server started at http://localhost:${port}`);
 });
 
-
-
-
-
-
-
-
-
-
 // async function getBooksFromDatabase() {
- 
 
 //   try {
 //     await client.connect();

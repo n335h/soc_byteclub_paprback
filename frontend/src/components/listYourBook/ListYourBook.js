@@ -1,21 +1,27 @@
 import ListYourBookInput from '../listYourBookInput/ListYourBookInput';
 import ListYourBookOutput from '../listYourBookOutput/ListYourBookOutput';
-import React, { useState, useEffect } from 'react';
-import { books } from '../../data.js';
+import React, { useState } from 'react';
 
-//PLAN
-//1. fetch our API
+//we want the areas to clear after the book is listed
+//if searchterm is EMPTY set the result to empty
+//LESSON - use useEffect sparingly - it will cause an infinite loop if you don't use it correctly
+//Add in logic that accounts for lazy typing  - adjust the fetch request change it to LIKE
+//on the sql side put the url's for the images into the database
+//connect post listing to the backend - make an addition to the database
+
 
 function ListYourBook() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [searchResult, setSearchResult] = useState([
-    {
-      title: '',
-      author: '',
-      cover: '',
-      publishedDate: '',
-    },
-  ]);
+  const [searchResult, setSearchResult] = useState({
+    title: '',
+    author: '',
+    cover: '',
+    publishedDate: '',
+  });
+
+  // useEffect(() => {
+  //   handleSearchClick();
+  // }, [searchTerm]);
 
   function handleChange(e) {
     setSearchTerm(e.target.value);
@@ -27,45 +33,32 @@ function ListYourBook() {
     }
   }
 
-  function handleSearchClick(e) {
-
-    //if searchTerm === ISBN of any book in database return that book
-
-    let result = books.filter((book) => {
-      if (book.isbn.toLowerCase() === searchTerm.toLowerCase()) {
-        return book;
-      }
-      if (book.title.toLowerCase() === searchTerm.toLowerCase()) {
-        return book;
-      }
-    });
-    console.log(result);
-    
-    if (result.length === 0) {
-      result.push({
-        title: "",
-        author: "",
-        cover: "",
-        publishedDate: "",
-      });
+  function handleSearchClick() {
+    if (searchTerm) {
+      fetch(`http://localhost:5432/api/books/${searchTerm}`)
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          } else {
+            throw new Error('No book found');
+          }
+        })
+        .then((data) => setSearchResult(data.payload[0]))
+        .catch((error) => {
+          console.error('Error fetching data:', error);
+          setSearchResult({
+            title: '',
+            author: '',
+            cover: '',
+            publishedDate: '',
+          });
+        });
     }
-
-    setSearchResult(result);
-
-    console.log(searchResult);
-
   }
 
-//connecting to our database!
-
-  useEffect(() => {
-  async function getData() {
-    const response = await fetch("http://example.com/movies.json");
-    const jsonData = await response.json();
-    console.log(jsonData);
-  }})
-  
-
+  // useEffect(() => {
+  //   console.log(searchResult);
+  // }, [searchResult]);
 
   return (
     <div>
@@ -75,7 +68,7 @@ function ListYourBook() {
         onClick={handleSearchClick}
         onKeyPress={handleEnter}
       />
-      <ListYourBookOutput book={searchResult[0]} />
+      <ListYourBookOutput book={searchResult} />
     </div>
   );
 }
