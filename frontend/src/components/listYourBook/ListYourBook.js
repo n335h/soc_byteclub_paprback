@@ -78,17 +78,36 @@ function ListYourBook() {
   }
 
   function handleListingClick() {
-    setNewListing({
-      title: searchResult.title,
-      author: searchResult.author,
-      isbn: searchResult.isbn,
-      condition: condition,
-      notes: notes,
-      cover_img: searchResult.cover_img,
-      user_id: 1,
-    });
-    console.log(newListing);
+    fetch('http://localhost:5432/api/listings', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newListing),
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          throw new Error('Failed to create listing');
+        }
+      })
+      .then((data) => console.log(data))
+      .catch((error) => {
+        console.error('Error creating listing:', error);
+        setNewListing({
+          title: searchResult.title,
+          author: searchResult.author,
+          isbn: searchResult.isbn,
+          condition: condition,
+          notes: notes,
+          cover_img: searchResult.cover_img,
+          user_id: 2,
+        });
+      });
+    console.table(newListing);
     console.log('List Post CLicked');
+    console.table(newListing);
   }
 
   return (

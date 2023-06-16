@@ -1,5 +1,5 @@
 footer {
-  position: fixed;
+  
   bottom: 0;
   width: 100%;
   background-color: var(--secondary-color);
@@ -31,7 +31,9 @@ footer {
 }
 
 .footer-logo {
+  margin-top: 1vh;
   width: 140px;
+  
 }
 
 @media screen and (max-width: 600px) {
