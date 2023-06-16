@@ -1,9 +1,7 @@
 .App {
   text-align: center;
 }
-main {
-  height: 100vh; /* Hide vertical scrollbar */
-}
+
   /* Hide the vertical scroll bar */
   ::-webkit-scrollbar {
     width: 0em;
@@ -17,5 +15,5 @@ main {
     overflow-y: scroll;
   }
   .pages {
-    padding-top: 10vh;
+    padding-top: 1vh;
   }

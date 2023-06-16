@@ -1,86 +1,83 @@
-
 import ListYourBookInput from '../listYourBookInput/ListYourBookInput';
 import ListYourBookOutput from '../listYourBookOutput/ListYourBookOutput';
 import React, { useState } from 'react';
 import './listYourBook.css';
 
-
-//we want the areas to clear after the book is listed
-//if searchterm is EMPTY set the result to empty
-//LESSON - use useEffect sparingly - it will cause an infinite loop if you don't use it correctly
-//Add in logic that accounts for lazy typing  - adjust the fetch request change it to LIKE
-//on the sql side put the url's for the images into the database
-//connect post listing to the backend - make an addition to the database
-
-//FAKE THE ISER ID THAT IS BEING SENT TO THE DATABASE
-
 function ListYourBook() {
-  const [condition, setCondition] = useState("");
-  const [notes, setNotes] = useState("");
+  // State variables
+  const [condition, setCondition] = useState('');
+  const [notes, setNotes] = useState('');
   const [newListing, setNewListing] = useState({
-    title: "",
-    author: "",
-    isbn: "",
-    condition: "",
-    notes: "",
-    cover_img: "",
+    title: '',
+    author: '',
+    isbn: '',
+    condition: '',
+    notes: '',
+    cover_img: '',
     user_id: 1,
   });
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
   const [searchResult, setSearchResult] = useState({
-    title: "",
-    author: "",
-    cover_img: "",
-    publishedDate: "",
+    title: '',
+    author: '',
+    cover_img: '',
+    publishedDate: '',
   });
 
-  // useEffect(() => {
-  //   handleSearchClick();
-  // }, [searchTerm]);
-
+  // Function to handle changes in the search bar input
   function handleChange(e) {
     setSearchTerm(e.target.value);
   }
 
+  // Function to handle Enter key press in the search bar
   function handleEnter(e) {
-    if (e.key === "Enter" || e.keyCode === 13) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
       handleSearchClick();
     }
   }
 
+  // Function to handle the search button click
   function handleSearchClick() {
     if (searchTerm) {
+      // Fetch data from the Google Books API based on the search term
       fetch(`http://localhost:5432/api/books/${searchTerm}`)
         .then((res) => {
           if (res.ok) {
             return res.json();
           } else {
-            throw new Error("No book found");
+            throw new Error('No book found'); // Throw an error if no book is found
+            
           }
+          
         })
-        .then((data) => setSearchResult(data.payload[0]))
+        .then((data) => setSearchResult(data.payload[0])) // Update the searchResult state with the data from the API
         .catch((error) => {
-          console.error("Error fetching data:", error);
+          console.error('Error fetching data:', error); // Log the error
           setSearchResult({
-            title: "",
-            author: "",
-            cover_img: "",
-            publishedDate: "",
+            title: '',
+            author: '',
+            cover_img: '',
+            publishedDate: '',
           });
+          alert('No book found. Please try again.'); // Display an alert
         });
       console.log(searchResult);
     }
   }
 
-  function updateCondition(e) {
-    setCondition(e.target.value);
+  // Function to update the condition state
+  function updateCondition(e) { // e is the event object
+    setCondition(e.target.value); // Update the condition state with the value from the select element
   }
+
+  // Function to update the notes state
   function updateNotes(e) {
-    setNotes(e.target.value);
+    setNotes(e.target.value); // Update the notes state with the value from the input element
   }
 
+  // Function to handle the listing button click
   function handleListingClick() {
-
+    // Send a POST request to the backend API to create a new listing
     fetch('http://localhost:5432/api/listings', {
       method: 'POST',
       headers: {
@@ -98,6 +95,7 @@ function ListYourBook() {
       .then((data) => console.log(data))
       .catch((error) => {
         console.error('Error creating listing:', error);
+        // If there is an error, update the newListing object with the search result data and other values
         setNewListing({
           title: searchResult.title,
           author: searchResult.author,
@@ -108,37 +106,31 @@ function ListYourBook() {
           user_id: 2,
         });
       });
-    console.table(newListing);
-    console.log('List Post CLicked');
-    console.table(newListing);
 
+    console.table(newListing);
+    console.log('List Post Clicked');
+    console.table(newListing);
   }
 
+  // Render the component
   return (
     <div id="listBookContainer">
       <h1>List Your Book</h1>
+      {/* Render the input component for the search bar */}
       <ListYourBookInput
-        onChange={handleChange}
-        onClick={handleSearchClick}
-        onKeyPress={handleEnter}
+        onChange={handleChange} // Pass the handleChange function as a prop to the input component - Search book for listing
+        onClick={handleSearchClick} // Pass the handleSearchClick function as a prop to the input component- Search book for listing
+        onKeyPress={handleEnter} // Pass the handleEnter function as a prop to the input component  - Search book for listing
       />
+      {/* Render the output component for the book listing */}
       <ListYourBookOutput
-        onClick={handleListingClick}
-        onChangeCondition={updateCondition}
-        onChangeNotes={updateNotes}
-        book={searchResult}
+        onClick={handleListingClick} // Pass the handleListingClick function as a prop to the output component - Create listing
+        onChangeCondition={updateCondition} // Pass the updateCondition function as a prop to the output component - Create listing
+        onChangeNotes={updateNotes} // Pass the updateNotes function as a prop to the output component - Create listing
+        book={searchResult} // Pass the searchResult state as a prop to the output component -  Create listing
       />
     </div>
   );
 }
 
 export default ListYourBook;
-
-//PLAN
-//1. Create a new variable - new listing (object)
-//2. set params - combination of title, author, published date, condition, notes
-//Assisgn the content of notes and condition to individual states
-//3. Adjust SQL database - to have column for conditon, notes
-// adjust SQL database - listings - delete edition for published date
-//adjsut form on the listings to remove the published date box
-//4. Construct a fetch request to post the new listing to the database - TBC??
