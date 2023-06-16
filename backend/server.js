@@ -165,23 +165,10 @@ app.get("/api/listings", async function (req, res) {
 // List a book
 app.post("/api/listings", async function (req, res) {
   try {
-    const result = await client.query(
-      "INSERT INTO listings (isbn, title, author, edition, condition, price, seller, email, phone) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)",
-      [
-        req.body.isbn,
-        req.body.title,
-        req.body.author,
-        req.body.edition,
-        req.body.condition,
-        req.body.price,
-        req.body.seller,
-        req.body.email,
-        req.body.phone,
-      ]
-    );
+    const result = await postListing(req.body);
 
     if (result) {
-      res.json({ success: true, payload: result.rows });
+      res.json({ success: true, payload: result });
     } else {
       res.send("Book not listed");
     }

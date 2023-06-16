@@ -42,7 +42,7 @@ function ListYourBookOutput(props) {
         placeholder="Author"
         disabled="disabled"
       ></input>
-      <p className="outputFormLabels">Published:</p>
+      {/* <p className="outputFormLabels">Published:</p>
       <input
         className="outputForm"
         id="published"
@@ -50,7 +50,7 @@ function ListYourBookOutput(props) {
         type="text"
         value={props.book.publishedDate}
         disabled="disabled"
-      ></input>
+      ></input> */}
 
       <p className="outputFormLabels">Condition:</p>
        <form id="condition" onChange={props.onChangeCondition}>

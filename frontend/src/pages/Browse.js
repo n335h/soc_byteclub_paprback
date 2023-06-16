@@ -1,27 +1,31 @@
-import React from "react";
-import Book from "../components/book/Book";
-import { books } from "../data";
+import React from 'react';
+import Book from '../components/book/Book';
+import { books } from '../data';
 import './browse.css';
 
-
-
-
 function Books() {
-
-
   return (
-    <section className='pages' id="books">
+    <section className="pages" id="books">
       <div className="books-container">
-      <h1>Browse Books</h1>
-      <div className="books-grid">
-      {books.map((book) => (
-      <Book
-      cover={book.cover}
-      title={book.title}
-      author={book.author}
-       />
-      ))}
-      </div>
+        <h1>Browse Books</h1>
+        <div className="search-container">
+          <input
+            className="searchInputBrowse"
+            type="text"
+            placeholder="Search"
+          ></input>
+          <button className="searchButton">Search</button>
+        </div>
+
+        <div className="books-grid">
+          {books.map((book) => (
+            <Book
+              cover={book.cover}
+              title={book.title}
+              author={book.author}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

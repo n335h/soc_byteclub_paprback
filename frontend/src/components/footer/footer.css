@@ -32,6 +32,7 @@ footer {
 }
 
 .footer-logo {
+  margin-top: 1vh;
   width: 140px;
   fill: var(--background);
 }
