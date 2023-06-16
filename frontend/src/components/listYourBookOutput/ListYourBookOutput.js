@@ -1,6 +1,8 @@
 // import tokillamockingbird from "../../assets/images/books/to-kill-a-mockingbird.png";
-import coverDefault from '../../assets/images/books/coverDefault.png';
-import './listYourBookOutput.css';
+
+import "./listYourBookOutput.css";
+import coverdefault from '../../assets/images/coverDefault.png';
+
 
 //Creating a listed books array
 //1. Create a new array - in a data file.
@@ -18,12 +20,12 @@ import './listYourBookOutput.css';
 function ListYourBookOutput(props) {
   return (
     <div>
-      <img
-        id="cover"
-        src={props.book.cover || coverDefault}
-        alt="book cover"
-      />
+
+      <img id="cover" src={props.book.cover_img || coverdefault} alt="book cover" />
+      
+
       <p className="outputFormLabels">Title:</p>
+
       <input
         className="outputForm"
         id="title"
@@ -49,15 +51,17 @@ function ListYourBookOutput(props) {
         value={props.book.publishedDate}
         disabled="disabled"
       ></input> */}
+
       <p className="outputFormLabels">Condition:</p>
-      <form id="condition" onChange={props.onChangeCondition}>
+       <form id="condition" onChange={props.onChangeCondition}>
         <select className="outputForm" name="Condition">
-          <option value="new">New</option>
-          <option value="like-new">Like New</option>
-          <option value="very-good">Very Good</option>
-          <option value="good">Good</option>
-          <option value="acceptable">Acceptable</option>
-          <option value="poor">Poor</option>
+          <option value="New">New</option>
+          <option value="Like New">Like New</option>
+          <option value="Very Good">Very Good</option>
+          <option value="Good">Good</option>
+          <option value="Acceptable">Acceptable</option>
+          <option value="Poor">Poor</option>
+
         </select>
       </form>
       <p className="outputFormLabels">Notes:</p>
@@ -69,6 +73,7 @@ function ListYourBookOutput(props) {
         placeholder="Notes"
       ></input>
       <br></br>
+
       <button
         className="postListing"
         onClick={props.onClick}
