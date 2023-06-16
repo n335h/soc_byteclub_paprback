@@ -45,14 +45,14 @@ function ListYourBook() {
           if (res.ok) {
             return res.json();
           } else {
-            throw new Error('No book found');
+            throw new Error('No book found'); // Throw an error if no book is found
             
           }
           
         })
-        .then((data) => setSearchResult(data.payload[0]))
+        .then((data) => setSearchResult(data.payload[0])) // Update the searchResult state with the data from the API
         .catch((error) => {
-          console.error('Error fetching data:', error);
+          console.error('Error fetching data:', error); // Log the error
           setSearchResult({
             title: '',
             author: '',
@@ -66,13 +66,13 @@ function ListYourBook() {
   }
 
   // Function to update the condition state
-  function updateCondition(e) {
-    setCondition(e.target.value);
+  function updateCondition(e) { // e is the event object
+    setCondition(e.target.value); // Update the condition state with the value from the select element
   }
 
   // Function to update the notes state
   function updateNotes(e) {
-    setNotes(e.target.value);
+    setNotes(e.target.value); // Update the notes state with the value from the input element
   }
 
   // Function to handle the listing button click
@@ -118,16 +118,16 @@ function ListYourBook() {
       <h1>List Your Book</h1>
       {/* Render the input component for the search bar */}
       <ListYourBookInput
-        onChange={handleChange}
-        onClick={handleSearchClick}
-        onKeyPress={handleEnter}
+        onChange={handleChange} // Pass the handleChange function as a prop to the input component - Search book for listing
+        onClick={handleSearchClick} // Pass the handleSearchClick function as a prop to the input component- Search book for listing
+        onKeyPress={handleEnter} // Pass the handleEnter function as a prop to the input component  - Search book for listing
       />
       {/* Render the output component for the book listing */}
       <ListYourBookOutput
-        onClick={handleListingClick}
-        onChangeCondition={updateCondition}
-        onChangeNotes={updateNotes}
-        book={searchResult}
+        onClick={handleListingClick} // Pass the handleListingClick function as a prop to the output component - Create listing
+        onChangeCondition={updateCondition} // Pass the updateCondition function as a prop to the output component - Create listing
+        onChangeNotes={updateNotes} // Pass the updateNotes function as a prop to the output component - Create listing
+        book={searchResult} // Pass the searchResult state as a prop to the output component -  Create listing
       />
     </div>
   );
