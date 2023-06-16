@@ -5,7 +5,7 @@
 }
 
 .outputForm {
-    width: 13vw;
+    width: 25rem;
     font-size: var(--text-s);
     height:3rem;
     border-radius: 0.5rem;
@@ -15,20 +15,20 @@
 .outputFormLabels {
     font-size:var(--text-r);
     display: flex;
-    width: 13vw;
+    width: 25rem;
     margin: 0.3vh auto;
     justify-content: flex-start;
 }
 
 .outputFormNotes {
-    width: 13vw;
+    width: 25rem;
     height: 3vw;
     border-radius: 0.5rem;
     border: 1px solid #c4c4c4;
 }
 
 .outputForm p {
-    width: 14vw;
+    width: 25rem;
     justify-content: flex-start;
 }
 

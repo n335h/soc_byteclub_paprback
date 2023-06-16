@@ -1,6 +1,6 @@
 
    .list-book-input{
-    width: 14vw;
+    width: 25rem;
     margin: auto;
    }
    .signUp  {
@@ -27,4 +27,5 @@
     border-radius: 0.5rem;
     border: 1px solid #acb1b8;
     width: 9.5vw;
+    width: 18rem;
 }

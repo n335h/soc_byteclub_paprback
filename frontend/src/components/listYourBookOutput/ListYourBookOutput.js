@@ -1,8 +1,6 @@
-// import tokillamockingbird from "../../assets/images/books/to-kill-a-mockingbird.png";
-
-import "./listYourBookOutput.css";
+// Importing CSS file and default cover image
+import './listYourBookOutput.css';
 import coverdefault from '../../assets/images/coverDefault.png';
-
 
 //Creating a listed books array
 //1. Create a new array - in a data file.
@@ -13,19 +11,18 @@ import coverdefault from '../../assets/images/coverDefault.png';
 //6. return an object with the requred structure (holding all the props and their inherent value)
 //7. A state variable is needed for the notes and condition
 
-// function handleChange(e) {
-
-// }
-
 function ListYourBookOutput(props) {
   return (
     <div>
+      {/* Render book cover image */}
+      <img
+        id="cover"
+        src={props.book.cover_img || coverdefault}
+        alt="book cover"
+      />
 
-      <img id="cover" src={props.book.cover_img || coverdefault} alt="book cover" />
-      
-
+      {/* Render book title */}
       <p className="outputFormLabels">Title:</p>
-
       <input
         className="outputForm"
         id="title"
@@ -34,6 +31,8 @@ function ListYourBookOutput(props) {
         value={props.book.title}
         disabled="disabled"
       ></input>
+
+      {/* Render book author */}
       <p className="outputFormLabels">Author:</p>
       <input
         className="outputForm"
@@ -42,18 +41,10 @@ function ListYourBookOutput(props) {
         placeholder="Author"
         disabled="disabled"
       ></input>
-      {/* <p className="outputFormLabels">Published:</p>
-      <input
-        className="outputForm"
-        id="published"
-        placeholder="Published"
-        type="text"
-        value={props.book.publishedDate}
-        disabled="disabled"
-      ></input> */}
 
+      {/* Render book condition */}
       <p className="outputFormLabels">Condition:</p>
-       <form id="condition" onChange={props.onChangeCondition}>
+      <form id="condition" onChange={props.onChangeCondition}>
         <select className="outputForm" name="Condition">
           <option value="New">New</option>
           <option value="Like New">Like New</option>
@@ -61,9 +52,10 @@ function ListYourBookOutput(props) {
           <option value="Good">Good</option>
           <option value="Acceptable">Acceptable</option>
           <option value="Poor">Poor</option>
-
         </select>
       </form>
+
+      {/* Render book notes */}
       <p className="outputFormLabels">Notes:</p>
       <input
         onChange={props.onChangeNotes}
@@ -74,6 +66,7 @@ function ListYourBookOutput(props) {
       ></input>
       <br></br>
 
+      {/* Render post listing button */}
       <button
         className="postListing"
         onClick={props.onClick}
@@ -86,10 +79,3 @@ function ListYourBookOutput(props) {
 }
 
 export default ListYourBookOutput;
-
-//PLAN
-//1. Create a new variable - new listing (object)
-//2. set params - combination of title, author, published date, condition, notes
-//Assisgn the content of notes and condition to individual states
-//3. Adjust SQL database - to have column for conditon, notes
-//4. Construct a fetch request to post the new listing to the database - TBC??
