@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 5432; // default port to listen
 
-const dbConnectionString = process.env.DB_CONNECTION_STRING;
+const connectionString = process.env.DB_CONNECTION_STRING;
 const apiKey = process.env.API_KEY;
 
 //Hello!!!
@@ -21,7 +21,7 @@ app.use(express.json());
 
 // Create a database client
 const client = new Client({
-  connectionString: dbConnectionString, // Use 'connectionString' instead of 'dbConnectionString'
+  connectionString: connectionString, // Use 'connectionString' instead of 'dbConnectionString'
 });
 
 // Connect to the database
