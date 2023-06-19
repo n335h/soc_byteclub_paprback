@@ -7,6 +7,7 @@ import ListingsCarousel from "../listingsCarousel/ListingsCarousel";
 function ListYourBook() {
   // State variables
   const [condition, setCondition] = useState("");
+  const [rerenderlisting, setRerenderlisting] = useState(0);
   const [notes, setNotes] = useState("");
   const [newListing, setNewListing] = useState({
     title: "",
@@ -92,7 +93,7 @@ function ListYourBook() {
           throw new Error("Failed to create listing");
         }
       })
-      .then((data) => console.log(data))
+      .then((data) => console.log(data), setRerenderlisting(rerenderlisting + 1)
       .catch((error) => {
         console.error("Error creating listing:", error);
         // If there is an error, update the newListing object with the search result data and other values
@@ -105,7 +106,7 @@ function ListYourBook() {
           cover_img: searchResult.cover_img,
           user_id: 2,
         });
-      });
+      }));
   }
 
   useEffect(() => {
@@ -132,7 +133,9 @@ function ListYourBook() {
         />
       </div>
       <div id="listingsCarousel">
-        <ListingsCarousel />
+        <ListingsCarousel 
+          rerenderlisting={rerenderlisting}
+        />
       </div>
     </div>
   );

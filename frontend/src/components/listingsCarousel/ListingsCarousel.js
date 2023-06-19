@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-function ListingsCarousel() {
+function ListingsCarousel(props) {
   const [listings, setListings] = useState([]);
 
   const responsive = {
@@ -45,7 +45,7 @@ function ListingsCarousel() {
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, []);
+  }, [props.rerenderlisting]);
 
   // useEffect to log the listings whenever they change
   useEffect(() => {
