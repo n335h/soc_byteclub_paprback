@@ -1,5 +1,6 @@
 import "./listYourBookInput.css";
 
+
 function ListYourBookInput(props) {
   return (
     <div className="list-book-input">
@@ -10,7 +11,7 @@ function ListYourBookInput(props) {
         onChange={props.onChange}
         onKeyDown={props.onKeyPress}
       ></input>
-      <button className="signUp" onClick={props.onClick}>
+      <button className="search" onClick={props.onClick}>
         Search
       </button>
     </div>
