@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import './listYourBook.css';
 
 function ListYourBook() {
+
+
   // State variables
   const [condition, setCondition] = useState('');
   const [notes, setNotes] = useState('');
@@ -25,19 +27,7 @@ function ListYourBook() {
     user_id: '',
   });
 
-  const reset = () => {
-    setCondition('');
-    setNotes('');
-    setSearchTerm('');
-  };
 
-  // useEffect(() => {  REMOVED
-  //   setNewListing((prevState) => ({
-  //     ...prevState,
-  //     condition: condition,
-  //     notes: notes,
-  //   }));
-  // }, [condition, notes]);
   useEffect(() => {
     //Added this useEffect
     console.log(newListing);
@@ -72,6 +62,7 @@ function ListYourBook() {
         })
         .then((data) => {
           setSearchResult(data.payload[0]);
+          
         })
         .catch((error) => {
           console.error('Error fetching data:', error);
@@ -81,7 +72,8 @@ function ListYourBook() {
             cover_img: '',
             isbn: '',
           });
-          alert('No book found. Please try again.');
+        
+          console.log('No book found. Please try again.');
         });
     }
   }
@@ -96,6 +88,7 @@ function ListYourBook() {
     setNotes(e.target.value);
   }
 
+  // Function to handle the listing button click
   function handleListingClick() {
     setNewListing({
       title: searchResult.title,
@@ -107,6 +100,11 @@ function ListYourBook() {
     });
     console.log(newListing);
   }
+
+  function handleReloadClick() {
+    window.location.reload();
+  }
+
   // // Make the API call when newListing state changes
   useEffect(() => {
     if (newListing.title !== '') {
@@ -120,6 +118,7 @@ function ListYourBook() {
         .then((res) => {
           if (res.ok) {
             console.log('Listing created successfully!');
+            
             return res.json();
           } else {
             throw new Error('Failed to create listing');
@@ -133,7 +132,7 @@ function ListYourBook() {
           console.error('Error creating listing:', error);
         });
         
-      
+        handleReloadClick()
     }
   }, [newListing]);
 
