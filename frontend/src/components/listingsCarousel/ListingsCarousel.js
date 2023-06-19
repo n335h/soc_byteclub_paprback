@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 function ListingsCarousel() {
   const [listings, setListings] = useState([]);
 
+  // useEffect to fetch listings data from the API on component mount
   useEffect(() => {
     fetch(`http://localhost:5432/api/listings`)
       .then((res) => {
@@ -20,6 +21,7 @@ function ListingsCarousel() {
       });
   }, []);
 
+  // useEffect to log the listings whenever they change
   useEffect(() => {
     console.log(listings);
   }, [listings]);
@@ -28,6 +30,7 @@ function ListingsCarousel() {
     <div id="listings-carousel">
       <div className="books-grid">
         {listings.map((book) => (
+          // Rendering Book component for each listing
           <Book
             cover={book.cover_img}
             title={book.title}
