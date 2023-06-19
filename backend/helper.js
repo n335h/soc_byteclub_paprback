@@ -1,27 +1,36 @@
 import dotenv from 'dotenv';
-// import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
+
 
 dotenv.config();
 
 
-
-
+// BOOKS
 
 export async function getBooks(client) {
-  // await Client.connect();
   const query = 'SELECT * FROM books;';
   const result = await client.query(query);
   console.table(result.rows);
   return result.rows;
 }
 
+
+
+
+
+
+
+
+
+// LISTINGS
+
 // post a new listing into the database
 export async function postListing(client, newListing) {
   try {
-    // const id = uuidv4();
+    const id = uuidv4();
 
     const values = [
-      // id,
+      id,
       // newListing.user_id,
       newListing.title,
       newListing.author,
@@ -32,7 +41,7 @@ export async function postListing(client, newListing) {
     ];
 
     const postQuery =
-      'INSERT INTO listings (title, author, isbn, cover_img, condition, notes) VALUES ($1, $2, $3, $4, $5, $6)';
+      'INSERT INTO listings (id, title, author, isbn, cover_img, condition, notes) VALUES ($1, $2, $3, $4, $5, $6, $7)';
     const result = await client.query(postQuery, values);
     console.table(result.rows);
     return result.rows;
@@ -41,4 +50,14 @@ export async function postListing(client, newListing) {
     return null;
   }
 }
+ 
+
+
+
+
+
+// USERS
+
+
+
 
