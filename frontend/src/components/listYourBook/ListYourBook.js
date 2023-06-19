@@ -114,7 +114,7 @@ function ListYourBook() {
   }, [newListing]);
   // Render the component
   return (
-    <div>
+    <div id="listings-page">
       <div id="listBookContainer">
         <h1>List Your Book</h1>
         {/* Render the input component for the search bar */}
