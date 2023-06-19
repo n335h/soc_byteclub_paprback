@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import pkg from "pg";
 import cors from "cors";
-import { getBooks } from "./helper.js";
+import { getBooks, postListing } from "./helper.js";
 
 export const { Client } = pkg;
 dotenv.config();
@@ -12,7 +12,7 @@ const port = process.env.PORT || 5432; // default port to listen
 
 const connectionString = process.env.DB_CONNECTION_STRING;
 const apiKey = process.env.API_KEY;
-
+ 
 //Hello!!!
 
 // middleware
@@ -165,12 +165,12 @@ app.get("/api/listings", async function (req, res) {
 // List a book
 app.post("/api/listings", async function (req, res) {
   try {
-    const result = await postListing(req.body);
+    const result = await postListing(client, req.body);
 
     if (result) {
       res.json({ success: true, payload: result });
     } else {
-      res.send("Book not listed");
+      res.status(500).json({ success: false, error: "Book not listed" });
     }
   } catch (error) {
     console.error("Error executing query:", error);
