@@ -162,11 +162,27 @@ app.get("/api/listings", async function (req, res) {
   }
 });
 
+
+// // Get all Listings belonging to user (user 1)
+// app.get("/api/listings", async function (req, res) {
+//   try {
+//     const result = await client.query("SELECT * FROM listings WHERE user_id = 1");
+
+//     if (result.rows.length > 0) {
+//       res.json({ success: true, payload: result.rows });
+//     } else {
+//       res.send("No books found");
+//     }
+//   } catch (error) {
+//     console.error("Error executing query:", error);
+//     res.status(500).json({ success: false, error: "Internal server error" });
+//   }
+// });
+
 // List a book
 app.post("/api/listings", async function (req, res) {
   try {
     const result = await postListing(req.body);
-
     if (result) {
       res.json({ success: true, payload: result });
     } else {
