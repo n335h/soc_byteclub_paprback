@@ -1,7 +1,9 @@
-import ListYourBookInput from '../listYourBookInput/ListYourBookInput';
-import ListYourBookOutput from '../listYourBookOutput/ListYourBookOutput';
-import React, { useState, useEffect } from 'react';
-import './listYourBook.css';
+import ListYourBookInput from "../listYourBookInput/ListYourBookInput";
+import ListYourBookOutput from "../listYourBookOutput/ListYourBookOutput";
+import React, { useState, useEffect } from "react";
+import "./listYourBook.css";
+import ListingsCarousel from "../listingsCarousel/ListingsCarousel";
+
 
 function ListYourBook() {
 
@@ -44,7 +46,7 @@ function ListYourBook() {
 
   // Function to handle Enter key press in the search bar
   function handleEnter(e) {
-    if (e.key === 'Enter' || e.keyCode === 13) {
+    if (e.key === "Enter" || e.keyCode === 13) {
       handleSearchClick();
     }
   }
@@ -80,7 +82,8 @@ function ListYourBook() {
 
   // Function to update the condition state
   function updateCondition(e) {
-    setCondition(e.target.value);
+    // e is the event object
+    setCondition(e.target.value); // Update the condition state with the value from the select element
   }
 
   // Function to update the notes state
@@ -90,6 +93,7 @@ function ListYourBook() {
 
   // Function to handle the listing button click
   function handleListingClick() {
+
     setNewListing({
       title: searchResult.title,
       author: searchResult.author,
@@ -137,23 +141,30 @@ function ListYourBook() {
   }, [newListing]);
 
   // Render the component
-  return (
-    <div id="listBookContainer">
-      <h1>List Your Book</h1>
-      {/* Render the input component for the search bar */}
-      <ListYourBookInput
-        onChange={handleChange}
-        onClick={handleSearchClick}
-        onKeyPress={handleEnter}
-      />
-      {/* Render the output component for the book listing */}
-      <ListYourBookOutput
-        onClick={handleListingClick}
-        onChangeCondition={updateCondition}
-        onChangeNotes={updateNotes}
-        book={searchResult}
-      />
-    </div>
+   return (
+    <div id="listings-page">
+      <div id="listBookContainer">
+        <h1>List Your Book</h1>
+        {/* Render the input component for the search bar */}
+        <ListYourBookInput
+          onChange={handleChange} // Pass the handleChange function as a prop to the input component - Search book for listing
+          onClick={handleSearchClick} // Pass the handleSearchClick function as a prop to the input component- Search book for listing
+          onKeyPress={handleEnter} // Pass the handleEnter function as a prop to the input component  - Search book for listing
+        />
+        {/* Render the output component for the book listing */}
+        <ListYourBookOutput
+          onClick={handleListingClick} // Pass the handleListingClick function as a prop to the output component - Create listing
+          onChangeCondition={updateCondition} // Pass the updateCondition function as a prop to the output component - Create listing
+          onChangeNotes={updateNotes} // Pass the updateNotes function as a prop to the output component - Create listing
+          book={searchResult} // Pass the searchResult state as a prop to the output component -  Create listing
+        />
+      </div>
+      <div id="listingsCarousel">
+        <ListingsCarousel 
+        />
+      </div>
+    
+  </div>
   );
 }
 

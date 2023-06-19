@@ -1,11 +1,15 @@
+#listings-page {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
 #listBookContainer {
-    background-color: #F9F9F9;
-    width: 40rem;
-    margin: 1vh auto;
-    border-radius: 0.5rem;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    
+  background-color: #f9f9f9;
+  width: 40rem;
+  margin: 1vh auto;
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }

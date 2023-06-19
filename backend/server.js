@@ -30,12 +30,14 @@ client.connect();
 // routes
 Routes(app, client);
 
+
 // app.get("/", (req, res) => {
 //   res.json({
 //     status: true,
 //     payload: "This route works!",
 //   });
 // });
+
 
 // Close the database connection when the server is stopped
 process.on("SIGINT", () => {

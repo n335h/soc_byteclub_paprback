@@ -1,4 +1,5 @@
-import './listYourBookInput.css';
+import "./listYourBookInput.css";
+
 
 function ListYourBookInput(props) {
   return (
@@ -8,7 +9,7 @@ function ListYourBookInput(props) {
         type="text"
         placeholder="ISBN or title"
         onChange={props.onChange}
-        onKeyDown={props.handleEnter}
+        onKeyDown={props.onKeyPress}
       ></input>
       <button className="search" onClick={props.onClick}>
         Search
