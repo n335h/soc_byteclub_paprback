@@ -15,7 +15,7 @@ function Book({
       <div className="book-container">
         <img id="like-heart" src={SolidHeartWhiteS} alt="" />
         <img id="book-cover" src={cover} alt="" />
-        <p datatest-id='listing' id="book-title">{title}</p>
+        <p data-testid='listing' id="book-title">{title}</p>
         <p id="book-author">{author}</p>
         <p id="book-publisher">{publisher}</p>
         <p id="book-publishedDate">{publishedDate}</p>
