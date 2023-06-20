@@ -61,7 +61,7 @@ function ListingsCarousel() {
           arrows
           autoPlaySpeed={3000}
           centerMode={false}
-          className=""
+          className="carousel"
           containerClass="container"
           dotListClass=""
           draggable

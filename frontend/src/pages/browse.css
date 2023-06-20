@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.books-grid {
+.books-grid-browse {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }

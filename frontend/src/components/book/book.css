@@ -4,15 +4,26 @@
   box-sizing: border-box;
 }
 
+#like-heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
 .book-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 12vw;
 }
 
 #book-cover {
   width: 150px;
+  margin: 0.5rem 0;
+z-index: 0;
 }
 
 #book-title {
@@ -22,6 +33,6 @@
 }
 
 #book-author {
-  font-size:var(--text-s);
+  font-size:var(--text-r);
   margin: 0.5rem 0;
 }

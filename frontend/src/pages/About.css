@@ -1,0 +1,24 @@
+.aboutimg {
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+   margin: auto;
+   margin-bottom: 5vh;
+ 
+
+}
+.about-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+  }
+  
+  .about-text{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    font-size: var(--text-r);
+  }
