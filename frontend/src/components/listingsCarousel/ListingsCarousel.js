@@ -1,8 +1,8 @@
-import "./listingsCarousel.css";
-import Book from "../book/Book";
-import { useState, useEffect } from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import './listingsCarousel.css';
+import Book from '../book/Book';
+import { useState, useEffect } from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 function ListingsCarousel() {
   const [listings, setListings] = useState([]);
@@ -38,12 +38,12 @@ function ListingsCarousel() {
         if (res.ok) {
           return res.json();
         } else {
-          throw new Error("No listings found");
+          throw new Error('No listings found');
         }
       })
       .then((data) => setListings(data.payload))
       .catch((error) => {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       });
   }, []);
 
@@ -55,7 +55,7 @@ function ListingsCarousel() {
   return (
     <div id="listings-carousel">
       <h2>Your Listings</h2>
-      <div className="books-grid">
+      <div data-testid="listing" className="books-grid">
         <Carousel
           additionalTransfrom={0}
           arrows
@@ -113,6 +113,7 @@ function ListingsCarousel() {
           {listings.map((book) => (
             // Rendering Book component for each listing
             <Book
+              data-testid="listing"
               cover={book.cover_img}
               title={book.title}
               author={book.author}

@@ -33,7 +33,7 @@ describe('SearchBar on Load', () => {
 });
 
 describe('List your book search input', () => {
-  test('test you can write in seach bar', () => {
+  test(' you can write in search bar', () => {
     render(
       <MemoryRouter>
         <ListYourBookInput />
@@ -49,7 +49,7 @@ describe('List your book search input', () => {
 });
 
 describe('search button searches for value of search input', () => {
-  test('test search button searches for value of search input', () => {
+  test('button searches for value of search input', () => {
     render(
       <MemoryRouter>
         <ListYourBookInput />

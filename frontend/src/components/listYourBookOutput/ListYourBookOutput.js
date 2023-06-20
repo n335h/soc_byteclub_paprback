@@ -48,6 +48,7 @@ function ListYourBookOutput(props) {
       <p className="outputFormLabels">Condition:</p>
       <form id="condition" onChange={props.onChangeCondition}>
         <select
+          role='combobox'
           className="outputForm"
           name="Condition"
           placeholder="Condition"
