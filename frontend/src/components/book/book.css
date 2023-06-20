@@ -1,7 +1,12 @@
 #book {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+#book-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 #like-heart {
@@ -12,27 +17,24 @@
   height: 20px;
   z-index: 1;
 }
-.book-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 12vw;
-}
 
 #book-cover {
   width: 150px;
-  margin: 0.5rem 0;
-z-index: 0;
 }
 
 #book-title {
   font-size:var(--text-r);
   font-weight: bold;
-  margin: 0.5rem 0;
 }
 
 #book-author {
   font-size:var(--text-r);
-  margin: 0.5rem 0;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .book-container {
+    row-gap: 1rem;
+  }
 }

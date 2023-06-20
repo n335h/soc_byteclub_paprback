@@ -1,21 +1,89 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Book from '../components/book/Book';
-import { books } from '../data';
 import './browse.css';
 
 function Books() {
+
   const [searchTerm, setSearchTerm] = useState('');
+  const [listings, setListings] = useState([]); 
+
+  const [selectedBook, setSelectedBook] = useState({
+    listing_id: '',
+    user_id: '',
+    cover_img: '',
+    title: '',
+    author: '',
+    isbn: '',
+    condition: '',
+    notes: ''
+  }); 
+
+  const navToBookView = useNavigate();
+
+  const apiCall = async () => {
+    const response = await fetch('http://localhost:5432/api/listings');
+    const data = await response.json();
+  
+    if (response.ok) {
+      setListings(data.payload);
+      
+    } else {
+      setListings([]);
+    }
+  
+  };
+
+
+  useEffect( () => {
+    // call listings api 
+    // retreive all listings
+    // pass to book display: 
+    apiCall();
+  
+     
+  }, []);
+
+
+
+
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  const filteredBooks = books.filter(
-    (book) =>
-      book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      book.author.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredListings = listings.filter(
+    (listing) =>
+    listing.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    listing.author.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const handleSearchClick = () => {
+    setListings(filteredListings);
+    const searchInput = document.querySelector('.searchInputBrowse');
+    searchInput.value = '';
+    const close = document.getElementById('close');
+    close.style.display = 'block';
+  };
+
+  const handleBookClick = (listing) => {
+    console.log('Book Clicked:', listing);
+    setSelectedBook(listing);
+    navToBookView(`/bookview/${listing.listing_id}`, {state: {selectedBook: listing}});
+  };
+
+  const handleCloseClick = () => {
+    setListings(listings);
+    const close = document.getElementById('close');
+    close.style.display = 'none';
+    window.location.reload();
+  };
+
+
+
+
+console.log(selectedBook);
 
   return (
     <section className="pages" id="books">
@@ -26,19 +94,23 @@ function Books() {
             className="searchInputBrowse"
             type="text"
             placeholder="Search"
-            value={searchTerm}
             onChange={handleSearchChange}
           ></input>
-          <button className="searchButton">Search</button>
+          <button className="searchButton" onClick={handleSearchClick}>Search</button>
         </div>
 
-        <div className="books-grid-browse">
-          {filteredBooks.map((book) => (
+        <div id="books-grid-browse">
+          {listings.map((listing) => (
+            <div id="book-enclosure">
             <Book
-              cover={book.cover}
-              title={book.title}
-              author={book.author}
+              key={listing.listing_id}
+              cover_img={listing.cover_img}
+              title={listing.title}
+              author={listing.author}
+              onClick={() => handleBookClick(listing)}
             />
+            <button id="close" onClick={handleCloseClick}>❌</button>
+            </div>
           ))}
         </div>
       </div>

@@ -3,18 +3,20 @@ import SolidHeartWhiteS from '../../assets/icons/SolidHeartWhiteS.png';
 
 function Book({
   isbn,
-  cover,
+  cover_img,
   title,
   author,
   publisher,
   publishedDate,
   genre,
+  listing_id,
+  onClick,
 }) {
   return (
-    <div id="book">
-      <div className="book-container">
+    <div id="book" key={listing_id} onClick={() => onClick && onClick()}>
+      <div id="book-container">
         <img id="like-heart" src={SolidHeartWhiteS} alt="" />
-        <img id="book-cover" src={cover} alt="" />
+        <img id="book-cover" src={cover_img} alt="" />
         <p id="book-title">{title}</p>
         <p id="book-author">{author}</p>
         <p id="book-publisher">{publisher}</p>

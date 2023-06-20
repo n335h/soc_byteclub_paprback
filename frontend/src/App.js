@@ -5,6 +5,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Browse from './pages/Browse';
+import BookView from './pages/BookView';
 import About from './pages/About';
 import FAQ from './pages/FAQ';
 import Listings from './pages/Listings';
@@ -28,7 +29,7 @@ function App() {
   return (
     <main className="App">
       <Header />
-
+      <div id="content">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
@@ -37,11 +38,12 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/browse" element={<Browse />} />
+        <Route path="/bookview/:listing_id" element={<BookView />} />
         <Route path="/listings" element={<Listings />} />
         <Route path="/listbook" element={<ListBook />} />
         <Route path="/offer" element={<Offer />} />
       </Routes>
-
+      </div>
       <Footer />
     </main>
   );

@@ -1,5 +1,8 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  min-height: 100vh;
 }
 
   /* Hide the vertical scroll bar */
@@ -7,13 +10,14 @@
     width: 0em;
   }
 
+.content {
+  padding-top: 110px;
+  flex: 1;
+}
 
-
-  /* Content area */
+@media screen and (max-width: 600px) {
   .content {
-    height: 300px;
-    overflow-y: scroll;
+    padding-top: 70px;
   }
-  .pages {
-    padding-top: 1vh;
-  }
+}
+
