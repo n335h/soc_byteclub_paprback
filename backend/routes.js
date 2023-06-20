@@ -3,6 +3,19 @@ import { getBooks, postListing } from "./helper.js";
 
 export default function Routes(app, client) {
 
+  const closeDatabaseConnection = () => {
+    client
+      .end()
+      .then(() => {
+        console.log("Database connection closed");
+        process.exit(0);
+      })
+      .catch((error) => {
+        console.error("Error closing database connection:", error);
+        process.exit(1);
+      });
+  };
+
 // BOOKS
 
 // Get all books
@@ -170,5 +183,7 @@ app.delete("/api/listings/:id", async function (req, res) {
   }
 });
 
+  process.on("SIGINT", closeDatabaseConnection);
+  process.on("SIGTERM", closeDatabaseConnection);
 
 }
