@@ -13,7 +13,7 @@ import coverdefault from '../../assets/images/coverDefault.png';
 
 function ListYourBookOutput(props) {
   return (
-    <div>
+    <div data-testid="listyourbook-output">
       {/* Render book cover image */}
       <img
         className="cover"
@@ -46,8 +46,8 @@ function ListYourBookOutput(props) {
 
       {/* Render book condition */}
       <p className="outputFormLabels">Condition:</p>
-      <form id="condition" onChange={props.onChangeCondition}>
-        <select
+      <form  id="condition" onChange={props.onChangeCondition}>
+        <select data-testid="condition"
           className="outputForm"
           name="Condition"
           placeholder="Condition"
@@ -67,7 +67,7 @@ function ListYourBookOutput(props) {
 
       {/* Render book notes */}
       <p className="outputFormLabels">Notes:</p>
-      <input
+      <input data-testid="notes"
         onChange={props.onChangeNotes}
         className="outputFormNotes"
         id="notes"
