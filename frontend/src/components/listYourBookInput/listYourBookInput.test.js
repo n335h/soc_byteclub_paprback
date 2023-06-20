@@ -33,7 +33,9 @@ describe('SearchBar on Load', () => {
 });
 
 describe('List your book search input', () => {
+
   test('you can write in seach bar', () => {
+
     render(
       <MemoryRouter>
         <ListYourBookInput />
@@ -44,6 +46,26 @@ describe('List your book search input', () => {
     expect(searchInput).toBeInTheDocument();
     expect(searchInput).toBeEmptyDOMElement();
     searchInput.value = 'test';
+    expect(searchInput.value).toBe('test');
+  });
+});
+
+describe('search button searches for value of search input', () => {
+  test('button searches for value of search input', () => {
+    render(
+      <MemoryRouter>
+        <ListYourBookInput />
+      </MemoryRouter>
+    );
+
+    const searchInput = screen.getByPlaceholderText('ISBN or title');
+    expect(searchInput).toBeInTheDocument();
+    expect(searchInput).toBeEmptyDOMElement();
+    searchInput.value = 'test';
+    expect(searchInput.value).toBe('test');
+    const searchButton = screen.getByText('Search');
+    expect(searchButton).toBeInTheDocument();
+    searchButton.click();
     expect(searchInput.value).toBe('test');
   });
 });

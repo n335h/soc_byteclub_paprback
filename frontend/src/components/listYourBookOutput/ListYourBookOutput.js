@@ -46,8 +46,10 @@ function ListYourBookOutput(props) {
 
       {/* Render book condition */}
       <p className="outputFormLabels">Condition:</p>
+
       <form  id="condition" onChange={props.onChangeCondition}>
         <select data-testid="condition"
+
           className="outputForm"
           name="Condition"
           placeholder="Condition"
