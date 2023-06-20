@@ -3,8 +3,8 @@ import "./listYourBookInput.css";
 
 function ListYourBookInput(props) {
   return (
-    <div className="list-book-input">
-      <input
+    <div data-testid="listyourbook-input" className="list-book-input">
+      <input data-testid="search-input"
         className="searchInput"
         type="text"
         placeholder="ISBN or title"

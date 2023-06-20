@@ -33,7 +33,9 @@ describe('SearchBar on Load', () => {
 });
 
 describe('List your book search input', () => {
-  test(' you can write in search bar', () => {
+
+  test('you can write in seach bar', () => {
+
     render(
       <MemoryRouter>
         <ListYourBookInput />
@@ -67,3 +69,4 @@ describe('search button searches for value of search input', () => {
     expect(searchInput.value).toBe('test');
   });
 });
+
