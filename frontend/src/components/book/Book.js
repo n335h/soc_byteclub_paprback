@@ -1,6 +1,7 @@
 import './book.css';
 import SolidHeartWhiteS from '../../assets/icons/SolidHeartWhiteS.png';
 
+
 function Book({
   isbn,
   cover_img,
@@ -11,6 +12,7 @@ function Book({
   genre,
   listing_id,
   onClick,
+  handleCloseClick
 }) {
   return (
     <div id="book" key={listing_id} onClick={() => onClick && onClick()}>

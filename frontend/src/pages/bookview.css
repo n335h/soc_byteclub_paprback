@@ -54,20 +54,20 @@
 
 }
 
-#book-view-close {
+#book-view #book-view-close {
   width: 20rem;
-  margin: 3rem 1rem 3rem 1rem;
+  
   border: none;
   background-color: transparent;
   color: rgb(168, 0, 0);
-  padding: 1rem;
-  font-size: var(--font-size-l);
+  padding: 0.8rem 4rem;
+  font-size: var(--text-r);
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   border-radius: 0.5rem;
 }
 
-#book-view-close:hover {
+#book-view #book-view-close:hover {
   background-color: rgb(168, 0, 0);
   color: white;
 }

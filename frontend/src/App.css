@@ -10,13 +10,18 @@
     width: 0em;
   }
 
-.content {
+  /* 
+  Everything below header and above footer now enclosed in this div.
+  Padding top ensures every page and component sits below the 
+  Header at all screen sizes.   
+  */
+#content {
   padding-top: 110px;
   flex: 1;
 }
 
 @media screen and (max-width: 600px) {
-  .content {
+  #content {
     padding-top: 70px;
   }
 }

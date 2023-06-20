@@ -1,8 +1,10 @@
 header {
+  position: fixed;
   top: 0;
   width: 100vw;
   background-color: var(--background);
   min-height: 11rem;
+  z-index: 100;
 }
 
 .header-container {

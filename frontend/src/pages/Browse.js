@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Book from '../components/book/Book';
+import Close from '../assets/icons/close.svg';
 import './browse.css';
 
 function Books() {
@@ -65,6 +66,8 @@ function Books() {
     searchInput.value = '';
     const close = document.getElementById('close');
     close.style.display = 'block';
+    const searchedBook = document.getElementById('book-enclosure');
+    searchedBook.style.gridTemplateColumns  = 'repeat(1, minmax(150px, 1fr)';
   };
 
   const handleBookClick = (listing) => {
@@ -85,6 +88,7 @@ function Books() {
 
 console.log(selectedBook);
 
+
   return (
     <section className="pages" id="books">
       <div className="books-container">
@@ -103,13 +107,14 @@ console.log(selectedBook);
           {listings.map((listing) => (
             <div id="book-enclosure">
             <Book
+              id="grid-book"
               key={listing.listing_id}
               cover_img={listing.cover_img}
               title={listing.title}
               author={listing.author}
               onClick={() => handleBookClick(listing)}
             />
-            <button id="close" onClick={handleCloseClick}>❌</button>
+            <button id="close" onClick={handleCloseClick}><img src={Close} alt="Close"/></button>
             </div>
           ))}
         </div>
