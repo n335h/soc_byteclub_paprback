@@ -13,10 +13,10 @@ import coverdefault from '../../assets/images/coverDefault.png';
 
 function ListYourBookOutput(props) {
   return (
-    <div>
+    <div data-testid="listyourbook-output">
       {/* Render book cover image */}
       <img
-        id="cover"
+        className="cover"
         src={props.book.cover_img || coverdefault}
         alt="book cover"
       />
@@ -24,6 +24,7 @@ function ListYourBookOutput(props) {
       {/* Render book title */}
       <p className="outputFormLabels">Title:</p>
       <input
+         data-testid="title-input"
         className="outputForm"
         id="title"
         placeholder="Title"
@@ -35,6 +36,7 @@ function ListYourBookOutput(props) {
       {/* Render book author */}
       <p className="outputFormLabels">Author:</p>
       <input
+        data-testid="author-input"
         className="outputForm"
         id="author"
         value={props.book.author}
@@ -44,8 +46,18 @@ function ListYourBookOutput(props) {
 
       {/* Render book condition */}
       <p className="outputFormLabels">Condition:</p>
-      <form id="condition" onChange={props.onChangeCondition}>
-        <select className="outputForm" name="Condition">
+
+      <form  id="condition" onChange={props.onChangeCondition}>
+        <select data-testid="condition"
+
+          className="outputForm"
+          name="Condition"
+          placeholder="Condition"
+        >
+          <option value="Condition" disabled selected>
+            {' '}
+            Condition{' '}
+          </option>
           <option value="New">New</option>
           <option value="Like New">Like New</option>
           <option value="Very Good">Very Good</option>
@@ -57,7 +69,7 @@ function ListYourBookOutput(props) {
 
       {/* Render book notes */}
       <p className="outputFormLabels">Notes:</p>
-      <input
+      <input data-testid="notes"
         onChange={props.onChangeNotes}
         className="outputFormNotes"
         id="notes"
