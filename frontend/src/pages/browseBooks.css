@@ -1,4 +1,4 @@
-#books {
+#browse {
   padding: 0 5rem;
   min-height: 100vh;
 }
@@ -10,7 +10,7 @@
   margin: auto;
 }
 
-#books h1 {
+#browse h1 {
   font-size: var(--text-xl);
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -54,20 +54,34 @@
   background-color: var(--main-color);
 }
 
-#books-grid-browse {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(150px, 1fr));
-  gap: 10%;
-  justify-content: center;
-}
-
 #book-enclosure {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  max-width: 150px;
+  position: relative;
 }
+
+#books-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+}
+
+#books-grid > div {
+  margin: 2rem; /* Adjust the value to set the desired gap size */
+}
+
+/* #books-grid-browse {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap: 10%;
+  justify-content: center;
+} */
 
 #grid-book {
   min-width: 150px;
@@ -75,59 +89,38 @@
 }
 
 button#close {
+  position: absolute;
+  top: -1.8rem;
+  right: -6rem;
   display: none;
-  scale: 0.5;
+  scale: 0.3;
   border: none;
   background-color: transparent;
   transition: all 0.1s ease-in-out;
   border-radius: 50%;
   width: 50%;
+  cursor: pointer;
 }
 
 #books button#close:hover {
-  background-color: rgb(168, 0, 0);
+  background-color: var(--close-color);
   cursor: pointer;
 }
 
 #books button#close svg {
 
-  fill: rgb(168, 0, 0);
+  fill: var(--close-color);
   transition: all 0.1s ease-in-out;
 }
 
 #books button#close:hover svg {
-  fill: white;
-}
-
-#books .filteredListings {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-@media screen and (max-width: 1200px) {
-  #books-grid-browse {
-    grid-template-columns: repeat(4, minmax(150px, 1fr));
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  #books-grid-browse {
-    grid-template-columns: repeat(3, minmax(150px, 1fr));
-  }
+  fill: var(--close-color);
 }
 
 @media screen and (max-width: 600px) {
 
   #books {
     padding: 0 3rem;
-  }
-
-  #books-grid-browse {
-    gap: 6rem;
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .books-container {
@@ -140,6 +133,14 @@ button#close {
     margin: 1rem 0 4rem 0;
     font-size: var(--text-s);
     width: 80%;
+  }
+
+  #books-grid {
+    width: 100%;
+  }
+  
+  #books-grid > div {
+    margin: 2.5rem; /* Adjust the value to set the desired gap size */
   }
  
 }

@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-import Browse from './pages/Browse';
+import BrowseBooks from './pages/BrowseBooks';
 import BookView from './pages/BookView';
 import About from './pages/About';
 import FAQ from './pages/FAQ';
@@ -37,7 +37,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/browse" element={<Browse />} />
+        <Route path="/browse" element={<BrowseBooks />} />
         <Route path="/bookview/:listing_id" element={<BookView />} />
         <Route path="/listings" element={<Listings />} />
         <Route path="/listbook" element={<ListBook />} />

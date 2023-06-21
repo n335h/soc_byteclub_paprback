@@ -3,12 +3,13 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Book from '../components/book/Book';
 import Close from '../assets/icons/close.svg';
-import './browse.css';
+import './browseBooks.css';
 
 function Books() {
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [listings, setListings] = useState([]); 
+  const [listings, setListings] = useState([]);
+  const [like, setLike] = useState(false);
 
   const [selectedBook, setSelectedBook] = useState({
     listing_id: '',
@@ -36,19 +37,9 @@ function Books() {
   
   };
 
-
   useEffect( () => {
-    // call listings api 
-    // retreive all listings
-    // pass to book display: 
-    apiCall();
-  
-     
+    apiCall();  
   }, []);
-
-
-
-
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -83,6 +74,8 @@ function Books() {
     window.location.reload();
   };
 
+  
+
 
 
 
@@ -90,7 +83,7 @@ console.log(selectedBook);
 
 
   return (
-    <section className="pages" id="books">
+    <section className="pages" id="browse">
       <div className="books-container">
         <h1>Browse Books</h1>
         <div className="search-container">
@@ -103,7 +96,7 @@ console.log(selectedBook);
           <button className="searchButton" onClick={handleSearchClick}>Search</button>
         </div>
 
-        <div id="books-grid-browse">
+        <div id="books-grid">
           {listings.map((listing) => (
             <div id="book-enclosure">
             <Book
