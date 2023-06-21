@@ -17,7 +17,12 @@ export default function Routes(app, pool) {
   };
 
 // BOOKS
-
+app.get("/", (req, res) => {
+  res.json({
+    status: true,
+    payload: "This route works!",
+  });
+});
 // Get all books
 app.get("/api/books", async function (req, res) {
   try {
