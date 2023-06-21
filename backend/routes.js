@@ -1,29 +1,24 @@
-import { getBooks, postListing } from "./helper.js";
+import { getBooks, getListings, postListing } from "./helper.js";
 
 
-export default function Routes(app, client) {
 
-  const closeDatabaseConnection = () => {
-    client
-      .end()
-      .then(() => {
-        console.log("Database connection closed");
-        process.exit(0);
-      })
-      .catch((error) => {
-        console.error("Error closing database connection:", error);
-        process.exit(1);
-      });
-  };
+export default function Routes(app, pool) {
+
+
 
 // BOOKS
-
+app.get("/", (req, res) => {
+  res.json({
+    status: true,
+    payload: "This route works!",
+  });
+});
 // Get all books
 app.get("/api/books", async function (req, res) {
   try {
-    const result = await getBooks(req);
+    const result = await getBooks(pool, req);
     if (result.rows.length > 0) {
-      res.json({ success: true, payload: result.rows });
+      res.status(200).json({ success: true, payload: result.rows });
     } else {
       res.send("No books found");
     }
@@ -36,7 +31,7 @@ app.get("/api/books", async function (req, res) {
 // Get a single book by title
 app.get("/api/books/:title", async function (req, res) {
   try {
-    const result = await client.query("SELECT * FROM books WHERE LOWER(title) = $1", [
+    const result = await pool.query("SELECT * FROM books WHERE LOWER(title) = $1", [
       req.params.title.toLowerCase()
     ]);
     if (result.rows.length > 0) {
@@ -60,7 +55,7 @@ app.get("/api/books/:title", async function (req, res) {
 // Get a single book from Listings by isbn
 app.get("/api/listings/:isbn", async function (req, res) {
   try {
-    const result = await client.query(
+    const result = await pool.query(
       "SELECT * FROM listings WHERE isbn = $1",
       [req.params.isbn]
     );
@@ -79,7 +74,7 @@ app.get("/api/listings/:isbn", async function (req, res) {
 // Get book from listings by title
 app.get("/api/listings/:title", async function (req, res) {
   try {
-    const result = await client.query(
+    const result = await pool.query(
       "SELECT * FROM listings WHERE LOWER(title) = $1",
       [req.params.title.toLowerCase()]
     );
@@ -118,7 +113,7 @@ app.get("/api/listings/:title", async function (req, res) {
 // Get a single book from books table by isbn or title
 app.get("/api/books/:isbntitle", async function (req, res) {
   try {
-    const result = await client.query(
+    const result = await pool.query(
       "SELECT * FROM listings WHERE isbn = $1 OR LOWER(title) = $1",
       [req.params.isbntitle.toLowerCase()]
     );
@@ -134,26 +129,23 @@ app.get("/api/books/:isbntitle", async function (req, res) {
   }
 });
 
-// Get all Listings
+// Get all Listings (PRETENDING IF WE ARE USER 1)
 app.get("/api/listings", async function (req, res) {
   try {
-    const result = await client.query("SELECT * FROM listings");
+    const result = await getListings(pool);
+    const body = { success: true, payload: result };
 
-    if (result.rows.length > 0) {
-      res.json({ success: true, payload: result.rows });
-    } else {
-      res.send("No books found");
-    }
-  } catch (error) {
+    res.json(body);
+} catch (error) {
     console.error("Error executing query:", error);
     res.status(500).json({ success: false, error: "Internal server error" });
-  }
+}
 });
 
 // List a book
 app.post("/api/listings", async function (req, res) {
   try {
-    const result = await postListing(client, req.body);
+    const result = await postListing(pool, req.body);
 
     if (result) {
       res.json({ success: true, payload: result });
@@ -169,7 +161,7 @@ app.post("/api/listings", async function (req, res) {
 // Delete a Listing
 app.delete("/api/listings/:id", async function (req, res) {
   try {
-    const result = await client.query("DELETE FROM listings WHERE id = $1", [
+    const result = await pool.query("DELETE FROM listings WHERE id = $1", [
       req.params.id,
     ]);
     if (result) {
@@ -182,7 +174,20 @@ app.delete("/api/listings/:id", async function (req, res) {
     res.status(500).json({ success: false, error: "Internal server error" });
   }
 });
-
+  
+const closeDatabaseConnection = () => {
+    pool
+      .end()
+      .then(() => {
+        console.log("Database connection closed");
+        process.exit(0);
+      })
+      .catch((error) => {
+        console.error("Error closing database connection:", error);
+        process.exit(1);
+      });
+  };
+  
   process.on("SIGINT", closeDatabaseConnection);
   process.on("SIGTERM", closeDatabaseConnection);
 

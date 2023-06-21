@@ -96,7 +96,7 @@ function ListYourBook() {
       condition: condition,
       notes: notes,
     });
-    console.table(newListing);
+    console.log(newListing);
   }
 
   function handleReloadClick() {
