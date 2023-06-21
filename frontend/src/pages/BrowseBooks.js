@@ -9,7 +9,6 @@ function Books() {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [listings, setListings] = useState([]);
-  const [like, setLike] = useState(false);
 
   const [selectedBook, setSelectedBook] = useState({
     listing_id: '',
