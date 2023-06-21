@@ -16,9 +16,9 @@ app.get("/", (req, res) => {
 // Get all books
 app.get("/api/books", async function (req, res) {
   try {
-    const result = await getBooks(req);
+    const result = await getBooks(pool, req);
     if (result.rows.length > 0) {
-      res.json({ success: true, payload: result.rows });
+      res.status(200).json({ success: true, payload: result.rows });
     } else {
       res.send("No books found");
     }
@@ -132,7 +132,7 @@ app.get("/api/books/:isbntitle", async function (req, res) {
 // Get all Listings (PRETENDING IF WE ARE USER 1)
 app.get("/api/listings", async function (req, res) {
   try {
-    const result = await getListings(client);
+    const result = await getListings(pool);
     const body = { success: true, payload: result };
 
     res.json(body);

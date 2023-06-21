@@ -47,8 +47,31 @@ function ListYourBookOutput(props) {
       {/* Render book condition */}
       <p className="outputFormLabels">Condition:</p>
 
+      {/* <form id="condition" onChange={props.onChangeCondition}>
+        <select
+          data-testid="defaultValue"
+          className="outputForm"
+          name="Condition"
+          placeholder="Condition"
+          defaultValue="Condition" // Set defaultValue prop instead
+        >
+          <option value="Condition" disabled>
+            {' '}
+            Condition{' '}
+          </option>
+          <option value="New">New</option>
+          <option value="Like New">Like New</option>
+          <option value="Very Good">Very Good</option>
+          <option value="Good">Good</option>
+          <option value="Acceptable">Acceptable</option>
+          <option value="Poor">Poor</option>
+        </select>
+      </form> */}
+
+      {/* Code as it was before */}
+
       <form  id="condition" onChange={props.onChangeCondition}>
-        <select data-testid="condition"
+        <select data-testid="defaultValue"
 
           className="outputForm"
           name="Condition"
