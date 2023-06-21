@@ -5,7 +5,7 @@ import cors from "cors";
 import Routes from "./routes.js";
 import nodemon from "nodemon";
 
-export const { Client } = pkg;
+export const { Pool } = pkg;
 dotenv.config();
 
 const app = express();
@@ -20,15 +20,15 @@ app.use(cors());
 app.use(express.json());
 
 // Create a database client
-const client = new Client({
+const pool = new Pool({
   connectionString: connectionString, // Use 'connectionString' instead of 'dbConnectionString'
 });
 
 // Connect to the database
-client.connect();
+pool.connect();
 
 // routes
-Routes(app, client);
+Routes(app, pool);
 
 
 // app.get("/", (req, res) => {
@@ -41,7 +41,7 @@ Routes(app, client);
 
 // Close the database connection when the server is stopped
 process.on("SIGINT", () => {
-  client
+  pool
     .end()
     .then(() => {
       console.log("Database connection closed");

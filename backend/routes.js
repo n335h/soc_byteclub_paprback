@@ -1,7 +1,20 @@
 import { getBooks, getListings, postListing } from "./helper.js";
 
 
-export default function Routes(app, client) {
+export default function Routes(app, pool) {
+
+  const closeDatabaseConnection = () => {
+    pool
+      .end()
+      .then(() => {
+        console.log("Database connection closed");
+        process.exit(0);
+      })
+      .catch((error) => {
+        console.error("Error closing database connection:", error);
+        process.exit(1);
+      });
+  };
 
 // BOOKS
 
@@ -23,7 +36,7 @@ app.get("/api/books", async function (req, res) {
 // Get a single book by title
 app.get("/api/books/:title", async function (req, res) {
   try {
-    const result = await client.query("SELECT * FROM books WHERE LOWER(title) = $1", [
+    const result = await pool.query("SELECT * FROM books WHERE LOWER(title) = $1", [
       req.params.title.toLowerCase()
     ]);
     if (result.rows.length > 0) {
@@ -47,7 +60,7 @@ app.get("/api/books/:title", async function (req, res) {
 // Get a single book from Listings by isbn
 app.get("/api/listings/:isbn", async function (req, res) {
   try {
-    const result = await client.query(
+    const result = await pool.query(
       "SELECT * FROM listings WHERE isbn = $1",
       [req.params.isbn]
     );
@@ -66,7 +79,7 @@ app.get("/api/listings/:isbn", async function (req, res) {
 // Get book from listings by title
 app.get("/api/listings/:title", async function (req, res) {
   try {
-    const result = await client.query(
+    const result = await pool.query(
       "SELECT * FROM listings WHERE LOWER(title) = $1",
       [req.params.title.toLowerCase()]
     );
@@ -105,7 +118,7 @@ app.get("/api/listings/:title", async function (req, res) {
 // Get a single book from books table by isbn or title
 app.get("/api/books/:isbntitle", async function (req, res) {
   try {
-    const result = await client.query(
+    const result = await pool.query(
       "SELECT * FROM listings WHERE isbn = $1 OR LOWER(title) = $1",
       [req.params.isbntitle.toLowerCase()]
     );
@@ -137,7 +150,7 @@ app.get("/api/listings", async function (req, res) {
 // List a book
 app.post("/api/listings", async function (req, res) {
   try {
-    const result = await postListing(client, req.body);
+    const result = await postListing(pool, req.body);
 
     if (result) {
       res.json({ success: true, payload: result });
@@ -153,7 +166,7 @@ app.post("/api/listings", async function (req, res) {
 // Delete a Listing
 app.delete("/api/listings/:id", async function (req, res) {
   try {
-    const result = await client.query("DELETE FROM listings WHERE id = $1", [
+    const result = await pool.query("DELETE FROM listings WHERE id = $1", [
       req.params.id,
     ]);
     if (result) {
@@ -167,5 +180,7 @@ app.delete("/api/listings/:id", async function (req, res) {
   }
 });
 
+  process.on("SIGINT", closeDatabaseConnection);
+  process.on("SIGTERM", closeDatabaseConnection);
 
 }

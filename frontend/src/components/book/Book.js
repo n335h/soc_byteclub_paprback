@@ -23,7 +23,7 @@ function Book({ cover_img, title, author, listing_id, onClick }) {
       <div id="book-container">
         <Heart id="like-heart" className={like ? 'heart-pink' : ''} onClick={heartClick} />
         <img id="book-cover" src={cover_img} alt="" />
-        <p id="book-title">{title}</p>
+        <p datatest-id='listing' id="book-title">{title}</p>
         <p id="book-author">{author}</p>
       </div>
     </div>
