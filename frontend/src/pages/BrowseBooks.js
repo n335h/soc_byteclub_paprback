@@ -44,11 +44,19 @@ function Books() {
     setSearchTerm(event.target.value);
   };
 
-  const filteredListings = listings.filter(
-    (listing) =>
-    listing.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    listing.author.toLowerCase().includes(searchTerm.toLowerCase())
+  console.log('Search Term:', searchTerm);
+console.log('Listings:', listings);
+  const filteredListings = listings.filter((listing) => {
+  const title = listing.title ? listing.title.toLowerCase() : '';
+  const author = listing.author ? listing.author.toLowerCase() : '';
+  const isbn = listing.isbn ? listing.isbn.toLowerCase() : '';
+
+  return (
+    title.includes(searchTerm.toLowerCase()) ||
+    author.includes(searchTerm.toLowerCase()) ||
+    isbn.includes(searchTerm.toLowerCase())
   );
+});
 
   const handleSearchClick = () => {
     setListings(filteredListings);
