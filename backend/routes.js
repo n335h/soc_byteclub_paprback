@@ -13,20 +13,20 @@ export default function Routes(app, pool) {
       payload: "This route works!",
     });
   });
-  // Get all books
-  app.get("/api/books", async function (req, res) {
-    try {
-      const result = await getBooks(pool, req);
-      if (result.rows.length > 0) {
-        res.status(200).json({ success: true, payload: result.rows });
-      } else {
-        res.send("No books found");
-      }
-    } catch (error) {
-      console.error("Error executing query:", error);
-      res.status(500).json({ success: false, error: "Internal server error" });
+ // Get all books
+app.get("/api/books", async function (req, res) {
+  try {
+    const result = await getBooks(pool);
+    if (result) {
+      res.json({ success: true, payload: result });
+    } else {
+      res.send("No books found");
     }
-  });
+  } catch (error) {
+    console.error("Error executing query:", error);
+    res.status(500).json({ success: false, error: "Internal server error" });
+  }
+});
 
   // Get a single book by title
   app.get("/api/books/:title", async function (req, res) {
