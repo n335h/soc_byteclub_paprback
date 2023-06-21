@@ -1,0 +1,146 @@
+#browse {
+  padding: 0 5rem;
+  min-height: 100vh;
+}
+
+.books-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+#browse h1 {
+  font-size: var(--text-xl);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.search-container {
+  width: 50rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+ 
+.searchInputBrowse {
+  border: 0.1rem solid rgb(190, 190, 190);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: var(--text-r);
+  width:100%;
+  margin-right: 1rem;
+}
+
+.searchInputBrowse:focus {
+  outline: none;
+  border: 1px solid rgb(190, 190, 190);
+}
+
+.searchButton  {
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+  padding: 0.6rem 4rem;
+  border-radius: 0.5rem;
+  font-size: var(--text-r);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.1s ease-in;
+}
+
+.searchButton:hover {
+  background-color: var(--main-color);
+}
+
+#book-enclosure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 150px;
+  position: relative;
+}
+
+#books-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+}
+
+#books-grid > div {
+  margin: 2rem; /* Adjust the value to set the desired gap size */
+}
+
+/* #books-grid-browse {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap: 10%;
+  justify-content: center;
+} */
+
+#grid-book {
+  min-width: 150px;
+  max-width: 150px;
+}
+
+button#close {
+  position: absolute;
+  top: -1.8rem;
+  right: -6rem;
+  display: none;
+  scale: 0.3;
+  border: none;
+  background-color: transparent;
+  transition: all 0.1s ease-in-out;
+  border-radius: 50%;
+  width: 50%;
+  cursor: pointer;
+}
+
+#books button#close:hover {
+  background-color: var(--close-color);
+  cursor: pointer;
+}
+
+#books button#close svg {
+
+  fill: var(--close-color);
+  transition: all 0.1s ease-in-out;
+}
+
+#books button#close:hover svg {
+  fill: var(--close-color);
+}
+
+@media screen and (max-width: 600px) {
+
+  #books {
+    padding: 0 3rem;
+  }
+
+  .books-container {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .search-container {
+    border-radius: 5px;
+    margin: 1rem 0 4rem 0;
+    font-size: var(--text-s);
+    width: 80%;
+  }
+
+  #books-grid {
+    width: 100%;
+  }
+  
+  #books-grid > div {
+    margin: 2.5rem; /* Adjust the value to set the desired gap size */
+  }
+ 
+}

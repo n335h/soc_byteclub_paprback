@@ -1,5 +1,8 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  min-height: 100vh;
 }
 
   /* Hide the vertical scroll bar */
@@ -7,13 +10,19 @@
     width: 0em;
   }
 
+  /* 
+  Everything below header and above footer now enclosed in this div.
+  Padding top ensures every page and component sits below the 
+  Header at all screen sizes.   
+  */
+#content {
+  padding-top: 110px;
+  flex: 1;
+}
 
+@media screen and (max-width: 600px) {
+  #content {
+    padding-top: 70px;
+  }
+}
 
-  /* Content area */
-  .content {
-    height: 300px;
-    overflow-y: scroll;
-  }
-  .pages {
-    padding-top: 1vh;
-  }
