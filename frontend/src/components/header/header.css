@@ -51,14 +51,16 @@ header {
   background-color: var(--main-color);
   border: none;
   color: white;
-  padding: 10px 32px;
+  padding: 0.8rem 4rem;
   border-radius: 6px;
   text-align: center;
   text-decoration: none;
+  font-weight: bold;
   font-size: 16px;
   margin: 2px 2px;
   cursor: pointer;
   font-weight: 600;
+  letter-spacing: 0.1rem;
 }
 
 .login:hover {
@@ -93,14 +95,15 @@ header {
   background-color: var(--main-color);
   border: none;
   color: white;
-  padding: 0.5rem 4rem;
-  border-radius: 3px;
+  padding: 0.6rem 4rem;
+  border-radius: 0.3rem;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: var(--text-r);
   margin: 2px 5px;
   cursor: pointer;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  letter-spacing: 0.1rem;;
 }
 
 #navbutton:hover  {
