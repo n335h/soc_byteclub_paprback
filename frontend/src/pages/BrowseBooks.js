@@ -28,7 +28,7 @@ function Books() {
     const data = await response.json();
   
     if (response.ok) {
-      setListings(data.payload);
+      setListings(data.payload.othersListings);
       
     } else {
       setListings([]);

@@ -1,8 +1,8 @@
-import './listingsCarousel.css';
-import Book from '../book/Book';
-import { useState, useEffect } from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import "./listingsCarousel.css";
+import Book from "../book/Book";
+import { useState, useEffect } from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 function ListingsCarousel() {
   const [listings, setListings] = useState([]);
@@ -38,12 +38,12 @@ function ListingsCarousel() {
         if (res.ok) {
           return res.json();
         } else {
-          throw new Error('No listings found');
+          throw new Error("No listings found");
         }
       })
-      .then((data) => setListings(data.payload))
+      .then((data) => setListings(data.payload.myListings))
       .catch((error) => {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       });
   }, []);
 
