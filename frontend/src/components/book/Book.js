@@ -1,26 +1,29 @@
 import './book.css';
-import SolidHeartWhiteS from '../../assets/icons/SolidHeartWhiteS.png';
+import { useState } from 'react';
+import { ReactComponent as Heart} from '../../assets/icons/heart.svg';
 
-function Book({
-  isbn,
-  cover,
-  title,
-  author,
-  publisher,
-  publishedDate,
-  genre,
-}) {
+
+function Book({ cover_img, title, author, listing_id, onClick }) {
+
+  const [like, setLike] = useState(false);
+
+  const likeToggle = () => {
+    setLike(!like);
+  }
+
+  const heartClick = (event) => {
+    event.stopPropagation(); // Stop event propagation
+    likeToggle();
+  }
+  
   return (
-    <div id="book">
-      <div className="book-container">
-        <img id="like-heart" src={SolidHeartWhiteS} alt="" />
-        <img id="book-cover" src={cover} alt="" />
-        <p data-testid='listing' id="book-title">{title}</p>
+
+    <div id="book" key={listing_id} onClick={() => onClick && onClick()}>
+      <div id="book-container">
+        <Heart id="like-heart" className={like ? 'heart-pink' : ''} onClick={heartClick} />
+        <img id="book-cover" src={cover_img} alt="" />
+        <p datatest-id='listing' id="book-title">{title}</p>
         <p id="book-author">{author}</p>
-        <p id="book-publisher">{publisher}</p>
-        <p id="book-publishedDate">{publishedDate}</p>
-        <p id="book-genre">{genre}</p>
-        <p id="book-isbn">{isbn}</p>
       </div>
     </div>
   );

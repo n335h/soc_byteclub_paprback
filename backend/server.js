@@ -1,9 +1,11 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import pkg from 'pg';
-import cors from 'cors';
-import Routes from './routes.js';
-import nodemon from 'nodemon';
+
+import express from "express";
+import dotenv from "dotenv";
+import pkg from "pg";
+import cors from "cors";
+import Routes from "./routes.js";
+import nodemon from "nodemon";
+
 
 export const { Pool } = pkg;
 dotenv.config();
@@ -30,6 +32,7 @@ pool.connect();
 // routes
 Routes(app, pool);
 
+
 // app.get("/", (req, res) => {
 //   res.json({
 //     status: true,
@@ -38,7 +41,9 @@ Routes(app, pool);
 // });
 
 // Close the database connection when the server is stopped
+
 process.on('SIGINT', () => {
+
   pool
     .end()
     .then(() => {
