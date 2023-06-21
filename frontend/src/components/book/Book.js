@@ -17,6 +17,7 @@ function Book({ cover_img, title, author, listing_id, onClick }) {
   }
   
   return (
+
     <div id="book" key={listing_id} onClick={() => onClick && onClick()}>
       <div id="book-container">
         <Heart id="like-heart" className={like ? 'heart-pink' : ''} onClick={heartClick} />

@@ -67,4 +67,3 @@ export async function postListing(pool, newListing) {
 
 
 
-

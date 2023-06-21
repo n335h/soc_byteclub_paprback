@@ -1,13 +1,10 @@
-import ListYourBookInput from "../listYourBookInput/ListYourBookInput";
-import ListYourBookOutput from "../listYourBookOutput/ListYourBookOutput";
-import React, { useState, useEffect } from "react";
-import "./listYourBook.css";
-import ListingsCarousel from "../listingsCarousel/ListingsCarousel";
-
+import ListYourBookInput from '../listYourBookInput/ListYourBookInput';
+import ListYourBookOutput from '../listYourBookOutput/ListYourBookOutput';
+import React, { useState, useEffect } from 'react';
+import './listYourBook.css';
+import ListingsCarousel from '../listingsCarousel/ListingsCarousel';
 
 function ListYourBook() {
-
-
   // State variables
   const [condition, setCondition] = useState('');
   const [notes, setNotes] = useState('');
@@ -29,7 +26,6 @@ function ListYourBook() {
     user_id: '',
   });
 
-
   useEffect(() => {
     //Added this useEffect
     console.log(newListing);
@@ -46,7 +42,7 @@ function ListYourBook() {
 
   // Function to handle Enter key press in the search bar
   function handleEnter(e) {
-    if (e.key === "Enter" || e.keyCode === 13) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
       handleSearchClick();
     }
   }
@@ -64,7 +60,6 @@ function ListYourBook() {
         })
         .then((data) => {
           setSearchResult(data.payload[0]);
-          
         })
         .catch((error) => {
           console.error('Error fetching data:', error);
@@ -74,7 +69,7 @@ function ListYourBook() {
             cover_img: '',
             isbn: '',
           });
-        
+
           console.log('No book found. Please try again.');
         });
     }
@@ -93,7 +88,6 @@ function ListYourBook() {
 
   // Function to handle the listing button click
   function handleListingClick() {
-
     setNewListing({
       title: searchResult.title,
       author: searchResult.author,
@@ -122,7 +116,7 @@ function ListYourBook() {
         .then((res) => {
           if (res.ok) {
             console.log('Listing created successfully!');
-            
+
             return res.json();
           } else {
             throw new Error('Failed to create listing');
@@ -130,18 +124,17 @@ function ListYourBook() {
         })
         .then((data) => {
           console.table(newListing);
-          
         })
         .catch((error) => {
           console.error('Error creating listing:', error);
         });
-        
-        handleReloadClick()
+
+      handleReloadClick();
     }
   }, [newListing]);
 
   // Render the component
-   return (
+  return (
     <div id="listings-page">
       <div id="listBookContainer">
         <h1>List Your Book</h1>
@@ -160,11 +153,9 @@ function ListYourBook() {
         />
       </div>
       <div id="listingsCarousel">
-        <ListingsCarousel 
-        />
+        <ListingsCarousel />
       </div>
-    
-  </div>
+    </div>
   );
 }
 

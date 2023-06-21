@@ -1,9 +1,11 @@
+
 import express from "express";
 import dotenv from "dotenv";
 import pkg from "pg";
 import cors from "cors";
 import Routes from "./routes.js";
 import nodemon from "nodemon";
+
 
 export const { Pool } = pkg;
 dotenv.config();
@@ -38,23 +40,24 @@ Routes(app, pool);
 //   });
 // });
 
-
 // Close the database connection when the server is stopped
-process.on("SIGINT", () => {
+
+process.on('SIGINT', () => {
+
   pool
     .end()
     .then(() => {
-      console.log("Database connection closed");
+      console.log('Database connection closed');
       process.exit(0);
     })
     .catch((error) => {
-      console.error("Error closing database connection:", error);
+      console.error('Error closing database connection:', error);
       process.exit(1);
     });
 });
 
-app.get("/message", (req, res) => {
-  res.json({ message: "Hello from server!" });
+app.get('/message', (req, res) => {
+  res.json({ message: 'Hello from server!' });
 });
 
 app.listen(port, () => {
