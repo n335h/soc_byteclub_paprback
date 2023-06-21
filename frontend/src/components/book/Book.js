@@ -15,8 +15,6 @@ function Book({ cover_img, title, author, listing_id, onClick }) {
     event.stopPropagation(); // Stop event propagation
     likeToggle();
   }
-
-  console.log(like);
   
   return (
     <div id="book" key={listing_id} onClick={() => onClick && onClick()}>
