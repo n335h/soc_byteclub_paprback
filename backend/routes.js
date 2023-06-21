@@ -1,20 +1,10 @@
 import { getBooks, postListing } from "./helper.js";
 
 
+
 export default function Routes(app, pool) {
 
-  const closeDatabaseConnection = () => {
-    pool
-      .end()
-      .then(() => {
-        console.log("Database connection closed");
-        process.exit(0);
-      })
-      .catch((error) => {
-        console.error("Error closing database connection:", error);
-        process.exit(1);
-      });
-  };
+
 
 // BOOKS
 app.get("/", (req, res) => {
@@ -187,7 +177,20 @@ app.delete("/api/listings/:id", async function (req, res) {
     res.status(500).json({ success: false, error: "Internal server error" });
   }
 });
-
+  
+const closeDatabaseConnection = () => {
+    pool
+      .end()
+      .then(() => {
+        console.log("Database connection closed");
+        process.exit(0);
+      })
+      .catch((error) => {
+        console.error("Error closing database connection:", error);
+        process.exit(1);
+      });
+  };
+  
   process.on("SIGINT", closeDatabaseConnection);
   process.on("SIGTERM", closeDatabaseConnection);
 
