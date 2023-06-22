@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: center;
   min-height: 60rem;
+  max-width: 50rem;
   background-color: var(--background);
   padding: 0 1rem;
 }
@@ -20,15 +21,19 @@
 #book-cover {
   width: 100%;
   height: 100%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 #book-view img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 30rem;
+  object-fit: cover;
 }
 
 #book-info {
+  margin: 0 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,12 +43,13 @@
 
 #book-view h1 {
   font-size: var(--text-xxl);
-  margin: 1rem;
+  margin-bottom: 1rem;
+  word-wrap: wrap;
 }
 
 #book-view h2 {
   font-size: var(--text-xl);
-
+  margin-bottom: 2rem;
 }
 
 #book-view h3 {
@@ -51,12 +57,11 @@
 }
 
 #contact {
-
 }
 
 #book-view #book-view-close {
   width: 20rem;
-  
+
   border: none;
   background-color: transparent;
   color: rgb(168, 0, 0);
@@ -70,4 +75,20 @@
 #book-view #book-view-close:hover {
   background-color: rgb(168, 0, 0);
   color: white;
+}
+
+#book-view span {
+  font-size: var(--text-s);
+  vertical-align: 0.2rem;
+}
+
+#book-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+#book-details h3 {
+  font-size: var(--text-r);
 }

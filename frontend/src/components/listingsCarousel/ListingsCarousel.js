@@ -114,7 +114,7 @@ function ListingsCarousel() {
             // Rendering Book component for each listing
             <Book
               data-testid="listing"
-              cover={book.cover_img}
+              cover_img={book.cover_img}
               title={book.title}
               author={book.author}
             />
