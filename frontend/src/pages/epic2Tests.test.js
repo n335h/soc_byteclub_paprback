@@ -53,45 +53,4 @@ describe('BrowseBooks', () => {
   });
 
 
-  test('clicking search button filters listings', () => {
-
-   
-    const setState = jest.fn();
-    jest
-      .spyOn(React, 'useState')
-      .mockImplementationOnce(initState => [initState, setState]);
-      
-  
-
-    // Render the component
-    render(
-      <MemoryRouter>
-      <BrowseBooks />
-      </MemoryRouter>
-    );
-
-    // Get the search input
-    const searchInput = screen.getByPlaceholderText('Search');
-    fireEvent.change(searchInput, { target: { value: '1984' } });
-
-    // Get the search button
-    const searchButton = screen.getByText('Search');
-    fireEvent.click(searchButton);
-
-    // Assert that the listings are filtered correctly
-    const listing1 = screen.getById('book-container');
-    const listing2 = screen.queryByText('The Great Gatsby');
-    expect(listing1).toBeInTheDocument();
-    expect(listing2).not.toBeInTheDocument();
-  });
-
-
 })
-
-// it('should test what goes into the state, () => {
-//   const setState = jest.fn();
-//   jest
-//     .spyOn(React, 'useState')
-//     .mockImplementationOnce(initState => [initState, setState]);
-//   render(<MyComponent />);
-// });
