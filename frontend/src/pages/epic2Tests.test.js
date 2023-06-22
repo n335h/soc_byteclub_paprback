@@ -88,3 +88,10 @@ describe('BrowseBooks', () => {
 
 })
 
+// it('should test what goes into the state, () => {
+//   const setState = jest.fn();
+//   jest
+//     .spyOn(React, 'useState')
+//     .mockImplementationOnce(initState => [initState, setState]);
+//   render(<MyComponent />);
+// });
