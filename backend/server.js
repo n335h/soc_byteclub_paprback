@@ -22,7 +22,7 @@ app.use(cors());
 app.use(express.json());
 
 // Create a database client
-const pool = new Pool({
+export const pool = new Pool({
   connectionString: connectionString, // Use 'connectionString' instead of 'dbConnectionString'
 });
 
@@ -60,9 +60,9 @@ app.get('/message', (req, res) => {
   res.json({ message: 'Hello from server!' });
 });
 
-app.listen(port, () => {
-  console.log(`server started at http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`server started at http://localhost:${port}`);
+// });
 
 
 export default app
