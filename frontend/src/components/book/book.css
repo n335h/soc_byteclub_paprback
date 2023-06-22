@@ -43,6 +43,14 @@
   font-size:var(--text-r);
 }
 
+#book-distance {
+  font-size:var(--text-s);
+}
+
+#book-distance span {
+  color: var(--main-color);
+  font-weight: bold;
+}
 
 @media screen and (max-width: 600px) {
   

@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
 
 #book-view-container {
+  margin-top: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,19 +15,23 @@
   min-height: 60rem;
   max-width: 50rem;
   background-color: var(--background);
-  padding: 0 1rem;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 1rem white;
+
 }
 
 #book-cover {
   width: 100%;
   height: 100%;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  
   display: flex;
   justify-content: center;
 }
 
 #book-view img {
+  border: 0.5rem solid var(--main-color);
   width: 30rem;
   object-fit: cover;
 }
@@ -56,15 +60,36 @@
   font-size: var(--text-l);
 }
 
-#contact {
+#book-view #buttons {
+  width: 100%;
+  padding: 0 4rem;
+}
+
+#book-view #contact {
+  width: 100%;
+  border: none;
+  background-color: var(--main-color);
+  font-size: var(--text-r);
+  padding: 0.8rem 4rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+#book-view #contact:hover {
+  
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 #book-view #book-view-close {
-  width: 20rem;
+  width: 100%;
 
   border: none;
   background-color: transparent;
-  color: rgb(168, 0, 0);
+  color: var(--close-color);
   padding: 0.8rem 4rem;
   font-size: var(--text-r);
   cursor: pointer;
@@ -73,14 +98,16 @@
 }
 
 #book-view #book-view-close:hover {
-  background-color: rgb(168, 0, 0);
+  background-color: var(--close-color);
   color: white;
+  font-weight: bold;
 }
 
 #book-view span {
   font-size: var(--text-s);
   vertical-align: 0.2rem;
-}
+  }
+
 
 #book-details {
   display: flex;
@@ -91,4 +118,9 @@
 
 #book-details h3 {
   font-size: var(--text-r);
+}
+
+#book-view #distance {
+  font-size: var(--text-r);
+  margin-bottom: 2rem;
 }
