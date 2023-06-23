@@ -38,6 +38,7 @@ function ListYourBook() {
   // Function to handle changes in the search bar input
   function handleChange(e) {
     setSearchTerm(e.target.value);
+    console.log(searchTerm);
   }
 
   // Function to handle Enter key press in the search bar

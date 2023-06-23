@@ -1,0 +1,14 @@
+.logIN {
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    padding: 0.6rem 4rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--text-r);
+    margin: 2px 5px;
+    cursor: pointer;
+    letter-spacing: 0.1rem;;
+}
