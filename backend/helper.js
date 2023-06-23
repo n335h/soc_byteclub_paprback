@@ -13,11 +13,12 @@ export async function getBooks(pool) {
 }
 
 // LISTINGS
- 
+
 // get my listings
 export async function getMyListings(pool) {
   try {
-    const query = "SELECT listings.*, users.* FROM listings JOIN users ON listings.user_id = users.id WHERE listings.user_id = 1;";
+    const query =
+      "SELECT listings.*, users.* FROM listings JOIN users ON listings.user_id = users.id WHERE listings.user_id = 1;";
     const result = await pool.query(query);
     console.table(result.rows);
     return result.rows;
@@ -26,11 +27,12 @@ export async function getMyListings(pool) {
     return null;
   }
 }
- 
+
 // get others' listings
 export async function getOthersListings(pool) {
   try {
-    const query = "SELECT listings.*, users.* FROM listings JOIN users ON listings.user_id = users.id WHERE listings.user_id != 1;";
+    const query =
+      "SELECT listings.*, users.* FROM listings JOIN users ON listings.user_id = users.id WHERE listings.user_id != 1;";
     const result = await pool.query(query);
     console.table(result.rows);
     return result.rows;
@@ -43,8 +45,6 @@ export async function getOthersListings(pool) {
 // post a new listing into the database
 export async function postListing(pool, newListing) {
   try {
-    const user_id = Math.floor(Math.random() * 3) + 1;
-
     const values = [
       newListing.title,
       newListing.author,
@@ -52,7 +52,7 @@ export async function postListing(pool, newListing) {
       newListing.cover_img,
       newListing.condition,
       newListing.notes,
-      user_id,
+      newListing.user_id,
     ];
 
     const postQuery =

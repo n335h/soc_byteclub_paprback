@@ -1,5 +1,5 @@
 import "./listingsCarousel.css";
-import Book from "../book/Book";
+import BookMyBook from "../BookMyBook/BookMyBook";
 import { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -112,7 +112,7 @@ function ListingsCarousel() {
         >
           {listings.map((book) => (
             // Rendering Book component for each listing
-            <Book
+            <BookMyBook
               data-testid="listing"
               cover_img={book.cover_img}
               title={book.title}

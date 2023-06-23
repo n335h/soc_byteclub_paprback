@@ -1,29 +1,29 @@
-import ListYourBookInput from '../listYourBookInput/ListYourBookInput';
-import ListYourBookOutput from '../listYourBookOutput/ListYourBookOutput';
-import React, { useState, useEffect } from 'react';
-import './listYourBook.css';
-import ListingsCarousel from '../listingsCarousel/ListingsCarousel';
+import ListYourBookInput from "../listYourBookInput/ListYourBookInput";
+import ListYourBookOutput from "../listYourBookOutput/ListYourBookOutput";
+import React, { useState, useEffect } from "react";
+import "./listYourBook.css";
+import ListingsCarousel from "../listingsCarousel/ListingsCarousel";
 
 function ListYourBook() {
   // State variables
-  const [condition, setCondition] = useState('');
-  const [notes, setNotes] = useState('');
+  const [condition, setCondition] = useState("");
+  const [notes, setNotes] = useState("");
 
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [searchResult, setSearchResult] = useState({
-    title: '',
-    author: '',
-    cover_img: '',
-    isbn: '',
+    title: "",
+    author: "",
+    cover_img: "",
+    isbn: "",
   });
   const [newListing, setNewListing] = useState({
-    title: '',
-    author: '',
-    isbn: '',
-    condition: '',
-    notes: '',
-    cover_img: '',
-    user_id: '',
+    title: "",
+    author: "",
+    isbn: "",
+    condition: "",
+    notes: "",
+    cover_img: "",
+    user_id: "",
   });
 
   useEffect(() => {
@@ -42,7 +42,7 @@ function ListYourBook() {
 
   // Function to handle Enter key press in the search bar
   function handleEnter(e) {
-    if (e.key === 'Enter' || e.keyCode === 13) {
+    if (e.key === "Enter" || e.keyCode === 13) {
       handleSearchClick();
     }
   }
@@ -55,22 +55,22 @@ function ListYourBook() {
           if (res.ok) {
             return res.json();
           } else {
-            throw new Error('No book found');
+            throw new Error("No book found");
           }
         })
         .then((data) => {
           setSearchResult(data.payload[0]);
         })
         .catch((error) => {
-          console.error('Error fetching data:', error);
+          console.error("Error fetching data:", error);
           setSearchResult({
-            title: '',
-            author: '',
-            cover_img: '',
-            isbn: '',
+            title: "",
+            author: "",
+            cover_img: "",
+            isbn: "",
           });
 
-          console.log('No book found. Please try again.');
+          console.log("No book found. Please try again.");
         });
     }
   }
@@ -95,6 +95,7 @@ function ListYourBook() {
       cover_img: searchResult.cover_img,
       condition: condition,
       notes: notes,
+      user_id: 1,
     });
     console.log(newListing);
   }
@@ -105,28 +106,28 @@ function ListYourBook() {
 
   // // Make the API call when newListing state changes
   useEffect(() => {
-    if (newListing.title !== '') {
-      fetch('http://localhost:5432/api/listings', {
-        method: 'POST',
+    if (newListing.title !== "") {
+      fetch("http://localhost:5432/api/listings", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(newListing),
       })
         .then((res) => {
           if (res.ok) {
-            console.log('Listing created successfully!');
+            console.log("Listing created successfully!");
 
             return res.json();
           } else {
-            throw new Error('Failed to create listing');
+            throw new Error("Failed to create listing");
           }
         })
         .then((data) => {
           console.table(newListing);
         })
         .catch((error) => {
-          console.error('Error creating listing:', error);
+          console.error("Error creating listing:", error);
         });
 
       handleReloadClick();

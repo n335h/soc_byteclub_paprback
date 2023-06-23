@@ -1,0 +1,57 @@
+#book {
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  #book-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  #like-heart {
+    position: absolute;
+    top: 3rem;
+    right: 1.4rem;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    scale: 1.2;
+    cursor: pointer;
+  }
+  
+  .heart-pink path {
+    fill: var(--close-color);
+    stroke: var(--background);
+  
+  }
+  
+  #book-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  
+  #book-title {
+    font-size:var(--text-r);
+    font-weight: bold;
+  }
+  
+  #book-author {
+    font-size:var(--text-r);
+  }
+  
+  #book-distance {
+    font-size:var(--text-s);
+  }
+  
+  #book-distance span {
+    color: var(--main-color);
+    font-weight: bold;
+  }
+  
+  @media screen and (max-width: 600px) {
+    
+  }
