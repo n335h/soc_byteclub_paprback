@@ -7,30 +7,6 @@ import "react-multi-carousel/lib/styles.css";
 function ListingsCarousel() {
   const [listings, setListings] = useState([]);
 
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-      // partialVisibilityGutter: 40,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-      // partialVisibilityGutter: 40,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      // partialVisibilityGutter: 30,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      // partialVisibilityGutter: 30,
-    },
-  };
-
   // useEffect to fetch listings data from the API on component mount
   useEffect(() => {
     fetch(`http://localhost:5432/api/listings`)
@@ -49,12 +25,12 @@ function ListingsCarousel() {
 
   // useEffect to log the listings whenever they change
   useEffect(() => {
-    console.log(listings);
+    // console.log(listings);
   }, [listings]);
 
   return (
     <div id="listings-carousel">
-      <h2>Your Listings</h2>
+      <h1>Your Listings</h1>
       <div data-testid="listing" className="books-grid">
         <Carousel
           additionalTransfrom={0}
@@ -76,26 +52,42 @@ function ListingsCarousel() {
           renderButtonGroupOutside={false}
           renderDotsOutside={false}
           responsive={{
-            desktop: {
+            xxxxl: {
               breakpoint: {
                 max: 3000,
-                min: 1024,
+                min: 1600,
               },
-              items: 3,
+              items: 6,
               partialVisibilityGutter: 40,
             },
-            mobile: {
+            xxxl: {
               breakpoint: {
-                max: 464,
-                min: 0,
+                max: 1599,
+                min: 1400,
               },
-              items: 1,
+              items: 5,
+              partialVisibilityGutter: 40,
+            },
+            xxl: {
+              breakpoint: {
+                max: 1399,
+                min: 1290,
+              },
+              items: 4,
+              partialVisibilityGutter: 40,
+            },
+            m: {
+              breakpoint: {
+                max: 1289,
+                min: 601,
+              },
+              items: 3,
               partialVisibilityGutter: 30,
             },
-            tablet: {
+            s: {
               breakpoint: {
-                max: 1024,
-                min: 464,
+                max: 600,
+                min: 0,
               },
               items: 2,
               partialVisibilityGutter: 30,

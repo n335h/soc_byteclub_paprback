@@ -1,34 +1,43 @@
 .cover {
     height: auto;
-    width:60%;
-    margin: 0.3vh auto;
+    width:100%;
+    margin: 1rem auto;
 }
 
 .outputForm {
-    width: 25rem;
-    font-size: var(--text-s);
-    height:3rem;
+    width: 100%;
+    font-size: var(--text-r);
+    height: 3rem;
     border-radius: 0.5rem;
     border: 1px solid #c4c4c4;
     color: var(--text-color);
+    margin: 0 0 1rem 0;
+    padding-left: 1rem;
 }
+
 .outputFormLabels {
     font-size:var(--text-r);
     display: flex;
-    width: 25rem;
-    margin: 0.3vh auto;
+    width: 100%;
+    margin: 0.3rem auto;
     justify-content: flex-start;
 }
 
 .outputFormNotes {
-    width: 25rem;
-    height: 3vw;
+    padding-left: 1rem;
+    font-size:var(--text-r);
+    width: 100%;
+    height: 3rem;
     border-radius: 0.5rem;
     border: 1px solid #c4c4c4;
 }
 
+.outputForm.conditionDropdown {
+    padding-left: 0.5rem;
+}
+
 .outputForm p {
-    width: 25rem;
+    width: 100%;
     justify-content: flex-start;
 }
 
@@ -36,21 +45,23 @@
     background-color: var(--main-color);
     border: none;
     color: white;
-    padding: 10px 32px;
+    padding: 0.8rem 4rem;
     border-radius: 6px;
     text-align: center;
     text-decoration: none;
     font-size: var(--text-s);
-    margin: 2px 2px;
+    margin: 2rem 0;
     cursor: pointer;
     font-weight: 600;
-
   }
+
   .postListing:hover {
     background-color: var(--main-color);
     color: white;
     scale: 1.1;
   }
+
+
 /* 
   @media screen and (max-width: 600px) {
     #cover {

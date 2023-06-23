@@ -8,7 +8,6 @@ function BookMyBook({
   author,
   listing_id,
   onClick,
-  distance,
 }) {
   const [like, setLike] = useState(false);
 
@@ -22,18 +21,18 @@ function BookMyBook({
   };
 
   return (
-    <div id="book" key={listing_id} onClick={() => onClick && onClick()}>
-      <div id="book-container">
+    <div id="mybook" key={listing_id} onClick={() => onClick && onClick()}>
+      <div id="mybook-container">
         <Heart
-          id="like-heart"
+          id="mybook-like"
           className={like ? "heart-pink" : ""}
           onClick={heartClick}
         />
-        <img id="book-cover" src={cover_img} alt="" />
-        <p datatest-id="listing" id="book-title">
+        <img id="mybook-cover" src={cover_img} alt="" />
+        <p datatest-id="listing" id="mybook-title">
           {title}
         </p>
-        <p id="book-author">{author}</p>
+        <p id="mybook-author">{author}</p>
       </div>
     </div>
   );
