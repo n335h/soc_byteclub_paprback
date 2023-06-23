@@ -6,16 +6,10 @@ const BookView = () => {
   const location = useLocation();
 
   const { selectedBook } = location.state;
-  const {
-    listing_id,
-    user_id,
-    title,
-    author,
-    isbn,
-    cover_img,
-    condition,
-    notes,
-  } = selectedBook;
+  const { distance } = location.state;
+
+
+  const { title, author, isbn, cover_img, condition, notes } = selectedBook;
 
   return (
     <div id="book-view">
@@ -31,12 +25,15 @@ const BookView = () => {
           <h3 id="book-isbn"><span>ISBN:</span> {isbn}</h3>
           <h3 id="condition"><span>Condition:</span> {condition}</h3>
           <h3 id="notes"><span>Notes:</span> {notes}</h3>
+          <h3 id="distance"><span>Distance:</span> {Math.round(distance)} miles</h3>
         </div>
         </div>
+        <div id="buttons">
         <button id="contact">Contact</button>
         <Link to="/browse">
           <button id="book-view-close">Close</button>
         </Link>
+        </div>
       </div>
     </div>
   );

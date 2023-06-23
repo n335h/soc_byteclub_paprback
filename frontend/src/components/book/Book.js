@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ReactComponent as Heart} from '../../assets/icons/heart.svg';
 
 
-function Book({ cover_img, title, author, listing_id, onClick }) {
+function Book({ cover_img, title, author, listing_id, onClick, distance }) {
 
   const [like, setLike] = useState(false);
 
@@ -24,6 +24,7 @@ function Book({ cover_img, title, author, listing_id, onClick }) {
         <img id="book-cover" src={cover_img} alt="" />
         <p datatest-id='listing' id="book-title">{title}</p>
         <p id="book-author">{author}</p>
+        <p id="book-distance"><span>{Math.round(distance)}</span> miles</p>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ export async function getBooks(pool) {
 // get my listings
 export async function getMyListings(pool) {
   try {
-    const query = "SELECT * FROM listings WHERE user_id = 1;";
+    const query = "SELECT listings.*, users.* FROM listings JOIN users ON listings.user_id = users.id WHERE listings.user_id = 1;";
     const result = await pool.query(query);
     console.table(result.rows);
     return result.rows;
@@ -30,7 +30,7 @@ export async function getMyListings(pool) {
 // get others' listings
 export async function getOthersListings(pool) {
   try {
-    const query = "SELECT * FROM listings WHERE user_id != 1;";
+    const query = "SELECT listings.*, users.* FROM listings JOIN users ON listings.user_id = users.id WHERE listings.user_id != 1;";
     const result = await pool.query(query);
     console.table(result.rows);
     return result.rows;
