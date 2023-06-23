@@ -24,7 +24,7 @@ function Book({ cover_img, title, author, listing_id, onClick, distance }) {
         <img id="book-cover" src={cover_img} alt="" />
         <p datatest-id='listing' id="book-title">{title}</p>
         <p id="book-author">{author}</p>
-        <p id="book-distance"><span>{Math.round(distance)}</span> miles</p>
+        <p id="book-distance"><span>{Math.round(distance)}</span> miles away</p>
       </div>
     </div>
   );

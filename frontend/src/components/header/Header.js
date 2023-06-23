@@ -5,6 +5,9 @@ import React, { useState, useEffect } from 'react';
 import userIconGrey from '../../assets/icons/userIconGrey.png';
 import LoginButton from '../loginButton/loginButton';
 import LogoutButton from '../logoutButton/logoutButton';
+
+
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -42,8 +45,8 @@ function Header() {
             <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SAxdFB6ZHQwamhJdmgyOXB3a3Y0RGRjZzRldVI0MnFreqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEo2SU1TM1d2TDF1amktVEhNVXE5OENwR0tfWXFGUmhVo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
               <button className="signup">Sign up</button>
             </Link>
-            <LoginButton />
-            <LogoutButton />
+            <LoginButton id="header-login"/>
+            <LogoutButton id="header-logout"/>
           </div>
         </div>
         <div className="menuBar">
