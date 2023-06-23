@@ -13,7 +13,7 @@ export async function getBooks(pool) {
 }
 
 // LISTINGS
-
+ 
 // get my listings
 export async function getMyListings(pool) {
   try {
@@ -26,7 +26,7 @@ export async function getMyListings(pool) {
     return null;
   }
 }
-
+ 
 // get others' listings
 export async function getOthersListings(pool) {
   try {

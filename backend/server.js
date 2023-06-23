@@ -33,12 +33,6 @@ pool.connect();
 Routes(app, pool);
 
 
-// app.get("/", (req, res) => {
-//   res.json({
-//     status: true,
-//     payload: "This route works!",
-//   });
-// });
 
 // Close the database connection when the server is stopped
 
@@ -60,9 +54,9 @@ app.get('/message', (req, res) => {
   res.json({ message: 'Hello from server!' });
 });
 
-// app.listen(port, () => {
-//   console.log(`server started at http://localhost:${port}`);
-// });
+app.listen(port, () => {
+  console.log(`server started at http://localhost:${port}`);
+});
 
 
 export default app
