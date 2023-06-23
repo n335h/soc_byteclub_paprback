@@ -73,7 +73,7 @@ function ListYourBookOutput(props) {
       <form  id="condition" onChange={props.onChangeCondition}>
         <select data-testid="defaultValue"
 
-          className="outputForm"
+          className="outputForm conditionDropdown" // Add custom class here
           name="Condition"
           placeholder="Condition"
         >

@@ -8,7 +8,6 @@ import BrowseBooks from './pages/BrowseBooks';
 import BookView from './pages/BookView';
 import About from './pages/About';
 import FAQ from './pages/FAQ';
-import Listings from './pages/Listings';
 import ListBook from './pages/ListBook';
 import Offer from './pages/Offer';
 
@@ -39,7 +38,6 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/browse" element={<BrowseBooks />} />
         <Route path="/bookview/:listing_id" element={<BookView />} />
-        <Route path="/listings" element={<Listings />} />
         <Route path="/listbook" element={<ListBook />} />
         <Route path="/offer" element={<Offer />} />
       </Routes>

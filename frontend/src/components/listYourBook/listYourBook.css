@@ -1,14 +1,15 @@
-#listings-page {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+#listings-component {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #listBookContainer {
+  padding: 1rem 15%;
   background-color: #f9f9f9;
-  width: 40rem;
-  margin: 1vh auto;
+  width: 100%;
   border-radius: 0.5rem;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

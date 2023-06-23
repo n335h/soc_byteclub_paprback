@@ -2,7 +2,7 @@ import ListYourBookInput from "../listYourBookInput/ListYourBookInput";
 import ListYourBookOutput from "../listYourBookOutput/ListYourBookOutput";
 import React, { useState, useEffect } from "react";
 import "./listYourBook.css";
-import ListingsCarousel from "../listingsCarousel/ListingsCarousel";
+
 
 function ListYourBook() {
   // State variables
@@ -136,7 +136,7 @@ function ListYourBook() {
 
   // Render the component
   return (
-    <div id="listings-page">
+    <div id="listings-component">
       <div id="listBookContainer">
         <h1>List Your Book</h1>
         {/* Render the input component for the search bar */}
@@ -153,9 +153,7 @@ function ListYourBook() {
           book={searchResult} // Pass the searchResult state as a prop to the output component -  Create listing
         />
       </div>
-      <div id="listingsCarousel">
-        <ListingsCarousel />
-      </div>
+      
     </div>
   );
 }
