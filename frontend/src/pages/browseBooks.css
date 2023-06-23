@@ -91,7 +91,7 @@
 button#close {
   position: absolute;
   top: -1.8rem;
-  right: -6rem;
+  left: -8rem;
   display: none;
   scale: 0.3;
   border: none;
