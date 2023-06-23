@@ -24,6 +24,7 @@ function Books() {
     
 
 
+
   const navToBookView = useNavigate();
 
   useEffect(() => {
@@ -105,7 +106,7 @@ function Books() {
     );
   });
 
-  const handleSearchClick = () => {
+   const handleSearchClick = () => {
     setListings(filteredListings);
     const searchInput = document.querySelector(".searchInputBrowse");
     searchInput.value = "";
@@ -141,12 +142,13 @@ function Books() {
         <h1>Browse Books</h1>
         <div className="search-container">
           <input
+            data-testid="search-input"
             className="searchInputBrowse"
             type="text"
             placeholder="Search"
             onChange={handleSearchChange}
           ></input>
-          <button className="searchButton" onClick={handleSearchClick}>
+          <button data-testid="search-button" className="searchButton" onClick={handleSearchClick}>
             Search
           </button>
         </div>
