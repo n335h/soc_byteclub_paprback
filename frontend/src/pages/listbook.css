@@ -1,0 +1,166 @@
+
+.overall-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  flex: 0 0 120%;
+} 
+
+#list-book {
+  padding: 4rem 5rem;
+  height: 100%;
+}
+
+.list-book-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 5rem;
+  flex: 0 0 100%;
+  width: 50%;
+}
+
+.listings-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  z-index: 1;
+  
+}
+
+.user-info-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 2;
+  flex: 0 0 50%;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  top: -50px;
+  padding: 2rem;
+  
+}
+
+.user-image {
+  /* the magic */
+  display: block;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  -webkit-border-radius: 180px;
+  -moz-border-radius: 180px;
+  -ms-border-radius: 180px;
+  -o-border-radius: 180px;
+  border-radius: 180px;
+  top: -10px;
+  /* the rest */
+  position: relative; /* for the overlay later */
+  margin: 0px auto;
+  text-align: center;
+  margin-bottom: 10px;
+  border: 3px solid #296D6D;
+  -webkit-box-shadow: 0px 1px 2px #296D6D,inset 0px 3px 8px #296D6D;
+  -moz-box-shadow: 0px 1px 2px #296D6D,inset 0px 3px 8px #296D6D;
+  box-shadow: 0px 1px 2px #296D6D,inset 0px 3px 8px #296D6D;
+}
+
+@media screen and (max-width: 1000px) {
+  .list-book-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .listings-carousel-container {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.user-image-container {
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-direction: row;
+flex: 0 0 50%;
+width: 100%;
+}
+
+.find-a-book-button {
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    font-size: var(--text-r);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.1s ease-in;
+  }
+  
+  .find-a-book-button:hover {
+    background-color: var(--main-color);
+  }
+
+.bolded {
+  font-weight: bold;
+  color: var(--secondary-color-trans);
+}
+
+.inner-text {
+  font-size: var(--text-r);
+
+}
+
+.welcome-text {
+  font-size: var(--text-xl);
+}
+
+.name-text {
+  color: var(--secondary-color-trans);
+}
+
+.dividing-line {
+  font-weight: bold;
+  color: var(--main-color);
+  text-align: center;
+}
+
+/* justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.box-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 200px;
+  list-style-type: none;
+}
+.boxa {
+  background: red;
+  flex: 0 0 100%;
+  width: 50%;
+}
+.boxb {
+  background: orange;
+  order: 2
+}
+.boxc {
+  background: lightgreen;
+}
+.boxb,
+.boxc {
+  flex: 0 0 50%;
+  width: 50%;
+} */

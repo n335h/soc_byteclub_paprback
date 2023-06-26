@@ -1,16 +1,17 @@
-#book {
+#mybook {
     box-sizing: border-box;
     position: relative;
   }
   
-  #book-container {
+  #mybook-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin: 0 1rem;
   }
   
-  #like-heart {
+  #mybook-like {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -27,27 +28,27 @@
   
   }
   
-  #book-cover {
+  #mybook-cover {
     width: 100%;
     height: 100%;
     object-fit: contain;
     cursor: pointer;
   }
   
-  #book-title {
-    font-size:var(--text-r);
+  #mybook-title {
+    font-size:var(--text-s);
     font-weight: bold;
   }
   
-  #book-author {
+  #mybook-author {
+    font-size:var(--text-s);
+  }
+  
+  #mybook-distance {
     font-size:var(--text-r);
   }
   
-  #book-distance {
-    font-size:var(--text-r);
-  }
-  
-  #book-distance span {
+  #mybook-distance span {
     color: var(--main-color);
     font-weight: bold;
   }

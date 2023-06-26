@@ -1,0 +1,165 @@
+#offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding-top: 4rem;
+}
+
+.offer-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 2rem 4rem;
+}
+
+#offer h1 {
+  font-size: var(--text-xl);
+  margin-bottom: 2rem;
+}
+
+#select-your-book {
+  text-align: left;
+  width: 100%;
+}
+
+#offer label {
+  width: 1px;
+  position: fixed;
+  left: 9999px;
+}
+
+#offer form:focus {
+  outline-color: none;
+}
+
+.selectDropdown {
+  width: 100%;
+  padding: 0.8rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: var(--text-r);
+  margin-bottom: 4rem;
+  border: 1px solid #ccc;
+}
+
+#books-display {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; 
+  width: 100%;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+#offer h3 {
+  font-size: var(--text-r);
+  word-wrap: wrap;
+  margin-bottom: 0.5rem;
+  font-family: "Arial", sans-serif;
+}
+
+#offer h4 {
+  font-size: 1.4rem;
+  font-family: "Arial", sans-serif;
+  color: #8e8e8e;
+}
+
+
+
+#offer #author,
+#offer #distance {
+  color: #8e8e8e;
+}
+
+#offer span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.deliveryDropdown {
+  width: 100%;
+  padding: 0.8rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: var(--text-r);
+  border: 1px solid #ccc;
+  margin-bottom: 4rem;
+}
+
+#swap-icon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(160%);
+  font-size: var(--text-xxl);
+  
+}
+
+#swap-icon #left {
+  color: var(--main-color);
+  line-height: 0;
+}
+
+#swap-icon #right {
+  color: var(--secondary-color);
+}
+
+#offer img {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.offer-books {
+  width: 150px;
+  
+}
+
+#pre-message {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#offer #message {
+  font-size: var(--text-r);
+  margin-bottom: 2rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  margin-bottom: 4rem;
+}
+
+#offer #send-offer {
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  font-weight: bold;
+  width: 50%;
+  padding: 0.8rem 4rem;
+  border-radius: 0.5rem;
+  font-size: var(--text-r);
+  transform: translateX(50%);
+  margin-bottom: 4rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+#offer #send-offer:hover {
+  background-color: var(--secondary-color);
+
+}
+
+#post-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 10rem;
+}
+
+#post-message h2 {
+  font-size: var(--text-xl);
+  margin-bottom: 2rem;
+}

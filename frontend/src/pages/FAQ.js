@@ -12,6 +12,7 @@ const FAQ2 = () => {
   return (
     <section className="pages" id="faq">
       <div className="faq-container">
+      <div className="faq">
         <img className="faqimg" src={faq2} alt="FAQ" />
         <div className="faq-content">
           <h1 id="pagetitle">FAQ</h1>

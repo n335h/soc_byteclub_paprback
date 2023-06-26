@@ -36,10 +36,28 @@ hr {
     padding-bottom: 3rem;
   }
 
+  .faq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: var( --text-r);
+    justify-content: space-evenly;
+    width: 70%;
+  }
+
+  .faqList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: var( --text-r);
+     width: 100%;
+  }
   #list {
     list-style: none;
     width: 80%;
-    
   }
 
   .title.active {
