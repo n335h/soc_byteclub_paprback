@@ -1,6 +1,6 @@
 // Importing CSS file and default cover image
-import './listYourBookOutput.css';
-import coverdefault from '../../assets/images/coverDefault.png';
+import "./listYourBookOutput.css";
+import coverdefault from "../../assets/images/coverDefault.png";
 
 //Creating a listed books array
 //1. Create a new array - in a data file.
@@ -24,7 +24,7 @@ function ListYourBookOutput(props) {
       {/* Render book title */}
       <p className="outputFormLabels">Title:</p>
       <input
-         data-testid="title-input"
+        data-testid="title-input"
         className="outputForm"
         id="title"
         placeholder="Title"
@@ -70,16 +70,17 @@ function ListYourBookOutput(props) {
 
       {/* Code as it was before */}
 
-      <form  id="condition" onChange={props.onChangeCondition}>
-        <select data-testid="defaultValue"
-
+      <form id="condition" onChange={props.onChangeCondition}>
+        <select
+          data-testid="defaultValue"
+          id="condition-select"
           className="outputForm conditionDropdown" // Add custom class here
           name="Condition"
           placeholder="Condition"
         >
           <option value="Condition" disabled selected>
-            {' '}
-            Condition{' '}
+            {" "}
+            Condition{" "}
           </option>
           <option value="New">New</option>
           <option value="Like New">Like New</option>
@@ -92,21 +93,19 @@ function ListYourBookOutput(props) {
 
       {/* Render book notes */}
       <p className="outputFormLabels">Notes:</p>
-      <input data-testid="notes"
+      <input
+        data-testid="notes"
         onChange={props.onChangeNotes}
         className="outputFormNotes"
         id="notes"
         type="text"
         placeholder="Notes"
+        maxlength="200"
       ></input>
       <br></br>
 
       {/* Render post listing button */}
-      <button
-        className="postListing"
-        onClick={props.onClick}
-        id="post-listing"
-      >
+      <button className="postListing" onClick={props.onClick} id="post-listing">
         Post Listing
       </button>
     </div>
