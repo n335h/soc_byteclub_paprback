@@ -2,15 +2,13 @@
   margin: 4rem 0;
 }
 
-/*.books-grid {
-  display: grid;
-  grid-gap: 1rem;
-} */
 
 .books-grid {
   width: 100%;
   overflow: hidden;
   background: #fff;
+  display: grid;
+  grid-gap: 1rem;
   z-index: 1;
 }
 
