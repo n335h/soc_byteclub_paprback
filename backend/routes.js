@@ -136,8 +136,8 @@ app.get("/api/books", async function (req, res) {
       console.error("Error executing query:", error);
       res.status(500).json({ success: false, error: "Internal server error" });
     }
-  });
-
+  }); 
+ 
   // List a book
   app.post("/api/listings", async function (req, res) {
     try {

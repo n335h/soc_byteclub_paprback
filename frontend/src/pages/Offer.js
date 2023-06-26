@@ -92,9 +92,10 @@ setTimeout(() => {
   return (
     <section className="pages" id="offer">
       <div className="offer-container">
-        <h1>Your Swap</h1>
+        
         {!messageSent && (
           <div id="pre-message">
+          <h1>Your Swap</h1>
             <div id="select-your-book">
               <label htmlFor="select">Select your book</label>
               <form id="select-book" onChange={handleSelect}>
@@ -119,27 +120,29 @@ setTimeout(() => {
               </form>
             </div>
             <div id="books-display">
-              <div id="my-book">
-                <h3>{mySelectedBook.title}</h3>
-                <h4>{mySelectedBook.author}</h4>
+              <div id="my-book" className="offer-books">
                 <img
                   src={mySelectedBook.cover_img}
                   alt={mySelectedBook.title}
                 ></img>
+                <h3>{mySelectedBook.title}</h3>
+                <h3 id="author">{mySelectedBook.author}</h3>
                 <h4>{mySelectedBook.condition}</h4>
               </div>
-
-              <div id="their-book">
-                <h3>{otherBook.title}</h3>
-                <h4>{otherBook.author}</h4>
+              <div id="swap-icon">
+              <p id="left">←</p><p id="right">→</p>
+              </div>
+              <div id="their-book" className="offer-books">
                 <img src={otherBook.cover_img} alt={otherBook.title}></img>
+                <h3>{otherBook.title}</h3>
+                <h3 id="author">{otherBook.author}</h3>
                 <h4>{otherBook.condition}</h4>
-                <h4>{Math.round(distance)} miles</h4>
+                <h3 id="distance"><span>{Math.round(distance)} miles</span></h3>
               </div>
             </div>
             <form id="delivery" onChange={updateDelivery}>
               <select
-                className="outputForm conditionDropdown" // Add custom class here
+                className="deliveryDropdown" // Add custom class here
                 name="Delivery option"
                 placeholder="Delivery option"
               >
@@ -152,12 +155,13 @@ setTimeout(() => {
                 <option value="Either">Either</option>
               </select>
             </form>
-            <input
+            <textarea
+              rows="5"
               id="message"
               type="text"
               placeholder="Message"
               onChange={updateMessage}
-            ></input>
+            ></textarea>
             <button id="send-offer" onClick={handleMessageClick}>
               Send offer
             </button>
@@ -165,6 +169,7 @@ setTimeout(() => {
         )}
         {messageSent ? (
           <div id="post-message">
+          
             <h2>Offer sent!</h2>
           </div>
         ) : null}
