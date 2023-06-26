@@ -18,7 +18,7 @@ export async function getBooks(pool) {
 export async function getMyListings(pool) {
   try {
     const query =
-      "SELECT listings.*, users.* FROM listings JOIN users ON listings.user_id = users.id WHERE listings.user_id = 1;";
+      "SELECT listings.*, users.* FROM listings JOIN users ON listings.user_id = users.id WHERE listings.user_id = 1 ORDER BY listings.listing_id DESC;";
     const result = await pool.query(query);
     console.table(result.rows);
     return result.rows;
@@ -32,7 +32,7 @@ export async function getMyListings(pool) {
 export async function getOthersListings(pool) {
   try {
     const query =
-      "SELECT listings.*, users.* FROM listings JOIN users ON listings.user_id = users.id WHERE listings.user_id != 1;";
+      "SELECT listings.*, users.* FROM listings JOIN users ON listings.user_id = users.id WHERE listings.user_id != 1 ORDER BY listings.listing_id DESC;";
     const result = await pool.query(query);
     console.table(result.rows);
     return result.rows;

@@ -3,7 +3,6 @@ import ListYourBookOutput from "../listYourBookOutput/ListYourBookOutput";
 import React, { useState, useEffect } from "react";
 import "./listYourBook.css";
 
-
 function ListYourBook() {
   // State variables
   const [condition, setCondition] = useState("");
@@ -61,6 +60,8 @@ function ListYourBook() {
         })
         .then((data) => {
           setSearchResult(data.payload[0]);
+          document.getElementById("notes").value = "";
+          document.getElementById("condition-select").value = "Condition";
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
@@ -70,7 +71,8 @@ function ListYourBook() {
             cover_img: "",
             isbn: "",
           });
-
+          document.getElementById("notes").value = "";
+          document.getElementById("condition-select").value = "Condition";
           console.log("No book found. Please try again.");
         });
     }
@@ -154,7 +156,6 @@ function ListYourBook() {
           book={searchResult} // Pass the searchResult state as a prop to the output component -  Create listing
         />
       </div>
-      
     </div>
   );
 }
