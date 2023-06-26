@@ -1,8 +1,10 @@
 import React from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import "./bookview.css";
 
 const BookView = () => {
+
+  const navToOffer = useNavigate();
   const location = useLocation();
 
   const { selectedBook } = location.state;
@@ -29,7 +31,7 @@ const BookView = () => {
         </div>
         </div>
         <div id="buttons">
-        <button id="contact">Contact</button>
+        <button id="contact" onClick={() => navToOffer("/offer", { state: { selectedBook } })}>Contact</button>
         <Link to="/browse">
           <button id="book-view-close">Close</button>
         </Link>
