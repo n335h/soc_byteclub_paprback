@@ -15,17 +15,13 @@ function ListBook() {
         </div>
         <div className= "overall-box"> 
         <div className="user-info-container">
-          <h1>Welcome Zendaya!</h1>
-          <h2>CONTACT INFORMATION</h2>
-          <h2>Name: Zendaya Coleman</h2>
-          <h2>Email: Zcoleman@gmail.com</h2>
-          <h2>Address:
-          27 Fake Street
-          Faketon
-          SE1 4NF</h2>
-          <h2>Phone: 0121 987 654</h2>
+          <h1 className="welcome-text">Welcome <span className="name-text">Zendaya!</span></h1>
+          <p className="inner-text"><span className="bolded">Name:</span> Zendaya Coleman</p>
+          <p className="inner-text"><span className="bolded">Email:</span> ZColeman@gmail.com</p>
+          <p className="inner-text"><span className="bolded">Address:</span> 27 Fake Street, Faketon, SE1 4NF</p>
+          <p className="inner-text"><span className="bolded">Phone:</span> 0121 987 654</p>
           <Link to="http://localhost:3000/browse">
-          <button id="find-a-book-button">
+          <button className="find-a-book-button">
             Find A Book
           </button>
         </Link>

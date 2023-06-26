@@ -28,6 +28,7 @@
   overflow: hidden;
   background: #fff;
   z-index: 1;
+  
 }
 
 .user-info-container {
@@ -41,6 +42,9 @@
   flex: 0 0 50%;
   background-color: #f9f9f9;
   border-radius: 0.5rem;
+  top: -50px;
+  padding: 2rem;
+  
 }
 
 .user-image {
@@ -54,6 +58,7 @@
   -ms-border-radius: 180px;
   -o-border-radius: 180px;
   border-radius: 180px;
+  top: -10px;
   /* the rest */
   position: relative; /* for the overlay later */
   margin: 0px auto;
@@ -87,6 +92,39 @@ flex: 0 0 50%;
 width: 100%;
 }
 
+.find-a-book-button {
+    background-color: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    font-size: var(--text-r);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.1s ease-in;
+  }
+  
+  .find-a-book-button:hover {
+    background-color: var(--main-color);
+  }
+
+.bolded {
+  font-weight: bold;
+  color: var(--secondary-color-trans);
+}
+
+.inner-text {
+  font-size: var(--text-r);
+
+}
+
+.welcome-text {
+  font-size: var(--text-xl);
+}
+
+.name-text {
+  color: var(--secondary-color-trans);
+}
 
 /* justify-content: space-between;
   align-items: flex-start;

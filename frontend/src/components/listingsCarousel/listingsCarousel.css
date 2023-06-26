@@ -18,3 +18,7 @@
     width: auto;
   }
 }
+
+.title-text {
+  font-size: var(--text-l);
+}
