@@ -29,6 +29,7 @@ function ListBook() {
         <div className="user-image-container">
           <img className="user-image" src="https://i.pinimg.com/474x/2b/a9/ec/2ba9ecf8e084d6b699ea6b5dd7e5575d.jpg" alt="Picture of Zendaya"></img>
         </div>
+        <div className="dividing-line">------------------------------------------------------------------------------------------------------------------------------------------------</div>
         <div className="listings-carousel-container">
           <ListingsCarousel />
         </div>

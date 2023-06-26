@@ -126,6 +126,12 @@ width: 100%;
   color: var(--secondary-color-trans);
 }
 
+.dividing-line {
+  font-weight: bold;
+  color: var(--main-color);
+  text-align: center;
+}
+
 /* justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
