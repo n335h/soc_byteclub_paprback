@@ -12,8 +12,11 @@ const FAQ2 = () => {
   return (
     <section className="pages" id="faq">
       <div className="faq-container">
+      <div className="faq">
         <img className="faqimg" src={faq2} alt="FAQ" />
-
+          </div>
+          <div className="faqList">
+          
         <ul id="list">
           <h1>FAQ</h1>
           <li
@@ -25,6 +28,7 @@ const FAQ2 = () => {
               id="caron"
               className="caron"
               src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png"
+              alt="caron"
             />
           </li>
           <li
@@ -56,6 +60,7 @@ const FAQ2 = () => {
               id="caron"
               className="caron"
               src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png"
+              alt="caron"
             />
           </li>
           <li
@@ -87,6 +92,7 @@ const FAQ2 = () => {
               id="caron"
               className="caron"
               src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png"
+              alt="caron"
             />
           </li>
           <li
@@ -118,6 +124,7 @@ const FAQ2 = () => {
               id="caron"
               className="caron"
               src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png"
+              alt="caron"
             />
           </li>
           <li
@@ -140,6 +147,7 @@ const FAQ2 = () => {
             connect, swap books, and foster a sense of community.
           </li>
         </ul>
+        </div>
       </div>
     </section>
   );
