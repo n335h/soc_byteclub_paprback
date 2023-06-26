@@ -141,7 +141,7 @@ function ListYourBook() {
   return (
     <div id="listings-component">
       <div id="listBookContainer">
-        <h1>List Your Book</h1>
+        <h1 className = "list-text">List Your Book</h1>
         {/* Render the input component for the search bar */}
         <ListYourBookInput
           onChange={handleChange} // Pass the handleChange function as a prop to the input component - Search book for listing

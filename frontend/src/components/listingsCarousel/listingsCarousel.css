@@ -1,8 +1,24 @@
-#listings-carousel h1 {
+ #listings-carousel h1 {
   margin: 4rem 0;
 }
 
+
 .books-grid {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
   display: grid;
   grid-gap: 1rem;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  .listings-carousel-container {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.title-text {
+  font-size: var(--text-l);
 }

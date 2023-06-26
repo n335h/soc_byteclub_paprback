@@ -14,3 +14,8 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
+.list-text {
+  font-size: var(--text-l);
+  padding: 0.3rem;
+}

@@ -2,7 +2,100 @@
     height: 60vh;
     object-fit: cover;
     object-position: center;
-   margin: auto;
+ 
    
 
 }
+#pagetitle {
+    font-size: var(--text-xl);
+    font-weight: bold;
+    color: var(--secondary-color);
+    justify-content: center;
+}
+.faq-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+hr {
+    opacity: 0.2;
+    width:30vw;
+    margin: 1rem;
+}
+  .faq-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70vw;
+   
+    margin: auto;
+    font-size: var( --text-sr);
+    justify-content: space-evenly;
+    padding-bottom: 3rem;
+  }
+
+  .faq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: var( --text-r);
+    justify-content: space-evenly;
+    width: 70%;
+  }
+
+  .faqList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: var( --text-r);
+     width: 100%;
+  }
+  #list {
+    list-style: none;
+    width: 80%;
+  }
+
+  .title.active {
+    font-weight: bold;
+    color: var(--secondary-color);
+  }
+  
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .content.open {
+    max-height: 100px;
+    overflow-y: scroll; /* Adjust the height as per your content */
+  }
+  .caron {
+    margin-left: 1rem;
+    scale: 0.3;
+    opacity: 0.6;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .title img {
+    margin-left: 5px; /* Adjust the margin as needed */
+  }
+
+  @media screen and (max-width: 900px) {
+    .faq-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: var( --text-r);
+        justify-content: space-evenly;
+    
+  }}

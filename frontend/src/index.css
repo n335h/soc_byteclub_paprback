@@ -10,11 +10,12 @@
   /* Global Colours */
 
   --main-color: #DE9E36;
+
   --secondary-color: #296D6D;
-  --secondary-color-trans: #296d6dde;
+  --secondary-color-trans: #296d6da9;
   --background-color: #F3F3F3;
   --text-color: #222222;
-  --close-color: #a80000;
+  --close-color: #ee3232;
 
   /* Global Font Sizes */
 
@@ -24,6 +25,7 @@
   --text-xl: 2.4rem;
   --text-l: 2rem;
   --text-r: 1.6rem;
+  --text-sr: 1.4rem;
   --text-s: 1.2rem;
   --text-xs:1rem;
 
