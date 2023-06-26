@@ -24,7 +24,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5rem;
+  padding: 1rem 14rem;
 }
 
 .header-bottom {
@@ -45,6 +45,10 @@ header {
 .menu.open::before {
   opacity: 0;
   transition: opacity 0.3s ease-in;
+  
+}
+.menu.open {
+  top: 11rem;
 }
 
 .login  {
@@ -189,7 +193,7 @@ header {
     background-color: var(--main-color);
     height: auto;
     right: 0;
-    top: 72px;
+    top: 10rem;
     opacity: 1;
     transition: opacity 0.3s ease-in;
   }

@@ -35,7 +35,7 @@
 }
 .header-title {
   animation-delay: 0.8s;
-  padding: 2rem;
+ 
   margin-left: 2vw;
   position: absolute; /* Add this line to position #popin */
   top: 25%; /* Adjust the top value based on your desired vertical position */
@@ -44,7 +44,7 @@
 
 .header-subtitle {
   animation-delay: 1.2s;
-  padding: 2rem;
+ 
   margin-left: 4vw;
   position: absolute; /* Add this line to position #popin */
   top: 35%; /* Adjust the top value based on your desired vertical position */
@@ -52,7 +52,7 @@
 }
 .header-subtitle2 {
   animation-delay: 1.6s;
-  padding: 2rem;
+
   margin-left: 6vw;
   position: absolute; /* Add this line to position #popin */
   top: 45%; /* Adjust the top value based on your desired vertical position */
@@ -63,7 +63,7 @@
  
   transform: translate(-50%, -50%); /* Center #popin horizontally and vertically */
   background-color: var(--secondary-color-trans);
-  height: 5vh;
+  height: 6vh;
   width: auto;
   padding: 0rem 2rem;
   border-radius: 6px;
@@ -132,10 +132,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90vw;
     font-size: var(--text-r);
-    margin: 2rem;
-  
+    margin: auto;
+   
   
   }
   #subcontainer {
@@ -145,5 +145,32 @@
     margin:2rem 2rem;
     
   }
+  .header-title h1{
+
+    font-size: var(--text-l);
+    margin: auto;
+  
+
+  }
+  
+  .header-subtitle h1 {
+ 
+    font-size: var(--text-l);
+    margin: auto;
+
    
+  }
+  .header-subtitle2 h1{
+    margin: auto;
+    font-size: var(--text-l);
+   
+    
+  }
+  #heroSignup {
+    display: flex;
+    margin: auto;
+    left:30%;
+    top: 60%;
+
+  }
 }
