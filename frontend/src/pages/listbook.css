@@ -16,7 +16,36 @@
   background: #fff;
 }
 
+.User-info-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
+.User-image {
+ /* the magic */
+  display: block;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  -webkit-border-radius: 180px;
+  -moz-border-radius: 180px;
+  -ms-border-radius: 180px;
+  -o-border-radius: 180px;
+  border-radius: 180px;
+  /* the rest */
+  position: relative; /* for the overlay later */
+  margin: 0px auto;
+  text-align: center;
+  margin-bottom: 10px;
+  border: 3px solid #296D6D;
+  -webkit-box-shadow: 0px 1px 2px #296D6D,inset 0px 3px 8px #296D6D;
+  -moz-box-shadow: 0px 1px 2px #296D6D,inset 0px 3px 8px #296D6D;
+  box-shadow: 0px 1px 2px #296D6D,inset 0px 3px 8px #296D6D;
+}
 
 @media screen and (max-width: 1000px) {
   .list-book-container {
