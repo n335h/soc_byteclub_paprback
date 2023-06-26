@@ -5,11 +5,12 @@ function About() {
   return (
     <section className="pages" id="about">
       <div className="about-container">
-        <h1>About Us</h1>
         <div className="about-info">
           <img className="aboutimg" src={aboutUs} alt="about us" />
 
           <p className="about-text">
+            <h1>About Us</h1>
+            <br></br>
             Our journey began with a shared concern: witnessing local
             libraries closing down and realising that people had
             limited access to books. Driven by our belief that
@@ -17,25 +18,28 @@ function About() {
             all, we set out to make a difference. Our core values
             revolve around fostering communities, promoting
             sustainable practices, and making reading an inclusive
-            experience. <br></br> With these principles at heart,
-            Paprback, your friendly neighbourhood book swapping app,
-            came into existence. We are passionate about connecting
-            book lovers and empowering them to share their favourite
-            stories, exchange knowledge, and foster a sense of
-            belonging. By providing a platform where readers can
-            connect with others in their local area and beyond,
-            Paprback encourages the joy of discovery and the
-            preservation of the written word.<br></br> Furthermore, we
-            are committed to environmentally friendly practices. By
-            promoting book swapping, we actively contribute to
-            reducing paper waste and embracing the concept of reusing
-            resources. We believe that every book has a story to tell
-            and should find its way into the hands of someone who will
-            cherish it. Join us on this novel adventure, where the
-            love for books knows no bounds. <br></br> Together, let's
-            build a community that celebrates the power of literature,
-            supports one another, and makes a positive impact on the
-            world around us.
+            experience. <br></br>
+            <br></br> With these principles at heart, Paprback, your
+            friendly neighbourhood book swapping app, came into
+            existence. We are passionate about connecting book lovers
+            and empowering them to share their favourite stories,
+            exchange knowledge, and foster a sense of belonging. By
+            providing a platform where readers can connect with others
+            in their local area and beyond, Paprback encourages the
+            joy of discovery and the preservation of the written word.
+            <br></br>
+            <br></br> Furthermore, we are committed to environmentally
+            friendly practices. By promoting book swapping, we
+            actively contribute to reducing paper waste and embracing
+            the concept of reusing resources. We believe that every
+            book has a story to tell and should find its way into the
+            hands of someone who will cherish it. Join us on this
+            novel adventure, where the love for books knows no bounds.{' '}
+            <br></br> Together, let's build a community that
+            celebrates the power of literature, supports one another,
+            and makes a positive impact on the world around us.
+            <br></br>
+            <br></br>
             <h3 className="subStatement">
               We are the chapters we share. We are the stories we
               discover.
