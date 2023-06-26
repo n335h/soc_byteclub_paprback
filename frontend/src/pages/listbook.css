@@ -39,10 +39,11 @@
   gap: 1rem;
   z-index: 2;
   flex: 0 0 50%;
-  
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
 }
 
-.User-image {
+.user-image {
   /* the magic */
   display: block;
   width: 180px;
@@ -75,6 +76,15 @@
     height: 100%;
     width: auto;
   }
+}
+
+.user-image-container {
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+flex-direction: row;
+flex: 0 0 50%;
+width: 100%;
 }
 
 

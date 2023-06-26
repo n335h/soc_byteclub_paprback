@@ -20,16 +20,18 @@ function ListBook() {
           <h2>Name: Zendaya Coleman</h2>
           <h2>Email: Zcoleman@gmail.com</h2>
           <h2>Address:
-          201 Albany Road
-          Coventry
-          CV5 6NF</h2>
+          27 Fake Street
+          Faketon
+          SE1 4NF</h2>
           <h2>Phone: 0121 987 654</h2>
           <Link to="http://localhost:3000/browse">
           <button id="find-a-book-button">
             Find A Book
           </button>
         </Link>
-          <img className="User-image" src="https://i.pinimg.com/474x/2b/a9/ec/2ba9ecf8e084d6b699ea6b5dd7e5575d.jpg" alt="Picture of Zendaya"></img>
+        </div>
+        <div className="user-image-container">
+          <img className="user-image" src="https://i.pinimg.com/474x/2b/a9/ec/2ba9ecf8e084d6b699ea6b5dd7e5575d.jpg" alt="Picture of Zendaya"></img>
         </div>
         <div className="listings-carousel-container">
           <ListingsCarousel />
