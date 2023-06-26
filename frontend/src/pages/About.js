@@ -1,4 +1,4 @@
-import aboutUs from './../assets/images/aboutUs.jpg';
+import aboutt from './../assets/images/aboutt.jpg';
 import about from './About.css';
 
 function About() {
@@ -6,10 +6,10 @@ function About() {
     <section className="pages" id="about">
       <div className="about-container">
         <div className="about-info">
-          <img className="aboutimg" src={aboutUs} alt="about us" />
+          <img className="aboutimg" src={aboutt} alt="about us" />
 
           <p className="about-text">
-            <h1>About Us</h1>
+            <h1 id="pagetitle">About Us</h1>
             <br></br>
             Our journey began with a shared concern: witnessing local
             libraries closing down and realising that people had

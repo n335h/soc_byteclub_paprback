@@ -148,7 +148,7 @@ function Books() {
             placeholder="Search"
             onChange={handleSearchChange}
           ></input>
-          <button data-testid="search-button" className="searchButton" onClick={handleSearchClick}>
+          <button data-testid="search-button" className="searchButtons" onClick={handleSearchClick}>
             Search
           </button>
         </div>

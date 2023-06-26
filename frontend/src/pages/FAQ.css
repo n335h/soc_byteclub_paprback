@@ -2,25 +2,38 @@
     height: 60vh;
     object-fit: cover;
     object-position: center;
-   margin-bottom: 5vh;
  
    
 
 }
+#pagetitle {
+    font-size: var(--text-xl);
+    font-weight: bold;
+    color: var(--secondary-color);
+    justify-content: center;
+}
+.faq-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
 hr {
     opacity: 0.2;
-    width:40vw;
+    width:30vw;
+    margin: 1rem;
 }
   .faq-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    width: 70vw;
+   
     margin: auto;
-    font-size: var( --text-r);
+    font-size: var( --text-sr);
     justify-content: space-evenly;
-    width: 70%;
+    padding-bottom: 3rem;
   }
 
   .faq{
@@ -44,12 +57,12 @@ hr {
   }
   #list {
     list-style: none;
-    width: 60%;
+    width: 80%;
   }
 
   .title.active {
     font-weight: bold;
-    color: var(--secondary-color)
+    color: var(--secondary-color);
   }
   
   .content {
@@ -59,7 +72,8 @@ hr {
   }
   
   .content.open {
-    max-height: 100px; /* Adjust the height as per your content */
+    max-height: 100px;
+    overflow-y: scroll; /* Adjust the height as per your content */
   }
   .caron {
     margin-left: 1rem;
@@ -75,13 +89,12 @@ hr {
     margin-left: 5px; /* Adjust the margin as needed */
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 900px) {
     .faq-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-right:  2rem;
         font-size: var( --text-r);
         justify-content: space-evenly;
     
