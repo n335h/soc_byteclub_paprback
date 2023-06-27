@@ -5,7 +5,7 @@ footer {
   text-align: center;
   color: #ffffff;
   font-size: var(--text-r);
-  min-height: 225px;
+  min-height: 100px;
 }
 
 .footer-container {
@@ -39,7 +39,7 @@ footer {
 
 @media screen and (max-width: 600px) {
   footer .company-details {
-    font-size: var(--text-s)
+    font-size: var(--text-s);
   }
 
   .footer-branding {
@@ -49,7 +49,7 @@ footer {
   .logo {
     scale: 0.75;
   }
-    
+
   .footer-copyright {
     font-size: var(--text-s);
   }

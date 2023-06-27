@@ -1,4 +1,3 @@
-
 .overall-box {
   display: flex;
   flex-direction: row;
@@ -6,7 +5,9 @@
   height: 100%;
   width: 100%;
   flex: 0 0 120%;
-} 
+  position: sticky;
+  justify-content: center;
+}
 
 #list-book {
   padding: 4rem 5rem;
@@ -16,7 +17,7 @@
 .list-book-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
   flex-direction: row;
   gap: 5rem;
   flex: 0 0 100%;
@@ -28,7 +29,6 @@
   overflow: hidden;
   background: #fff;
   z-index: 1;
-  
 }
 
 .user-info-container {
@@ -42,9 +42,23 @@
   flex: 0 0 50%;
   background-color: #f9f9f9;
   border-radius: 0.5rem;
-  top: -50px;
+
   padding: 2rem;
-  
+}
+
+.user-image-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex: 0 0 50%;
+  width: 100%;
+}
+.user-info-and-photo {
+  display: flex;
+  background-color: #f9f9f9;
+  align-items: center;
+  justify-content: center;
 }
 
 .user-image {
@@ -64,10 +78,10 @@
   margin: 0px auto;
   text-align: center;
   margin-bottom: 10px;
-  border: 3px solid #296D6D;
-  -webkit-box-shadow: 0px 1px 2px #296D6D,inset 0px 3px 8px #296D6D;
-  -moz-box-shadow: 0px 1px 2px #296D6D,inset 0px 3px 8px #296D6D;
-  box-shadow: 0px 1px 2px #296D6D,inset 0px 3px 8px #296D6D;
+  border: 3px solid #296d6d;
+  -webkit-box-shadow: 0px 1px 2px #296d6d, inset 0px 3px 8px #296d6d;
+  -moz-box-shadow: 0px 1px 2px #296d6d, inset 0px 3px 8px #296d6d;
+  box-shadow: 0px 1px 2px #296d6d, inset 0px 3px 8px #296d6d;
 }
 
 @media screen and (max-width: 1000px) {
@@ -83,30 +97,21 @@
   }
 }
 
-.user-image-container {
-display: flex;
-justify-content: flex-start;
-align-items: flex-start;
-flex-direction: row;
-flex: 0 0 50%;
-width: 100%;
+.find-a-book-button {
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  font-size: var(--text-r);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.1s ease-in;
 }
 
-.find-a-book-button {
-    background-color: var(--secondary-color);
-    border: none;
-    color: white;
-    padding: 0.5rem 2rem;
-    border-radius: 0.5rem;
-    font-size: var(--text-r);
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.1s ease-in;
-  }
-  
-  .find-a-book-button:hover {
-    background-color: var(--main-color);
-  }
+.find-a-book-button:hover {
+  background-color: var(--main-color);
+}
 
 .bolded {
   font-weight: bold;
@@ -115,7 +120,6 @@ width: 100%;
 
 .inner-text {
   font-size: var(--text-r);
-
 }
 
 .welcome-text {

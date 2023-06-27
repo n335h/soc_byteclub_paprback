@@ -30,7 +30,7 @@ function ListingsCarousel() {
 
   return (
     <div id="listings-carousel">
-      <h1 className= "title-text">Your Listings</h1>
+      <h1 className="title-text">Your Listings</h1>
       <div data-testid="listing" className="books-grid">
         <Carousel
           additionalTransfrom={0}
@@ -54,7 +54,7 @@ function ListingsCarousel() {
           responsive={{
             xxxxl: {
               breakpoint: {
-                max: 3000,
+                max: 10000,
                 min: 1600,
               },
               items: 6,
