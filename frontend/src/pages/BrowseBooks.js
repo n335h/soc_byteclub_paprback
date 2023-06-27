@@ -21,7 +21,6 @@ function Books() {
   // isbn: "",
   // condition: "",
   // notes: "",}
-  console.log (selectedBook)
 
   const navToBookView = useNavigate();
 

@@ -23,9 +23,9 @@ function App() {
     fetch('http://localhost:5432/message')
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
-  }, []);
+  });
 
-  console.log(message);
+
   return (
     <main className="App">
       <Header />
