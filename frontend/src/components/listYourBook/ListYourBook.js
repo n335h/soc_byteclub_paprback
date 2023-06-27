@@ -7,7 +7,7 @@ function ListYourBook() {
   // State variables
   const [condition, setCondition] = useState("");
   const [notes, setNotes] = useState("");
-
+  const [listingPosted, setListingPosted] = useState(false); // Added this state variable
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResult, setSearchResult] = useState({
     title: "",
@@ -104,7 +104,7 @@ function ListYourBook() {
   }
 
   function handleReloadClick() {
-    window.location.reload();
+    setListingPosted(true);
   }
 
   // // Make the API call when newListing state changes
@@ -144,12 +144,16 @@ function ListYourBook() {
         <h1 className = "list-text">List Your Book</h1>
         {/* Render the input component for the search bar */}
         <ListYourBookInput
+          listingPosted={listingPosted} // Pass the listingPosted state as a prop to the input component - Search book for listing
+          setListingPosted={setListingPosted} // Pass the setListingPosted function as a prop to the input component - Search book for listing  
           onChange={handleChange} // Pass the handleChange function as a prop to the input component - Search book for listing
           onClick={handleSearchClick} // Pass the handleSearchClick function as a prop to the input component- Search book for listing
           onKeyPress={handleEnter} // Pass the handleEnter function as a prop to the input component  - Search book for listing
         />
         {/* Render the output component for the book listing */}
         <ListYourBookOutput
+          listingPosted={listingPosted} // Pass the listingPosted state as a prop to the output component - Create listing
+          setListingPosted={setListingPosted} // Pass the setListingPosted function as a prop to the output component - Create listing
           onClick={handleListingClick} // Pass the handleListingClick function as a prop to the output component - Create listing
           onChangeCondition={updateCondition} // Pass the updateCondition function as a prop to the output component - Create listing
           onChangeNotes={updateNotes} // Pass the updateNotes function as a prop to the output component - Create listing

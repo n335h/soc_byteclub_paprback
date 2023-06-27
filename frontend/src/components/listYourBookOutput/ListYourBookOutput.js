@@ -12,10 +12,22 @@ import coverdefault from "../../assets/images/coverDefault.png";
 //7. A state variable is needed for the notes and condition
 
 function ListYourBookOutput(props) {
+
+  if (props.listingPosted === true) {
+    document.getElementById("listbook-cover").value = coverdefault;
+    document.getElementById("title").value = "";
+    document.getElementById("author").value = "";
+    document.getElementById("condition-select").value = "Condition";
+    document.getElementById("notes").value = "";
+  } else {
+    props.setListingPosted(false);
+  }
+
   return (
     <div data-testid="listyourbook-output">
       {/* Render book cover image */}
       <img
+      id="listbook-cover"
         className="cover"
         src={props.book.cover_img || coverdefault}
         alt="book cover"
