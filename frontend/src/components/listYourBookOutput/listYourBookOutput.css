@@ -4,6 +4,8 @@
     margin: 1rem auto;
 }
 
+
+
 .outputForm {
     width: 100%;
     font-size: var(--text-r);
@@ -11,8 +13,9 @@
     border-radius: 0.5rem;
     border: 1px solid #c4c4c4;
     color: var(--text-color);
-    margin: 0 0 1rem 0;
+    margin: 1rem 1rem 1rem 0;
     padding-left: 1rem;
+ 
 }
 
 .outputFormLabels {
@@ -30,10 +33,12 @@
     height: 3rem;
     border-radius: 0.5rem;
     border: 1px solid #c4c4c4;
+    margin: 1rem 1rem 1rem 0;
 }
 
 .outputForm.conditionDropdown {
     padding-left: 0.5rem;
+    margin: 1rem 1rem 1rem 0;
 }
 
 .outputForm p {

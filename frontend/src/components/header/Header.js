@@ -83,6 +83,13 @@ function Header() {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/listbook">
+                    <button id="navbutton" className="listbook">
+                      List A Book
+                    </button>
+                  </Link>
+                </li>
+                <li>
                   <Link to="/about">
                     <button id="navbutton" className="about">
                       About
