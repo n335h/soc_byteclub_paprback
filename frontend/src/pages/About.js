@@ -1,7 +1,5 @@
-
 import imgabout from './../assets/images/imgabout.jpg';
-import './About.css';
-
+import './about.css';
 
 function About() {
   return (
