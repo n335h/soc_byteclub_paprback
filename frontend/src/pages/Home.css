@@ -73,20 +73,17 @@
 }
 #heroSignup {
   animation-delay: 1.6s;
-  margin-left: 6vw;
   position: absolute; /* Add this line to position #popin */
+  left: 45%; /* Adjust the left value based on your desired horizontal position */
   top: 65%; /* Adjust the top value based on your desired vertical position */
-  left: 46%; /* Adjust the left value based on your desired horizontal position */
   background-color: var(--main-color);
   border: none;
   color: white;
-  padding: 0.6rem 4rem;
   border-radius: 0.3rem;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
   font-size: var(--text-l);
-  margin: 2px 5px;
   cursor: pointer;
   letter-spacing: 0.1rem;;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -166,9 +163,9 @@
   }
   #heroSignup {
     display: flex;
-    margin: auto;
-    left:35%;
+    margin-left: auto;
     top: 60%;
+    left: 30%;
 
   }
 }
