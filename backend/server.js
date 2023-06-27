@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import pkg from 'pg';
 import cors from 'cors';
 import Routes from './routes.js';
-import nodemon from 'nodemon';
+//import nodemon from 'nodemon';
 
 export const { Pool } = pkg;
 dotenv.config();
