@@ -83,9 +83,9 @@ function Offer() {
       message !== ""
     ) {
       setMessageSent(true);
-      // setTimeout(() => {
-      //   navToHome("/");
-      // }, 1500);
+      setTimeout(() => {
+        navToHome("/");
+      }, 1500);
     }
   };
 
