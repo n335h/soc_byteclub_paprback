@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 // Importing CSS file and default cover image
 import "./listYourBookOutput.css";
 import coverdefault from "../../assets/images/coverDefault.png";
@@ -13,28 +11,13 @@ import coverdefault from "../../assets/images/coverDefault.png";
 //6. return an object with the requred structure (holding all the props and their inherent value)
 //7. A state variable is needed for the notes and condition
 
-function ListYourBookOutput({  listingPosted, setListingPosted, onClick, updateCondition, updateNotes, book}) {
-
-  useEffect(() => {
-
-  if (listingPosted === true) {
-    document.getElementById("listbook-cover").value = coverdefault;
-    document.getElementById("title").value = "";
-    document.getElementById("author").value = "";
-    document.getElementById("condition-select").value = "Condition";
-    document.getElementById("notes").value = "";
-  
-    setListingPosted(false);
-  }
-  }, [listingPosted, setListingPosted]);
-
+function ListYourBookOutput(props) {
   return (
     <div data-testid="listyourbook-output">
       {/* Render book cover image */}
       <img
-      id="listbook-cover"
         className="cover"
-        src={book.cover_img || coverdefault}
+        src={props.book.cover_img || coverdefault}
         alt="book cover"
       />
 
@@ -46,7 +29,7 @@ function ListYourBookOutput({  listingPosted, setListingPosted, onClick, updateC
         id="title"
         placeholder="* Title"
         type="text"
-        value={book.title}
+        value={props.book.title}
         disabled="disabled"
       ></input>
 
@@ -56,7 +39,7 @@ function ListYourBookOutput({  listingPosted, setListingPosted, onClick, updateC
         data-testid="author-input"
         className="outputForm"
         id="author"
-        value={book.author}
+        value={props.book.author}
         placeholder="* Author"
         disabled="disabled"
       ></input>
@@ -87,7 +70,7 @@ function ListYourBookOutput({  listingPosted, setListingPosted, onClick, updateC
 
       {/* Code as it was before */}
 
-      <form id="condition" onChange={updateCondition}>
+      <form id="condition" onChange={props.onChangeCondition}>
         <select
           data-testid="defaultValue"
           id="condition-select"
@@ -112,7 +95,7 @@ function ListYourBookOutput({  listingPosted, setListingPosted, onClick, updateC
       {/* <p className="outputFormLabels">Notes:</p> */}
       <input
         data-testid="notes"
-        onChange={updateNotes}
+        onChange={props.onChangeNotes}
         className="outputFormNotes"
         id="notes"
         type="text"
@@ -122,7 +105,7 @@ function ListYourBookOutput({  listingPosted, setListingPosted, onClick, updateC
       <br></br>
 
       {/* Render post listing button */}
-      <button className="postListing" onClick={onClick} id="post-listing">
+      <button className="postListing" onClick={props.onClick} id="post-listing">
         Post Listing
       </button>
     </div>
