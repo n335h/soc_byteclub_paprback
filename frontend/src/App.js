@@ -25,6 +25,11 @@ function App() {
       .then((data) => setMessage(data.message));
   });
 
+  useEffect(() => {
+    console.log('Message:', message);
+  }, [message]);
+  
+
 
   return (
     <main className="App">

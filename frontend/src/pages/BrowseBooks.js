@@ -119,6 +119,7 @@ function Books() {
   const handleBookClick = (listing) => {
     console.log('Book Clicked:', listing);
     setSelectedBook(listing);
+    console.log('Selected Book:', selectedBook);
     navToBookView(`/bookview/${listing.listing_id}`, {
       state: {
         selectedBook: listing,
