@@ -12,6 +12,7 @@
   font-weight: bold;
   color: var(--secondary-color);
   justify-content: center;
+  top: 2vh;
 }
 .about-info {
     display: flex;
@@ -58,7 +59,7 @@
       font-size: var(--text-sr);
     }
     #pagetitle {
-      padding-top: 2vh;
+      padding-top: 3vh;
     }
     
 

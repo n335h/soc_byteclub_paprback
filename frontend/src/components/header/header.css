@@ -83,7 +83,6 @@ header {
   border: none;
   color: var(--secondary-color);
   padding: 10px 32px;
-  text-decoration: underline;
   border-radius: 6px;
   text-align: center;
   text-decoration: none;
@@ -100,20 +99,20 @@ header {
   text-decoration: underline;
 }
 
-#navbutton {
+ #navbutton {
   background-color: var(--main-color);
   border: none;
   color: white;
   padding: 0.6rem 4rem;
   border-radius: 0.3rem;
   text-align: center;
-  text-decoration: none;
   font-weight: bold;
   font-size: var(--text-r);
   margin: 2px 5px;
   cursor: pointer;
   letter-spacing: 0.1rem;
   scale: 0.9;
+  text-decoration: none;
 
 }
 
@@ -122,6 +121,7 @@ header {
   color: rgb(255, 255, 255);
   scale: 1;
 }
+
 
 
 
@@ -250,4 +250,19 @@ header {
     display: none;
   }
 
+}
+
+.logIN .logOUT{
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+  padding: 0.6rem 4rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: var(--text-r);
+  margin: 2px 5px;
+  cursor: pointer;
+  letter-spacing: 0.1rem;;
 }

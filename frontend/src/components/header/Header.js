@@ -46,8 +46,12 @@ function Header() {
             <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SAxdFB6ZHQwamhJdmgyOXB3a3Y0RGRjZzRldVI0MnFreqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEo2SU1TM1d2TDF1amktVEhNVXE5OENwR0tfWXFGUmhVo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
               <button className="signup">Sign up</button>
             </Link>
-            <LoginButton id="header-login" />
-            <LogoutButton id="header-logout" />
+            <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/login?state=hKFo2SA2OWtySGIxck1ZcUVOak5zbldXSXVmMXNiVHppMEVab6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZleEw1Q1FkM01JM0ZvSnJnNW12NlhrRmxDUVBKMFpLo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
+              <button className="logIN">Login</button>
+            </Link>
+
+            {/* <LoginButton />
+            <LogoutButton />  */}
           </div>
         </div>
         <div className="menuBar">
@@ -90,9 +94,7 @@ function Header() {
                 </li>
                 <li>
                   <Link to="/faq">
-                    <button id="navbutton" className="faq">
-                      FAQ
-                    </button>
+                    <button id="navbutton">FAQ</button>
                   </Link>
                 </li>
               </ul>
