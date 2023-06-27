@@ -1,5 +1,7 @@
-import aboutt from './../assets/images/aboutt.jpg';
+
+import imgabout from './../assets/images/imgabout.jpg';
 import './About.css';
+
 
 function About() {
   return (
@@ -7,7 +9,7 @@ function About() {
       <div className="about-container">
         <h1 id="pagetitle">About Us</h1>
         <div className="about-info">
-          <img className="aboutimg" src={aboutt} alt="about us" />
+          <img className="aboutimg" src={imgabout} alt="about us" />
           <section className="about-text">
             <p>
               <br></br>
