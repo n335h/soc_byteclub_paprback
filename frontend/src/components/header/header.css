@@ -2,13 +2,14 @@ header {
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: var(--background);
+  background-color: var(--background-color);
   min-height: 11rem;
   z-index: 100;
 }
 
 .header-container {
-  width: 100%;
+  width: 100;
+  
 }
 
 .menu-toggle {
@@ -16,6 +17,9 @@ header {
 }
 
 .userIcon {
+  display: none;
+}
+.favs {
   display: none;
 }
 
@@ -108,13 +112,15 @@ header {
   font-size: var(--text-r);
   margin: 2px 5px;
   cursor: pointer;
-  letter-spacing: 0.1rem;;
+  letter-spacing: 0.1rem;
+  scale: 0.9;
+
 }
 
 #navbutton:hover  {
   background-color: var(--main-color);
   color: rgb(255, 255, 255);
-  scale: 1.1;
+  scale: 1;
 }
 
 
@@ -138,8 +144,9 @@ header {
   
 
   .header-bottom {
-    background-color: transparent;
+    background-color: var(--background);
     margin-right: 3rem;
+    
   }
 
   .login {
@@ -149,6 +156,9 @@ header {
   .userIcon {
       display: flex;
   }
+  .favs {
+    display: flex;
+}
 
   .signup {
       display: none;
@@ -194,7 +204,7 @@ header {
     background-color: var(--main-color);
     height: auto;
     right: 0;
-    top: 10rem;
+    top: 8rem;
     opacity: 1;
     transition: opacity 0.3s ease-in;
   }
@@ -217,15 +227,27 @@ header {
     width: 2.7rem;
     margin-right: 4rem;
   }
+  .favs {
+    height: 2.7rem;
+    width: 2.7rem;
+    margin-right: 4rem;
+  }
 
   .menuBar {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    background-color: var(--background)
   }
 
   .menu {
     background-color: none;
+  }
+  .logIN{
+    display: none;
+  }
+  .logOUT{
+    display: none;
   }
 
 }

@@ -87,7 +87,7 @@
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  font-size: var(--text-r);
+  font-size: var(--text-l);
   margin: 2px 5px;
   cursor: pointer;
   letter-spacing: 0.1rem;;
@@ -169,7 +169,7 @@
   #heroSignup {
     display: flex;
     margin: auto;
-    left:30%;
+    left:35%;
     top: 60%;
 
   }

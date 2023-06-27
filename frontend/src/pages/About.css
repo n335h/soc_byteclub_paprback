@@ -3,7 +3,7 @@
     object-fit: cover;
     object-position: center;
    margin: auto;
-   margin-bottom: 5vh;
+   margin-bottom: 1vh;
  
 
 }
@@ -18,7 +18,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 2rem;
+    margin: 1rem;
     
   }
   
@@ -44,4 +44,22 @@
     font-size: var(--text-xl);
     font-weight: bold;
     color: var(--secondary-color);
+  }
+  @media screen and (max-width: 1200px) {
+
+    .about-info{
+      display: flex;
+      flex-direction: column;
+    }
+    .about-text{
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      font-size: var(--text-sr);
+    }
+    #pagetitle {
+      padding-top: 2vh;
+    }
+    
+
   }

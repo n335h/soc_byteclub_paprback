@@ -3,10 +3,9 @@ import logo from '../../assets/icons/paprback_logo.svg';
 import './header.css';
 import React, { useState, useEffect } from 'react';
 import userIconGrey from '../../assets/icons/userIconGrey.png';
+import gHeart from '../../assets/icons/gHeart.png';
 import LoginButton from '../loginButton/loginButton';
 import LogoutButton from '../logoutButton/logoutButton';
-
-
 
 function Header() {
   // toggle hide show login/logout button depending on if user is logged in
@@ -47,21 +46,26 @@ function Header() {
             <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SAxdFB6ZHQwamhJdmgyOXB3a3Y0RGRjZzRldVI0MnFreqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEo2SU1TM1d2TDF1amktVEhNVXE5OENwR0tfWXFGUmhVo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
               <button className="signup">Sign up</button>
             </Link>
-            <LoginButton id="header-login"/>
-            <LogoutButton id="header-logout"/>
+            <LoginButton id="header-login" />
+            <LogoutButton id="header-logout" />
           </div>
         </div>
         <div className="menuBar">
           <div className="header-bottom">
             <nav className={`navbar ${menuOpen ? 'open' : ''}`}>
               {/* Render user icon and link it to the login page */}
-              <Link to="/login">
+              <Link to="/favs">
+                <img className="favs" src={gHeart} alt="favs" />
+              </Link>
+
+              <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/login?state=hKFo2SB5ZU1BMlVfNW1VcXB5YWJpeEt4VVFhMkdUX0xfTXZPR6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGRCRDlhWWdDYWRYeDc1ZXlidUZPRlNrMC0yU09XNVdlo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
                 <img
                   className="userIcon"
                   src={userIconGrey}
                   alt="User"
                 />
               </Link>
+
               <div className="menu-toggle" onClick={handleToggleMenu}>
                 {/* Render the menu toggle button */}
                 <div className="bar"></div>
