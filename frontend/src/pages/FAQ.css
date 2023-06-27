@@ -2,17 +2,17 @@
     height: 60vh;
     object-fit: cover;
     object-position: center;
-
+    margin: auto;
+    padding: 0%;
 }
 #faq {
-  margin-top: 2vh;
+  margin-top: 2rem;
 }
 #pagetitle {
     font-size: var(--text-xl);
     font-weight: bold;
     color: var(--secondary-color);
     justify-content: center;
-    top: 2vh;
 }
 .faq-content{
     display: flex;
@@ -32,14 +32,12 @@ hr {
     align-items: center;
     width: 70vw;
    
+    margin: auto;
     font-size: var( --text-sr);
     justify-content: space-evenly;
     padding-bottom: 3rem;
   }
- .faq.pages {
-  margin: 5rem;
 
- }
   .faq{
     display: flex;
     flex-direction: row;
