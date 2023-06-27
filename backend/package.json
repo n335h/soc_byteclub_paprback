@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "jest", 
+    "test": "jest",
     "db-script": "node -r content/config server.js",
     "dev": "nodemon server.js"
   },
@@ -24,12 +24,13 @@
     "uuid4": "^2.0.3"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "babel-jest": "^29.5.0",
     "jest": "^29.5.0"
   },
-  "jest": { 
+  "jest": {
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     }

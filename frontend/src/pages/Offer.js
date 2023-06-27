@@ -51,6 +51,7 @@ function Offer() {
     const selectedListing = myListings.find((listing) => {
       const optionValue = event.target.value;
       const [listingId, title, condition] = optionValue.split(":");
+      console.log(title, condition);
       return listing.listing_id === parseInt(listingId);
     });
 
