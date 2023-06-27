@@ -31,7 +31,7 @@ const BookView = () => {
         </div>
         </div>
         <div id="buttons">
-        <button id="contact" onClick={() => navToOffer("/offer", { state: { selectedBook, distance } })}>Contact</button>
+        <button id="contact" onClick={() => navToOffer("/offer", { state: { selectedBook, distance } })}>Contact Owner</button>
         <Link to="/browse">
           <button id="book-view-close">Close</button>
         </Link>
