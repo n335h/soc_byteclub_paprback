@@ -1,4 +1,4 @@
-import FAQ from './FAQ.css';
+import './FAQ.css';
 import faq2 from './../assets/images/faq2.jpg';
 import { useState } from 'react';
 
@@ -30,6 +30,7 @@ const FAQ2 = () => {
                   id="caron"
                   className="caron"
                   src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png"
+                  alt="caron"
                 />
               </li>
               <li
@@ -67,6 +68,7 @@ const FAQ2 = () => {
                   id="caron"
                   className="caron"
                   src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png"
+                  alt="caron"
                 />
               </li>
               <li
@@ -104,6 +106,7 @@ const FAQ2 = () => {
                   id="caron"
                   className="caron"
                   src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png"
+                  alt="caron"
                 />
               </li>
               <li
@@ -141,6 +144,7 @@ const FAQ2 = () => {
                   id="caron"
                   className="caron"
                   src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png"
+                  alt="caron"
                 />
               </li>
               <li

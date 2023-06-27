@@ -2,9 +2,7 @@
   padding: 0;
 }
 
-.home-container {
 
-}
 .hero {
   position: relative; /* Add this line to make .hero a positioned element */
   width: 100%;

@@ -14,16 +14,16 @@ import Offer from './pages/Offer';
 import Footer from './components/footer/Footer';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   // const [loggedIn, setLoggedIn] = useState(false);
-  // const [message, setMessage] = useState('');
-  // useEffect(() => {
-  //   fetch('http://localhost:5432/message')
-  //     .then((res) => res.json())
-  //     .then((data) => setMessage(data.message));
-  // }, []);
+  const [message, setMessage] = useState('');
+  useEffect(() => {
+    fetch('http://localhost:5432/message')
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message));
+  }, []);
 
   return (
     <main className="App">

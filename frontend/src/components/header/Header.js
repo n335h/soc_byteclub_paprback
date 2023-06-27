@@ -4,8 +4,6 @@ import './header.css';
 import React, { useState, useEffect } from 'react';
 import userIconGrey from '../../assets/icons/userIconGrey.png';
 import gHeart from '../../assets/icons/gHeart.png';
-import LoginButton from '../loginButton/loginButton';
-import LogoutButton from '../logoutButton/logoutButton';
 
 function Header() {
   // toggle hide show login/logout button depending on if user is logged in
