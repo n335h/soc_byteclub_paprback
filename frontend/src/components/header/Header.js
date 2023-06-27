@@ -9,7 +9,6 @@ import LogoutButton from '../logoutButton/logoutButton';
 
 function Header() {
   // toggle hide show login/logout button depending on if user is logged in
-  const [loggedIn, setLoggedIn] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   // useEffect to handle resizing and closing the menu on smaller screens

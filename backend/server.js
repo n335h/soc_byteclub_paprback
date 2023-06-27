@@ -50,9 +50,9 @@ process.on('SIGINT', () => {
     });
 });
 
-app.get('/message', (req, res) => {
-  res.json({ message: 'Hello from server!' });
-});
+// app.get('/message', (req, res) => {
+//   res.json({ message: 'Hello from server!' });
+// });
 
 app.listen(port, () => {
   console.log(`server started at http://localhost:${port}`);
