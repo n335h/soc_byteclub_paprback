@@ -22,30 +22,30 @@ function ListYourBookOutput(props) {
       />
 
       {/* Render book title */}
-      <p className="outputFormLabels">Title:</p>
+      {/* <p className="outputFormLabels">Title:</p> */}
       <input
         data-testid="title-input"
         className="outputForm"
         id="title"
-        placeholder="Title"
+        placeholder="* Title"
         type="text"
         value={props.book.title}
         disabled="disabled"
       ></input>
 
       {/* Render book author */}
-      <p className="outputFormLabels">Author:</p>
+      {/* <p className="outputFormLabels">Author:</p> */}
       <input
         data-testid="author-input"
         className="outputForm"
         id="author"
         value={props.book.author}
-        placeholder="Author"
+        placeholder="* Author"
         disabled="disabled"
       ></input>
 
       {/* Render book condition */}
-      <p className="outputFormLabels">Condition:</p>
+      {/* <p className="outputFormLabels">Condition:</p> */}
 
       {/* <form id="condition" onChange={props.onChangeCondition}>
         <select
@@ -80,7 +80,7 @@ function ListYourBookOutput(props) {
         >
           <option value="Condition" disabled selected>
             {" "}
-            Condition{" "}
+            * Condition{" "}
           </option>
           <option value="New">New</option>
           <option value="Like New">Like New</option>
@@ -92,14 +92,14 @@ function ListYourBookOutput(props) {
       </form>
 
       {/* Render book notes */}
-      <p className="outputFormLabels">Notes:</p>
+      {/* <p className="outputFormLabels">Notes:</p> */}
       <input
         data-testid="notes"
         onChange={props.onChangeNotes}
         className="outputFormNotes"
         id="notes"
         type="text"
-        placeholder="Notes"
+        placeholder="* Notes"
         maxlength="200"
       ></input>
       <br></br>
