@@ -27,8 +27,7 @@ function Books() {
 
   useEffect(() => {
     listingsCall();
-    console.log('USER DATA', userLatitude, userLongitude);
-  });
+  }, []);
 
   const listingsCall = async () => {
     try {
