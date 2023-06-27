@@ -252,7 +252,7 @@ header {
 
 }
 
-.logIN .logOUT{
+.logIN {
   background-color: var(--main-color);
   border: none;
   color: white;
