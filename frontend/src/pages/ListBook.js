@@ -10,12 +10,14 @@ function ListBook() {
     <section className='pages' id="list-book">
 
       <div className="list-book-container">
-        <div className="list-your-book">
-          <ListYourBook />
-        </div>
+       
         <div className= "overall-box"> 
         <div className="user-info-and-photo">
         <div className="user-info-container">
+        <div className="user-image-container">
+          <img className="user-image" src="https://i.pinimg.com/474x/2b/a9/ec/2ba9ecf8e084d6b699ea6b5dd7e5575d.jpg" alt="Zendaya"></img>
+        </div>
+        
           <h1 className="welcome-text">Welcome <span className="name-text">Zendaya!</span></h1>
           <p className="inner-text"><span className="bolded">Name:</span> Zendaya Coleman</p>
           <p className="inner-text"><span className="bolded">Email:</span> ZColeman@gmail.com</p>
@@ -27,16 +29,18 @@ function ListBook() {
           </button>
         </Link>
         </div>
-        <div className="user-image-container">
-          <img className="user-image" src="https://i.pinimg.com/474x/2b/a9/ec/2ba9ecf8e084d6b699ea6b5dd7e5575d.jpg" alt="Zendaya"></img>
+       
         </div>
+        {/* <div className="dividing-line">------------------------------------------------------------------------------------------------------------------------------------------------</div> */}
+        
+        
         </div>
-        <div className="dividing-line">------------------------------------------------------------------------------------------------------------------------------------------------</div>
+        <div className="list-your-book">
+          <ListYourBook />
+        </div>
         <div className="listings-carousel-container">
           <ListingsCarousel />
         </div>
-        </div>
-
   
       </div>
       
