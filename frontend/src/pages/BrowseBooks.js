@@ -21,13 +21,14 @@ function Books() {
   // isbn: "",
   // condition: "",
   // notes: "",}
+  console.log (selectedBook)
 
   const navToBookView = useNavigate();
 
   useEffect(() => {
     listingsCall();
     console.log('USER DATA', userLatitude, userLongitude);
-  }, []);
+  });
 
   const listingsCall = async () => {
     try {

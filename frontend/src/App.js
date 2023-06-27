@@ -25,22 +25,26 @@ function App() {
       .then((data) => setMessage(data.message));
   }, []);
 
+  console.log(message);
   return (
     <main className="App">
       <Header />
       <div id="content">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/browse" element={<BrowseBooks />} />
-        <Route path="/bookview/:listing_id" element={<BookView />} />
-        <Route path="/listbook" element={<ListBook />} />
-        <Route path="/offer" element={<Offer />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/browse" element={<BrowseBooks />} />
+          <Route
+            path="/bookview/:listing_id"
+            element={<BookView />}
+          />
+          <Route path="/listbook" element={<ListBook />} />
+          <Route path="/offer" element={<Offer />} />
+        </Routes>
       </div>
       <Footer />
     </main>
