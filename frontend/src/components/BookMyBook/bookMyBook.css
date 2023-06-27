@@ -36,12 +36,12 @@
   }
   
   #mybook-title {
-    font-size:var(--text-s);
+    font-size:var(--text-r);
     font-weight: bold;
   }
   
   #mybook-author {
-    font-size:var(--text-s);
+    font-size:var(--text-r);
   }
   
   #mybook-distance {

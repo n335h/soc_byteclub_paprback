@@ -51,6 +51,7 @@ function Offer() {
     const selectedListing = myListings.find((listing) => {
       const optionValue = event.target.value;
       const [listingId, title, condition] = optionValue.split(":");
+      console.log(title, condition);
       return listing.listing_id === parseInt(listingId);
     });
 
@@ -82,31 +83,29 @@ function Offer() {
       message !== ""
     ) {
       setMessageSent(true);
+      setTimeout(() => {
+        navToHome("/");
+      }, 1500);
     }
-setTimeout(() => {
-  navToHome("/");
-} , 1500)
-
   };
 
   return (
     <section className="pages" id="offer">
       <div className="offer-container">
-        
         {!messageSent && (
           <div id="pre-message">
-          <h1>Your Swap</h1>
+            <h1>Make Your Swap</h1>
             <div id="select-your-book">
               <label htmlFor="select">Select your book</label>
               <form id="select-book" onChange={handleSelect}>
                 <select
                   className="selectDropdown" // Add custom class here
                   name="select"
-                  placeholder="Your books..."
+                  placeholder="Select your book *"
                 >
                   <option value="defaultValue" disabled selected>
                     {" "}
-                    Your books...{" "}
+                    * Select your book{" "}
                   </option>
                   {myListings.map((listing) => (
                     <option
@@ -130,25 +129,28 @@ setTimeout(() => {
                 <h4>{mySelectedBook.condition}</h4>
               </div>
               <div id="swap-icon">
-              <p id="left">←</p><p id="right">→</p>
+                <p id="left">←</p>
+                <p id="right">→</p>
               </div>
               <div id="their-book" className="offer-books">
                 <img src={otherBook.cover_img} alt={otherBook.title}></img>
                 <h3>{otherBook.title}</h3>
                 <h3 id="author">{otherBook.author}</h3>
                 <h4>{otherBook.condition}</h4>
-                <h3 id="distance"><span>{Math.round(distance)} miles</span></h3>
+                <h3 id="distance">
+                  <span>{Math.round(distance)} miles</span>
+                </h3>
               </div>
             </div>
             <form id="delivery" onChange={updateDelivery}>
               <select
                 className="deliveryDropdown" // Add custom class here
                 name="Delivery option"
-                placeholder="Delivery option"
+                placeholder="Delivery option *"
               >
-                <option value="Delivery option" disabled selected>
+                <option value="Select your delivery option" disabled selected>
                   {" "}
-                  Delivery option{" "}
+                  * Select your delivery option{" "}
                 </option>
                 <option value="collection">Collection</option>
                 <option value="post">Post</option>
@@ -159,18 +161,17 @@ setTimeout(() => {
               rows="5"
               id="message"
               type="text"
-              placeholder="Message"
+              placeholder="* Message the owner"
               onChange={updateMessage}
             ></textarea>
             <button id="send-offer" onClick={handleMessageClick}>
-              Send offer
+              Contact Owner
             </button>
           </div>
         )}
         {messageSent ? (
           <div id="post-message">
-          
-            <h2>Offer sent!</h2>
+            <h2>Message sent!</h2>
           </div>
         ) : null}
       </div>

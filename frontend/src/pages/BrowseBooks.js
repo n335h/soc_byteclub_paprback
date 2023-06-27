@@ -26,8 +26,7 @@ function Books() {
 
   useEffect(() => {
     listingsCall();
-    console.log('USER DATA', userLatitude, userLongitude);
-  });
+  }, []);
 
   const listingsCall = async () => {
     try {
@@ -158,10 +157,9 @@ function Books() {
 
         <div id="books-grid">
           {listings.map((listing) => (
-            <div id="book-enclosure">
+            <div id="book-enclosure" key={listing.listing_id}>
               <Book
                 id="grid-book"
-                key={listing.listing_id}
                 cover_img={listing.cover_img}
                 title={listing.title}
                 author={listing.author}
