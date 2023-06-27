@@ -10,6 +10,7 @@
     font-weight: bold;
     color: var(--secondary-color);
     justify-content: center;
+    top: 2vh;
 }
 .faq-content{
     display: flex;
@@ -114,7 +115,7 @@ hr {
 
 }
 #pagetitle {
-  padding-top: 2vh;
+  padding-top: 3vh;
 }
 
 }
