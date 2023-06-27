@@ -155,8 +155,8 @@ function ListYourBook() {
           listingPosted={listingPosted} // Pass the listingPosted state as a prop to the output component - Create listing
           setListingPosted={setListingPosted} // Pass the setListingPosted function as a prop to the output component - Create listing
           onClick={handleListingClick} // Pass the handleListingClick function as a prop to the output component - Create listing
-          onChangeCondition={updateCondition} // Pass the updateCondition function as a prop to the output component - Create listing
-          onChangeNotes={updateNotes} // Pass the updateNotes function as a prop to the output component - Create listing
+          updateCondition={updateCondition} // Pass the updateCondition function as a prop to the output component - Create listing
+          updateNotes={updateNotes} // Pass the updateNotes function as a prop to the output component - Create listing
           book={searchResult} // Pass the searchResult state as a prop to the output component -  Create listing
         />
       </div>
