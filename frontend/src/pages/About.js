@@ -1,5 +1,5 @@
 import aboutt from './../assets/images/aboutt.jpg';
-import './About.css';
+import './about.css';
 
 function About() {
   return (
