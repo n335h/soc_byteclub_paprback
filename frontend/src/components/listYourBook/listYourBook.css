@@ -13,10 +13,8 @@
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
-
 
 .list-text {
   font-size: var(--text-l);
