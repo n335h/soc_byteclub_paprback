@@ -1,7 +1,6 @@
 #browse {
-  padding: 0 5rem;
+  margin: 4rem 5rem;
   min-height: 100vh;
-  margin: 3vh;
 }
 
 .books-container {
@@ -25,6 +24,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4rem;
+  position: relative;
 }
  
 .searchInputBrowse {
@@ -55,6 +55,26 @@
 
 .searchButtons:hover {
   background-color: var(--main-color);
+}
+
+#book-close {
+  display: none;
+  border: none;
+  color: var(--close-color);
+  background-color: transparent;
+  position: absolute;
+  font-size: var(--text-r);
+  padding: 0.6rem 4.6rem;
+  border-radius: 0.5rem;
+  right: 0;
+  top: 4rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+#book-close:hover {
+  background-color: var(--close-color);
+  color: white;
 }
 
 #book-enclosure {
@@ -91,10 +111,10 @@
   max-width: 150px;
 }
 
-button#close {
+/* button#close {
   position: absolute;
-  top: -1.8rem;
-  left: -8rem;
+  bottom: -10rem;
+  left: 50%;
   display: none;
   scale: 0.3;
   border: none;
@@ -103,7 +123,7 @@ button#close {
   border-radius: 50%;
   width: 50%;
   cursor: pointer;
-}
+} */
 
 #books button#close:hover {
   background-color: var(--close-color);
