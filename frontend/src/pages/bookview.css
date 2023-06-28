@@ -15,9 +15,10 @@
   min-height: 60rem;
   max-width: 50rem;
   background-color: var(--background-color);
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
   border-radius: 1rem;
   box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
+  margin: auto;
 }
 
 #book-cover {
@@ -31,6 +32,7 @@
 
 #book-view img {
   border: 0.5rem solid var(--main-color);
+  
   width: 30rem;
   object-fit: cover;
 }

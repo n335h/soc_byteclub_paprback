@@ -91,6 +91,23 @@
     margin-top: 2rem;
   }
   
+  .list-a-book-button {
+    /* position: absolute;
+    bottom: 2rem;
+    right: 4rem; */
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    font-size: var(--text-r);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.1s ease-in;
+  display: none;
+    margin: 2rem;
+  }
+  
   .find-a-book-button:hover {
     background-color: var(--main-color);
   }
@@ -166,6 +183,13 @@
     width: 20rem;
     border-radius: 50%;
   }
-  
+  .list-a-book-button {
+    display: flex;
+    justify-self: center;
+    margin: auto;
+    align-self: center;
+    margin-top: 2rem;
+    width: auto;
+  }
 }
   
