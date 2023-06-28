@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 #listBookContainer {
@@ -12,10 +13,26 @@
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+
 }
 
 .list-text {
   font-size: var(--text-l);
   padding: 0.3rem;
+}
+@media screen and (max-width: 1000px) {
+#listBookContainer {
+
+  justify-content: center;
+  align-items: center;
+  margin-left: 25vw;
+
+  
+}
+#listings-component {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  
+}
 }

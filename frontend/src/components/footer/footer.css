@@ -5,7 +5,7 @@ footer {
   text-align: center;
   color: #ffffff;
   font-size: var(--text-r);
-  min-height: 225px;
+  min-height: 100px;
 }
 
 .footer-container {
@@ -15,7 +15,7 @@ footer {
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 0 5vw;
 }
 
@@ -29,6 +29,7 @@ footer {
   top: 0;
   margin-top: 10px;
   left: calc((100% / 2) - 70px);
+  justify-content: space-between;
 }
 
 .footer-logo {
@@ -36,10 +37,20 @@ footer {
   width: 140px;
   fill: var(--background);
 }
-
+.footer-socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vh;
+}
+.footer-social-icon{
+  margin: 0 1vw;
+  width: 25px;
+  fill: var(--background);
+}
 @media screen and (max-width: 600px) {
   footer .company-details {
-    font-size: var(--text-s)
+    font-size: var(--text-s);
   }
 
   .footer-branding {
@@ -49,7 +60,7 @@ footer {
   .logo {
     scale: 0.75;
   }
-    
+
   .footer-copyright {
     font-size: var(--text-s);
   }

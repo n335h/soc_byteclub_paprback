@@ -28,9 +28,9 @@ function App() {
   useEffect(() => {
     console.log('Message:', message);
   }, [message]);
+
   
-
-
+  
   return (
     <main className="App">
       <Header />

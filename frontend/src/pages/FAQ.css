@@ -6,7 +6,7 @@
     padding: 0%;
 }
 #faq {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 #pagetitle {
     font-size: var(--text-xl);
@@ -19,12 +19,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 4rem;
 
 }
 hr {
     opacity: 0.2;
-    width:30vw;
-    margin: 1rem;
+    width:25vw;
+    margin:2rem;
 }
   .faq-container {
     display: flex;
@@ -46,7 +47,7 @@ hr {
     margin: auto;
     font-size: var( --text-r);
     justify-content: space-evenly;
-    width: 70%;
+    width: 100%;
   }
 
   .faqList{

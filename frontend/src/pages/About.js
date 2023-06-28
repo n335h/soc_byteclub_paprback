@@ -1,14 +1,14 @@
-import aboutt from './../assets/images/aboutt.jpg';
-import './About.css';
+import imgabout from './../assets/images/imgabout.jpg';
+import './about.css';
 
 function About() {
   return (
     <section className="pages" id="about">
       <div className="about-container">
-        <h1 id="pagetitle">About Us</h1>
         <div className="about-info">
-          <img className="aboutimg" src={aboutt} alt="about us" />
+          <img className="aboutimg" src={imgabout} alt="about us" />
           <section className="about-text">
+            <h1 id="pagetitle">About Us</h1>
             <p>
               <br></br>
               Our journey began with a shared concern: witnessing

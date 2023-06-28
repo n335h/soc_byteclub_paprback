@@ -1,6 +1,7 @@
 #browse {
   padding: 0 5rem;
   min-height: 100vh;
+  margin: 3vh;
 }
 
 .books-container {
