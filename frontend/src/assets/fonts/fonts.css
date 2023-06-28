@@ -1,7 +1,23 @@
-@font-face {
+/* @font-face {
   font-family: 'SulphurPoint';
   src:  url('./sulphur_point/SulphurPoint-Light.ttf') format('truetype'),
         url('./sulphur_point/SulphurPoint-Regular.ttf') format('truetype'),
         url('./sulphur_point/SulphurPoint-Bold.ttf') format('truetype');
-}
+} */
 
+/* @font-face {
+  font-family: 'Roboto';
+  src:  
+  url('./Roboto/Roboto-Light.ttf') format('truetype'),
+  url('./Roboto/Roboto-Regular.ttf') format('truetype'),
+        url('./Roboto/Roboto-Bold.ttf') format('truetype');
+} */
+
+@font-face {
+  font-family: 'Lato';
+  src: 
+  url('./Lato/Lato-Light.ttf') format('truetype'),
+  url('./Lato/Lato-Regular.ttf') format('truetype'),
+  url('./Lato/Lato-Bold.ttf') format('truetype');
+
+}
