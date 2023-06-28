@@ -11,12 +11,11 @@ const FAQ2 = () => {
 
   return (
     <section className="pages" id="faq">
-   
       <div className="faq-container">
         <div className="faq">
-          <img className="faqimg" src={faq2} alt="FAQ" />
+         
           <div className="faq-content">
-          <h1 id="pagetitle">FAQ</h1>
+            <h1 id="pagetitle">FAQ</h1>
             <ul id="list">
               <br></br>
               <br></br>
@@ -157,6 +156,7 @@ const FAQ2 = () => {
             </ul>
           </div>
         </div>
+        <img className="faqimg" src={faq2} alt="FAQ" />
       </div>
     </section>
   );

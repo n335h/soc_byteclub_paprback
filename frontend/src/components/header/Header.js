@@ -45,9 +45,9 @@ function Header() {
             <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SBGd2VfOXVBdkcwWjEweHhtck9rMHJuY0o0azZjRDAzb6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFc5OWJRSGlZZExMOXNidnNWNnV3YXE3WDhnVUQxek5Io2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
               <button className="signup">Sign up</button>
             </Link>
-            <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/login?state=hKFo2SBGd2VfOXVBdkcwWjEweHhtck9rMHJuY0o0azZjRDAzb6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFc5OWJRSGlZZExMOXNidnNWNnV3YXE3WDhnVUQxek5Io2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
+            {/* <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/login?state=hKFo2SBGd2VfOXVBdkcwWjEweHhtck9rMHJuY0o0azZjRDAzb6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFc5OWJRSGlZZExMOXNidnNWNnV3YXE3WDhnVUQxek5Io2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
               <button className="logIN">Login</button>
-            </Link>
+            </Link> */}
 
             <LoginButton />
             {/* <LogoutButton /> */}
