@@ -67,7 +67,7 @@
   border-radius: 6px;
   color: white;
   z-index: 1;
-  font-size: var(--text-xl);
+  font-size: var(--text-l);
   justify-content: center;
   align-items: center;
 }
@@ -75,7 +75,7 @@
   animation-delay: 1.6s;
   position: absolute; /* Add this line to position #popin */
   left: 45%; /* Adjust the left value based on your desired horizontal position */
-  top: 65%; /* Adjust the top value based on your desired vertical position */
+  top: 60%; /* Adjust the top value based on your desired vertical position */
   background-color: var(--main-color);
   border: none;
   color: white;

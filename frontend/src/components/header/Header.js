@@ -59,7 +59,7 @@ function Header() {
                 <img className="favs" src={gHeart} alt="favs" />
               </Link>
 
-              <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/login?state=hKFo2SB5ZU1BMlVfNW1VcXB5YWJpeEt4VVFhMkdUX0xfTXZPR6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGRCRDlhWWdDYWRYeDc1ZXlidUZPRlNrMC0yU09XNVdlo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
+              <Link to="/listbook">
                 <img
                   className="userIcon"
                   src={userIconGrey}

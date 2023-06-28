@@ -5,10 +5,10 @@ function About() {
   return (
     <section className="pages" id="about">
       <div className="about-container">
-        <h1 id="pagetitle">About Us</h1>
         <div className="about-info">
           <img className="aboutimg" src={imgabout} alt="about us" />
           <section className="about-text">
+            <h1 id="pagetitle">About Us</h1>
             <p>
               <br></br>
               Our journey began with a shared concern: witnessing

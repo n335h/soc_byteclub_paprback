@@ -25,7 +25,6 @@ function App() {
       .then((data) => setMessage(data.message));
   });
 
-
   return (
     <main className="App">
       <Header />

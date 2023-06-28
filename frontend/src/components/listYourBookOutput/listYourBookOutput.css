@@ -1,6 +1,6 @@
 .cover {
     height: auto;
-    width:100%;
+    width:90%;
     margin: 1rem auto;
 }
 
@@ -54,7 +54,7 @@
     border-radius: 6px;
     text-align: center;
     text-decoration: none;
-    font-size: var(--text-s);
+    font-size: var(--text-r);
     margin: 2rem 0;
     cursor: pointer;
     font-weight: 600;
