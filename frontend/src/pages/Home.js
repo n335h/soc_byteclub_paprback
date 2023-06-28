@@ -1,6 +1,6 @@
 import homeHero from '../assets/images/homeHero.jpg';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import './home.css';
 function Home() {
   return (
     <section className="pages" id="home">
@@ -16,44 +16,46 @@ function Home() {
           <h1>We are Paprback</h1>
         </div>
 
-        <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SAxdFB6ZHQwamhJdmgyOXB3a3Y0RGRjZzRldVI0MnFreqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEo2SU1TM1d2TDF1amktVEhNVXE5OENwR0tfWXFGUmhVo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
+        <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SA2OWtySGIxck1ZcUVOak5zbldXSXVmMXNiVHppMEVab6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZleEw1Q1FkM01JM0ZvSnJnNW12NlhrRmxDUVBKMFpLo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
           <button id="heroSignup" className="signup">
             Get Started
           </button>
         </Link>
         <img className="hero" src={homeHero} alt="Logo" />
         <div className="hero-sub">
-        <div id='subcontainer' className="whatContainer">
-          <h1 id="subhead" className="what">What?</h1>
-          <p className="whatText">
-            Paprback is a book-swapping app where you have the unique
-            opportunity to meet fellow readers in your local area and
-            exchange books in person or by post.
-          </p>
+          <div id="subcontainer" className="whatContainer">
+            <h1 id="subhead" className="what">
+              What?
+            </h1>
+            <p className="whatText">
+              Paprback is a book-swapping app where you have the
+              unique opportunity to meet fellow readers in your local
+              area and exchange books in person or by post.
+            </p>
+          </div>
+          <div className="verticalLine"></div>
+          <div id="subcontainer" className="whyContainer">
+            <h1 id="subhead" className="why">
+              Why?
+            </h1>
+            <p className="whyText">
+              Our journey began with a shared concern: witnessing
+              local libraries closing down and realising that people
+              had limited access to books.
+            </p>
+          </div>
+          <div className="verticalLine"></div>
+          <div id="subcontainer" className="howContainer">
+            <h1 id="subhead" className="how">
+              How?
+            </h1>
+            <p className="howText">
+              Start connecting with fellow book enthusiasts, initiate
+              swaps, and let the magic of sharing stories unfold with
+              Paprback!
+            </p>
+          </div>
         </div>
-        <div className="verticalLine">
- 
-</div>
-        <div id='subcontainer' className="whyContainer">
-          <h1 id="subhead" className="why">Why?</h1>
-          <p className="whyText">
-            Our journey began with a shared concern: witnessing local
-            libraries closing down and realising that people had
-            limited access to books.
-          </p>
-        </div>
-        <div className="verticalLine">
-
-</div>
-        <div id='subcontainer' className="howContainer">
-          <h1 id="subhead" className="how">How?</h1>
-          <p className="howText">
-           Start connecting
-            with fellow book enthusiasts, initiate swaps, and let the
-            magic of sharing stories unfold with Paprback!
-          </p>
-        </div>
-      </div>
       </div>
     </section>
   );

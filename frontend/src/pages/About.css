@@ -7,6 +7,9 @@
  
 
 }
+#about {
+  margin: 3rem;
+}
 #pagetitle{
   font-size: var(--text-xl);
   font-weight: bold;

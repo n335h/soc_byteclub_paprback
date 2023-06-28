@@ -40,7 +40,7 @@ function Header() {
           </div>
           <div className="user-access">
             {/* Render signup and login buttons and link them to their respective pages */}
-            <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SAxdFB6ZHQwamhJdmgyOXB3a3Y0RGRjZzRldVI0MnFreqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEo2SU1TM1d2TDF1amktVEhNVXE5OENwR0tfWXFGUmhVo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
+            <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SA2OWtySGIxck1ZcUVOak5zbldXSXVmMXNiVHppMEVab6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZleEw1Q1FkM01JM0ZvSnJnNW12NlhrRmxDUVBKMFpLo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
               <button className="signup">Sign up</button>
             </Link>
             <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/login?state=hKFo2SA2OWtySGIxck1ZcUVOak5zbldXSXVmMXNiVHppMEVab6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZleEw1Q1FkM01JM0ZvSnJnNW12NlhrRmxDUVBKMFpLo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
@@ -59,7 +59,7 @@ function Header() {
                 <img className="favs" src={gHeart} alt="favs" />
               </Link>
 
-              <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/login?state=hKFo2SB5ZU1BMlVfNW1VcXB5YWJpeEt4VVFhMkdUX0xfTXZPR6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIGRCRDlhWWdDYWRYeDc1ZXlidUZPRlNrMC0yU09XNVdlo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
+              <Link to="/listbook">
                 <img
                   className="userIcon"
                   src={userIconGrey}
