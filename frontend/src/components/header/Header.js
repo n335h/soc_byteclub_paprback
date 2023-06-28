@@ -4,6 +4,8 @@ import './header.css';
 import React, { useState, useEffect } from 'react';
 import userIconGrey from '../../assets/icons/userIconGrey.png';
 import gHeart from '../../assets/icons/gHeart.png';
+import LogoutButton from '../logoutButton/logoutButton';
+import LoginButton from '../loginButton/loginButton';
 
 function Header() {
   // toggle hide show login/logout button depending on if user is logged in
@@ -40,15 +42,15 @@ function Header() {
           </div>
           <div className="user-access">
             {/* Render signup and login buttons and link them to their respective pages */}
-            <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SA2OWtySGIxck1ZcUVOak5zbldXSXVmMXNiVHppMEVab6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZleEw1Q1FkM01JM0ZvSnJnNW12NlhrRmxDUVBKMFpLo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
+            <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SBGd2VfOXVBdkcwWjEweHhtck9rMHJuY0o0azZjRDAzb6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFc5OWJRSGlZZExMOXNidnNWNnV3YXE3WDhnVUQxek5Io2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
               <button className="signup">Sign up</button>
             </Link>
-            <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/login?state=hKFo2SA2OWtySGIxck1ZcUVOak5zbldXSXVmMXNiVHppMEVab6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZleEw1Q1FkM01JM0ZvSnJnNW12NlhrRmxDUVBKMFpLo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
-              <button className="logIN">Logout</button>
+            <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/login?state=hKFo2SBGd2VfOXVBdkcwWjEweHhtck9rMHJuY0o0azZjRDAzb6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFc5OWJRSGlZZExMOXNidnNWNnV3YXE3WDhnVUQxek5Io2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
+              <button className="logIN">Login</button>
             </Link>
 
-            {/* <LoginButton />
-            <LogoutButton />  */}
+            <LoginButton />
+            {/* <LogoutButton /> */}
           </div>
         </div>
         <div className="menuBar">
