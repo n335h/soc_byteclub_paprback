@@ -44,7 +44,7 @@ function Header() {
               <button className="signup">Sign up</button>
             </Link>
             <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/login?state=hKFo2SA2OWtySGIxck1ZcUVOak5zbldXSXVmMXNiVHppMEVab6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZleEw1Q1FkM01JM0ZvSnJnNW12NlhrRmxDUVBKMFpLo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
-              <button className="logIN">Login</button>
+              <button className="logIN">Logout</button>
             </Link>
 
             {/* <LoginButton />

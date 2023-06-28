@@ -18,7 +18,7 @@ function Home() {
 
         <Link to="https://dev-4lkat7o8wi7ta0m4.us.auth0.com/u/signup?state=hKFo2SA2OWtySGIxck1ZcUVOak5zbldXSXVmMXNiVHppMEVab6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFZleEw1Q1FkM01JM0ZvSnJnNW12NlhrRmxDUVBKMFpLo2NpZNkgNENXNlRRSEYxQVlnUGlDem9GTmY2d3V2aVlPUDRMVTg">
           <button id="heroSignup" className="signup">
-            Get Started
+            Browse Books
           </button>
         </Link>
         <img className="hero" src={homeHero} alt="Logo" />
