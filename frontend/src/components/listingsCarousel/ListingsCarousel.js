@@ -54,7 +54,7 @@ function ListingsCarousel() {
           responsive={{
             xxxxl: {
               breakpoint: {
-                max: 3000,
+                max: 10000,
                 min: 1600,
               },
               items: 6,

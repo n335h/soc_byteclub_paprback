@@ -1,5 +1,3 @@
-
-
 #list-book {
   padding: 4rem 5rem;
   height: 100%;
@@ -8,15 +6,14 @@
 .list-book-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
   flex-direction: row;
   margin-left: 8%;
   
   gap: 5rem;
-  flex: 0 0 100%;
+  flex: 0 0 0%;
   width: 50%;
 }
-
 
 
 @media screen and (max-width: 1000px) {
@@ -24,6 +21,7 @@
 .listing-component{
   margin: auto  ;
   left: 50%;
+
 }
 
   .list-book-container {
@@ -36,7 +34,6 @@
     height: 100%;
     width: auto;
   }
-
 
 .list-book-container {
   display: flex;
@@ -61,6 +58,7 @@
     background-color: var(--main-color);
   }
 
+
 .bolded {
   font-weight: bold;
   color: var(--secondary-color-trans);
@@ -68,7 +66,6 @@
 
 .inner-text {
   font-size: var(--text-r);
-
 }
 
 .welcome-text {
@@ -87,3 +84,4 @@
   margin: auto;
   
 }
+

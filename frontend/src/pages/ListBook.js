@@ -8,6 +8,7 @@ function ListBook() {
   return (
     <section className="pages" id="list-book">
       <div className="list-book-container">
+
         <div className="overall-box">
           <Dashboard />
           <ListingsCarousel />
@@ -21,6 +22,7 @@ function ListBook() {
             {/* <ListingsCarousel /> */}
           </div>
         </div>
+
     </section>
   );
 }
