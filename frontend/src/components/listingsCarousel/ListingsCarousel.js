@@ -9,7 +9,7 @@ function ListingsCarousel() {
 
   // useEffect to fetch listings data from the API on component mount
   useEffect(() => {
-    fetch(`http://localhost:5432/api/listings`)
+    fetch(`https://paprback-backend.onrender.com/api/listings`)
       .then((res) => {
         if (res.ok) {
           return res.json();
