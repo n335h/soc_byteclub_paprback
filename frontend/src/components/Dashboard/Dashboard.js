@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Dashboard() {
   return (
-    <div className="user-info-container">
+    <div id="dashboard">
       <div className="userDetails">
         <h1 className="welcome-text">
           Welcome <span className="name-text">Zendaya!</span>
@@ -31,8 +31,8 @@ function Dashboard() {
         <img
           className="user-image"
           src="https://i.pinimg.com/474x/2b/a9/ec/2ba9ecf8e084d6b699ea6b5dd7e5575d.jpg"
-          alt="Zendaya"
-        ></img>
+          alt="Zendaya">
+          </img>
       </div>
     </div>
   );
