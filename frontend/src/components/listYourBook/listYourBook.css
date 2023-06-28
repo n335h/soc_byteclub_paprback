@@ -16,6 +16,8 @@
 
 }
 
+
+
 .list-text {
   font-size: var(--text-l);
   padding: 0.3rem;
@@ -25,7 +27,6 @@
 
   justify-content: center;
   align-items: center;
-  margin-left: 25vw;
 
   
 }

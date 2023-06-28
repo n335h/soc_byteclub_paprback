@@ -1,48 +1,83 @@
-#list-book {
-  padding: 4rem 5rem;
+#listbook {
   height: 100%;
-}
-
-.list-book-container {
-  display: flex;
-  justify-content: space-between;
-
-  flex-direction: row;
-  margin-left: 8%;
-  
-  gap: 5rem;
-  flex: 0 0 0%;
-  width: 50%;
-}
-
-
-@media screen and (max-width: 1000px) {
-
-.listing-component{
-  margin: auto  ;
-  left: 50%;
-
-}
-
-  .list-book-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .listings-carousel-container {
-    height: 100%;
-    width: auto;
-  }
-
-.list-book-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 4rem 10%;
 }
+
+#listbook-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5rem;
 }
+
+#listbook-container .column {
+  flex: 1;
+}
+
+#listbook-container .column:first-child {
+  flex: 2;
+}
+
+#dashboard-carousel {
+  display: flex;
+  flex-direction: column;
+}
+
+#dashboard-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+#user-details {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+#user-image-container {
+  border: 5px solid var(--secondary-color);
+  border-radius: 50%;
+}
+
+#user-image {
+  width: 22.5rem;
+  border-radius: 50%;
+}
+
+#user-text {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+#listbook-carousel-container {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+#listbook-carousel-container h1 {
+  margin-bottom: 2rem;
+}
+
+#listbook-listyourbook {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+
 .find-a-book-button {
+    /* position: absolute;
+    bottom: 2rem;
+    right: 4rem; */
     background-color: var(--secondary-color);
     border: none;
     color: white;
@@ -52,6 +87,7 @@
     cursor: pointer;
     font-weight: 600;
     transition: all 0.1s ease-in;
+    margin-top: 2rem;
   }
   
   .find-a-book-button:hover {
@@ -66,6 +102,7 @@
 
 .inner-text {
   font-size: var(--text-r);
+  
 }
 
 .welcome-text {
@@ -85,3 +122,41 @@
   
 }
 
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+  #listbook {
+    margin: 4rem 10%;
+  }
+
+  #listbook-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #dashboard-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #user-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #user-text {
+    text-align: center;
+  }
+
+  #user-image {
+    width: 20rem;
+    border-radius: 50%;
+  }
+  
+}
+  
