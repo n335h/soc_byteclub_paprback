@@ -1,11 +1,9 @@
-
-import express from "express";
-import dotenv from "dotenv";
-import pkg from "pg";
-import cors from "cors";
-import Routes from "./routes.js";
-import nodemon from "nodemon";
-
+import express from 'express';
+import dotenv from 'dotenv';
+import pkg from 'pg';
+import cors from 'cors';
+import Routes from './routes.js';
+//import nodemon from 'nodemon';
 
 export const { Pool } = pkg;
 dotenv.config();
@@ -16,7 +14,7 @@ const port = process.env.PORT || 5432; // default port to listen
 const connectionString = process.env.DB_CONNECTION_STRING;
 const apiKey = process.env.API_KEY;
 //Hello!!!
- 
+
 // middleware
 app.use(cors());
 app.use(express.json());
@@ -32,12 +30,9 @@ pool.connect();
 // routes
 Routes(app, pool);
 
-
-
 // Close the database connection when the server is stopped
 
 process.on('SIGINT', () => {
-
   pool
     .end()
     .then(() => {
@@ -53,10 +48,9 @@ process.on('SIGINT', () => {
 app.get('/message', (req, res) => {
   res.json({ message: 'Hello from server!' });
 });
-
+ 
 app.listen(port, () => {
   console.log(`server started at http://localhost:${port}`);
 });
 
-
-export default app
+export default app;

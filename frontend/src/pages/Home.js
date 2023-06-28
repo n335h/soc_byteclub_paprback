@@ -1,6 +1,6 @@
 import homeHero from '../assets/images/homeHero.jpg';
 import { Link } from 'react-router-dom';
-import './Home.css';
+import './home.css';
 function Home() {
   return (
     <section className="pages" id="home">
@@ -31,7 +31,7 @@ function Home() {
             exchange books in person or by post.
           </p>
         </div>
-        <div class="verticalLine">
+        <div className="verticalLine">
  
 </div>
         <div id='subcontainer' className="whyContainer">
@@ -42,7 +42,7 @@ function Home() {
             limited access to books.
           </p>
         </div>
-        <div class="verticalLine">
+        <div className="verticalLine">
 
 </div>
         <div id='subcontainer' className="howContainer">

@@ -44,17 +44,19 @@
   font-size:var(--text-r);
   font-weight: bold;
 }
-
+ 
 #book-author {
   font-size:var(--text-r);
 }
 
 #book-distance {
-  font-size:var(--text-s);
+  font-size:var(--text-r);
+  color: var(--secondary-color);
+  font-weight: bold;
 }
 
 #book-distance span {
-  color: var(--main-color);
+  color: var(--secondary-color);
   font-weight: bold;
 }
 

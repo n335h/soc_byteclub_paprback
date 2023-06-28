@@ -2,9 +2,11 @@
     height: 60vh;
     object-fit: cover;
     object-position: center;
- 
-   
-
+    margin: auto;
+    padding: 0%;
+}
+#faq {
+  margin-top: 2rem;
 }
 #pagetitle {
     font-size: var(--text-xl);
@@ -38,7 +40,7 @@ hr {
 
   .faq{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: auto;
@@ -89,7 +91,7 @@ hr {
     margin-left: 5px; /* Adjust the margin as needed */
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 700px) {
     .faq-container {
         display: flex;
         flex-direction: column;
@@ -98,4 +100,24 @@ hr {
         font-size: var( --text-r);
         justify-content: space-evenly;
     
-  }}
+  }
+.faq {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+.content {
+  width: 100%;
+}
+.faqimg {
+  height: 50vh;
+  object-fit: cover;
+  object-position: center;
+
+}
+#pagetitle {
+  padding-top: 3vh;
+}
+
+}
