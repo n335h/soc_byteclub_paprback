@@ -13,6 +13,7 @@
   align-items: center;
   background-color: var(--background-color);
   padding: 2rem 4rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #offer h1 {
@@ -136,11 +137,9 @@
   background-color: var(--main-color);
   color: #fff;
   font-weight: bold;
-  width: 50%;
   padding: 0.8rem 4rem;
   border-radius: 0.5rem;
   font-size: var(--text-r);
-  transform: translateX(50%);
   margin-bottom: 4rem;
   cursor: pointer;
   transition: all 0.1s ease-in-out;

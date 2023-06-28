@@ -109,7 +109,7 @@ function Books() {
     setListings(filteredListings);
     const searchInput = document.querySelector('.searchInputBrowse');
     searchInput.value = '';
-    const close = document.getElementById('close');
+    const close = document.getElementById('book-close');
     close.style.display = 'block';
     const searchedBook = document.getElementById('book-enclosure');
     searchedBook.style.gridTemplateColumns =
@@ -129,8 +129,7 @@ function Books() {
   };
 
   const handleCloseClick = () => {
-    setListings(listings);
-    const close = document.getElementById('close');
+    const close = document.getElementById('book-close');
     close.style.display = 'none';
     window.location.reload();
   };
@@ -154,6 +153,7 @@ function Books() {
           >
             Search
           </button>
+          <button id="book-close" onClick={handleCloseClick}>Close</button>
         </div>
 
         <div id="books-grid">
@@ -165,6 +165,7 @@ function Books() {
                 title={listing.title}
                 author={listing.author}
                 onClick={() => handleBookClick(listing)}
+                handleCloseClick={handleCloseClick}
                 distance={calcDistance(
                   listing.latitude,
                   listing.longitude

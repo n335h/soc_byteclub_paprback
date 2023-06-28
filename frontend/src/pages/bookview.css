@@ -14,10 +14,10 @@
   justify-content: center;
   min-height: 60rem;
   max-width: 50rem;
-  background-color: var(--background);
+  background-color: var(--background-color);
   padding: 1rem 1rem;
   border-radius: 1rem;
-  box-shadow: inset 0 0 1rem white;
+  box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #book-cover {
@@ -75,6 +75,7 @@
   border-radius: 0.5rem;
   margin-bottom: 1rem;
   font-weight: bold;
+  color: white;
 }
 
 #book-view #contact:hover {
@@ -84,7 +85,7 @@
 
 #book-view #book-view-close {
   width: 100%;
-
+  margin-bottom: 2rem;
   border: none;
   background-color: transparent;
   color: var(--close-color);
