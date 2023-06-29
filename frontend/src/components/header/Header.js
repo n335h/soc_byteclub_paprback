@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import userIconGrey from '../../assets/icons/userIconGrey.png';
 import gHeart from '../../assets/icons/gHeart.png';
 import LogoutButton from '../logoutButton/logoutButton';
-import LoginButton from '../loginButton/loginButton';
+
 
 function Header() {
   // toggle hide show login/logout button depending on if user is logged in
