@@ -68,6 +68,7 @@
   color: white;
   z-index: 1;
   font-size: var(--text-l);
+  display: flex;
   justify-content: center;
   align-items: center;
 }
