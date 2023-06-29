@@ -179,6 +179,17 @@ header {
     display: flex;
 }
 
+.userIconMain {
+  display: none;
+}
+.favsMain {
+display: none;
+}
+.logOut{
+  display: none;
+}
+
+
   .signup {
       display: none;
   }

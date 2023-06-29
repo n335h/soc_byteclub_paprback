@@ -60,7 +60,7 @@ function Header() {
               />
             </Link>
             {/* <LoginButton /> */}
-            <LogoutButton />
+            <LogoutButton className="logOut" />
           </div>
         </div>
         <div className="menuBar">

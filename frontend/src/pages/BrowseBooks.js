@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Book from '../components/book/Book';
 import Close from '../assets/icons/close.svg';
@@ -10,17 +9,7 @@ function Books() {
   const [listings, setListings] = useState([]);
   const [userLatitude, setUserLatitude] = useState(null);
   const [userLongitude, setUserLongitude] = useState(null);
-
   const [selectedBook, setSelectedBook] = useState(null);
-  // {
-  // listing_id: "",
-  // user_id: "",
-  // cover_img: "",
-  // title: "",
-  // author: "",
-  // isbn: "",
-  // condition: "",
-  // notes: "",}
 
   const navToBookView = useNavigate();
 
@@ -47,13 +36,6 @@ function Books() {
       setListings([]);
     }
   };
-
-  // let userLatitude = userData[0].latitude;
-  // let userLongitude = userData[0].longitude;
-  // const listingLatitude = listings[0].latitude;
-  // const listingLongitude = listings[0].longitude;
-
-  //console.log("look at me", userLatitude, userLongitude, listingLatitude, listingLongitude)
 
   function calcDistance(listingLatitude, listingLongitude) {
     if (userLatitude === null || userLongitude === null) {
@@ -87,26 +69,32 @@ function Books() {
     return deg * (Math.PI / 180);
   };
 
-  //const distance = calcDistance(userLatitude, userLongitude, listingLatitude, listingLongitude);
-
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  const filteredListings = listings.filter((listing) => {
-    const title = listing.title ? listing.title.toLowerCase() : '';
-    const author = listing.author ? listing.author.toLowerCase() : '';
-    const isbn = listing.isbn ? listing.isbn.toLowerCase() : '';
-
-    return (
-      title.includes(searchTerm.toLowerCase()) ||
-      author.includes(searchTerm.toLowerCase()) ||
-      isbn.includes(searchTerm.toLowerCase())
-    );
-  });
-
   const handleSearchClick = () => {
-    setListings(filteredListings);
+    const filteredListings = listings.filter((listing) => {
+      const title = listing.title ? listing.title.toLowerCase() : '';
+      const author = listing.author
+        ? listing.author.toLowerCase()
+        : '';
+      const isbn = listing.isbn ? listing.isbn.toLowerCase() : '';
+
+      return (
+        title.includes(searchTerm.toLowerCase()) ||
+        author.includes(searchTerm.toLowerCase()) ||
+        isbn.includes(searchTerm.toLowerCase())
+      );
+    });
+
+    if (filteredListings.length === 0) {
+      // Book not found
+      alert('Book not found');
+    } else {
+      setListings(filteredListings);
+    }
+
     const searchInput = document.querySelector('.searchInputBrowse');
     searchInput.value = '';
     const close = document.getElementById('book-close');
@@ -145,7 +133,7 @@ function Books() {
             type="text"
             placeholder="Search"
             onChange={handleSearchChange}
-          ></input>
+          />
           <button
             data-testid="search-button"
             className="searchButtons"
@@ -153,7 +141,9 @@ function Books() {
           >
             Search
           </button>
-          <button id="book-close" onClick={handleCloseClick}>Close</button>
+          <button id="book-close" onClick={handleCloseClick}>
+            Close
+          </button>
         </div>
 
         <div id="books-grid">
