@@ -13,7 +13,7 @@
   align-items: center;
   background-color: var(--background-color);
   padding: 2rem 4rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: 2rem;
 }
 
@@ -157,6 +157,7 @@
   justify-content: center;
   align-items: center;
   padding: 4rem 10rem;
+  color: var(--secondary-color);
 }
 
 #post-message h2 {
