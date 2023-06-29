@@ -1,5 +1,5 @@
 .aboutimg {
-    height: 60vh;
+    height: 50vh;
     object-fit: cover;
     object-position: center;
    margin: auto;
@@ -64,6 +64,14 @@
     #pagetitle {
       padding-top: 3vh;
     }
-    
+    .aboutimg {
+      height: 40vh;
+      object-fit: cover;
+      object-position: center;
+     margin: auto;
+     margin-bottom: 1vh;
+   
+  
+  }
 
   }
