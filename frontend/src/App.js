@@ -29,8 +29,6 @@ function App() {
     console.log('Message:', message);
   }, [message]);
 
-  
-  
   return (
     <main className="App">
       <Header />
