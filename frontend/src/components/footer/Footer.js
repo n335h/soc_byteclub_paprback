@@ -9,7 +9,6 @@ function Footer() {
     <footer>
       <div className="footer-container">
         <div className="footer-content">
-
           <div className="company-details">
             {/* <h4 className="footer-link">Customer Services</h4>
             <p className="footer-link">Contact Us</p>
@@ -23,6 +22,12 @@ function Footer() {
           </div>
 
           <div className="footer-branding">
+            <div className="logo">
+              <img src={Logo} alt="" className="footer-logo" />
+            </div>{' '}
+            <p className="footer-copyright">
+              &#169; {year} Byte Club!
+            </p>
             <div className="footer-socials">
               <a href="https://github.com/benhensor/soc_byteclub_paprback">
                 <img
@@ -39,12 +44,6 @@ function Footer() {
                 />
               </a>
             </div>
-            <div className="logo">
-              <img src={Logo} alt="" className="footer-logo" />
-            </div>{' '}
-            <p className="footer-copyright">
-              &#169; {year} Byte Club!
-            </p>
           </div>
         </div>
       </div>
