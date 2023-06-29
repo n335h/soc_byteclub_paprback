@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Book from '../components/book/Book';
-import Close from '../assets/icons/close.svg';
 import './browseBooks.css';
 
 function Books() {
