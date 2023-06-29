@@ -161,9 +161,6 @@ function Books() {
                   listing.longitude
                 )}
               />
-              <button id="close" onClick={handleCloseClick}>
-                <img src={Close} alt="Close" />
-              </button>
             </div>
           ))}
         </div>
