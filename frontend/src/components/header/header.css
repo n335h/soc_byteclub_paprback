@@ -27,18 +27,19 @@ header {
   display: flex;
   height: 2.3rem;
   width: 2.3rem;
-  margin-right: 4rem;
+  margin-right: 2rem;
 }
 .favsMain {
   display: flex;
   height: 2.3rem;
   width: 2.3rem;
-  margin-right: 4rem;
+  margin-right: 2rem;
 }
 .user-access {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  
 }
 
 .header-top {
