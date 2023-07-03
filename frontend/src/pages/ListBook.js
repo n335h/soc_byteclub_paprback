@@ -45,17 +45,24 @@ function ListBook() {
                   <span className="bolded">Phone:</span> 0121 987 654
                 </p>
                 <Link to="/browse">
-                  <button className="find-a-book-button">
+                  <button className="find-a-book-button2">
                     Find A Book
                   </button>
                 </Link>
-                <button
-                  className="list-a-book-button"
-                  onClick={handleListBookClick}
-                >
-                  List A Book
-                </button>
               </div>
+            </div>
+            <div className="buttons">
+              <Link to="/browse">
+                <button className="find-a-book-button">
+                  Find A Book
+                </button>
+              </Link>
+              <button
+                className="list-a-book-button"
+                onClick={handleListBookClick}
+              >
+                List A Book
+              </button>
             </div>
           </div>
           <div id="listbook-carousel-container">

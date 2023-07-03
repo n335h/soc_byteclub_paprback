@@ -36,7 +36,7 @@ function Footer() {
                   className="footer-social-icon"
                 />
               </a>
-              <a href="https://github.com/benhensor/soc_byteclub_paprback">
+              <a href="https://www.youtube.com/watch?v=UB3zVqyRQZQ">
                 <img
                   src={ytWhite}
                   alt="youtube"
