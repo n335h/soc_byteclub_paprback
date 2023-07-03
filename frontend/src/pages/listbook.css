@@ -166,11 +166,13 @@
   }
 
   #dashboard-container {
-    flex-direction: column;
     width: 400px;
   }
 
- 
+  #user-details {
+    flex-direction: column;
+    align-items: center;
+  }
 
   #user-text {
     text-align: center;
@@ -193,7 +195,6 @@
 
 @media screen and (max-width: 1300px) {
   #user-details {
-    flex-direction: row;
     align-items: center;
   }
   .inner-text {
@@ -207,7 +208,6 @@
   }
   #dashboard-container {
     flex-direction: column;
-    width: 500px;
   }
   #user-image {
     width: 25.5rem;

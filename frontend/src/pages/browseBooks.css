@@ -87,7 +87,7 @@
 }
 
 #books-grid {
-  width: 100%;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -161,10 +161,11 @@
 
   #books-grid {
     width: 100%;
+    justify-content: space-evenly;
   }
   
   #books-grid > div {
-    margin: 2.5rem; /* Adjust the value to set the desired gap size */
+    margin: 1.5rem; /* Adjust the value to set the desired gap size */
   }
  
 }

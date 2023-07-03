@@ -88,28 +88,28 @@ function Header() {
               <ul className={`menu ${menuOpen ? 'open' : ''}`}>
                 {/* Render navigation buttons and link them to their respective pages */}
                 <li>
-                  <Link to="/browse">
+                  <Link to="/browse" onClick={handleToggleMenu}>
                     <button id="navbutton" className="browse">
                       Browse
                     </button>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/listbook">
+                  <Link to="/listbook" onClick={handleToggleMenu}>
                     <button id="navbutton" className="listbook">
                       List A Book
                     </button>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about">
+                  <Link to="/about" onClick={handleToggleMenu}>
                     <button id="navbutton" className="about">
                       About
                     </button>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/faq">
+                  <Link to="/faq" onClick={handleToggleMenu}>
                     <button id="navbutton">FAQ</button>
                   </Link>
                 </li>
