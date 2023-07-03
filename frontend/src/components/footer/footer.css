@@ -6,6 +6,7 @@ footer {
   color: #ffffff;
   font-size: var(--text-r);
   min-height: 15rem;
+  z-index: 100;
 }
 
 .footer-container {
@@ -37,19 +38,19 @@ footer {
   width: 140px;
   fill: var(--background);
 }
-.footer-socials{
+.footer-socials {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 1vh;
 }
-.footer-social-icon{
+.footer-social-icon {
   margin: 0 0.5vw;
   width: 25px;
   fill: var(--background);
   opacity: 0.5;
 }
-.footer-social-icon:hover{
+.footer-social-icon:hover {
   opacity: 1;
 }
 @media screen and (max-width: 600px) {
