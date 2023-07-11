@@ -6,13 +6,13 @@ A community platform to connect local people to discover and share second-hand b
 https://bcpaprback.netlify.app
 ## Features
 
-**List a book**
+### List a book
 
 - Search our book database by title and add the condition and notes of your copy to create a listing. 
 
 - View all of your listings in the carousel.
 
-**Browse books**
+### Browse books
 
 - View all listings posted by other users.
 
@@ -25,15 +25,15 @@ https://bcpaprback.netlify.app
 
 ## Limitations
 
-**Login/Logout**
+### Login/Logout
 
 The login/logout function is under construction. For our prototype you are automatically logged in as our demonstration user Zendaya.
 
-**Favourites**
+### Favourites
 
 The favourites page is under construction.
 
-**Books database**
+### Books database
 
 In a final product, we would intend to work with a database of all published books such as the Google Books API. For our prototype, we have used a small PostgreSQL database. When listing a book, you can choose from the following titles:
 
@@ -88,6 +88,7 @@ In a final product, we would intend to work with a database of all published boo
 - Jest
 - Netlify
 - Render
+  
 ## More information
 
 - [Product demonstration video](https://youtu.be/-TggXw8SYgo)  
